@@ -18,10 +18,6 @@ const Contact = props => (
             <label htmlFor="email">Correo</label>
             <input type="text" name="email" id="email" />
           </div>
-          <div className="field">
-            <label htmlFor="message">Mensaje</label>
-            <textarea name="message" id="message" rows="6" />
-          </div>
           <ul className="actions">
             <li>
               <input type="submit" value="Enviar" className="special" />
@@ -41,20 +37,9 @@ const Contact = props => (
         </section>
         <section>
           <div className="contact-method">
-            <span className="icon alt fa-phone" />
+            <span className="icon alt fa-whatsapp" />
             <h3>Número</h3>
             <span>(+57) 000-0000</span>
-          </div>
-        </section>
-        <section>
-          <div className="contact-method">
-            <span className="icon alt fa-home" />
-            <h3>Dirección</h3>
-            <span>
-              1234 Somewhere Road #5432<br />
-              Nashville, TN 00000<br />
-              United States of America
-            </span>
           </div>
         </section>
       </section>

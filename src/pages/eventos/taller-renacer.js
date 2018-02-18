@@ -18,7 +18,6 @@ const Landing = props => (
         content="¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?"
       />
     </Helmet>
-    <FavIcon type="all" />
 
     <BannerLanding
       title="Taller Renacer"
