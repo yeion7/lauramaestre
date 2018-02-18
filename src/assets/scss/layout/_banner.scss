@@ -17,7 +17,7 @@
   background-size: cover;
   border-bottom: 0 !important;
   cursor: default;
-  height: 60vh;
+  height: 70vh;
   margin-bottom: -3.25em;
   max-height: 32em;
   min-height: 22em;
@@ -44,6 +44,7 @@
     font-size: 3.25em;
     color: _palette(bg);
     text-transform: uppercase;
+    margin-bottom: 0;
   }
 
   > .inner {
@@ -76,10 +77,10 @@
 
     .content {
       text-align: right;
+      margin-bottom: 15px;
       @include vendor('display', 'flex');
       @include vendor('align-items', 'center');
       @include vendor('justify-content', 'flex-end');
-      margin: 0 0 _size(element-margin) 0;
 
       > * {
         text-align: right;
@@ -220,6 +221,30 @@
 
     &.major {
       @include padding(6em, 0, (2em, 0, 0, 0));
+    }
+  }
+}
+
+.countdown {
+  display: flex;
+  justify-content: flex-end;
+
+  .time {
+    background: _palette(bg-alt);
+    padding: 5px;
+    margin: 0 5px;
+    text-align: center;
+    min-width: 70px;
+    font-weight: _font(weight-bold);
+    color: _palette(bg);
+
+    @include breakpoint(xlarge) {
+      font-size: 1.3em;
+      min-width: 90px;
+    }
+
+    span {
+      display: block;
     }
   }
 }
