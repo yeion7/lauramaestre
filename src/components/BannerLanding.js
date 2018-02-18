@@ -1,17 +1,21 @@
 import React from 'react';
 
-const BannerLanding = props => (
-  <section id="banner" className="style2">
+const BannerLanding = ({ title, description }) => (
+  <section id="banner">
     <div className="inner">
-      <header className="major">
-        <h1>Landing</h1>
+      <header className="">
+        <h1>{title}</h1>
       </header>
       <div className="content">
-        <p>
-          Lorem ipsum dolor sit amet nullam consequat<br />
-          sed veroeros. tempus adipiscing nulla.
-        </p>
+        <p>{description}</p>
       </div>
+      <ul className="actions">
+        <li>
+          <a href="#one" className="button special">
+            Registrarme
+          </a>
+        </li>
+      </ul>
     </div>
   </section>
 );

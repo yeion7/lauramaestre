@@ -35,7 +35,10 @@ class Template extends React.Component {
   }
 
   render() {
-    const { children } = this.props;
+    const { children, location } = this.props;
+    const { pathname } = location;
+
+    const isEvent = /eventos/g.test(pathname);
 
     return (
       <div
@@ -44,7 +47,7 @@ class Template extends React.Component {
         }`}
       >
         <div id="wrapper">
-          <Header onToggleMenu={this.handleToggleMenu} />
+          <Header onToggleMenu={this.handleToggleMenu} withMenu={!isEvent} />
           {children()}
           <Contact />
           <Footer />

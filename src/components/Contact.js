@@ -4,7 +4,7 @@ const Contact = props => (
   <section id="contact">
     <div className="inner">
       <section>
-        <form name="contact" netlify netlify-honeypot="bot-field">
+        <form name="contact" data-netlify="true" netlify-honeypot="bot-field">
           <div style={{ display: 'none' }}>
             <label>
               Don’t fill this out: <input name="bot-field" />

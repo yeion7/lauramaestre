@@ -11,31 +11,19 @@ const Menu = props => (
           </Link>
         </li>
         <li>
-          <Link onClick={props.onToggleMenu} to="/landing">
-            Landing
+          <Link onClick={props.onToggleMenu} to="/eventos">
+            Eventos
           </Link>
         </li>
         <li>
-          <Link onClick={props.onToggleMenu} to="/generic">
-            Generic
+          <Link onClick={props.onToggleMenu} to="/blog">
+            Blog
           </Link>
         </li>
         <li>
-          <Link onClick={props.onToggleMenu} to="/elements">
-            Elements
+          <Link onClick={props.onToggleMenu} to="/sobremi">
+            Sobre mi
           </Link>
-        </li>
-      </ul>
-      <ul className="actions vertical">
-        <li>
-          <a href="#" className="button special fit">
-            Get Started
-          </a>
-        </li>
-        <li>
-          <a href="#" className="button fit">
-            Log In
-          </a>
         </li>
       </ul>
     </div>
