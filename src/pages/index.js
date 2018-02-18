@@ -13,8 +13,8 @@ import pic06 from '../assets/images/pic06.jpg';
 
 class HomeIndex extends React.Component {
   render() {
-    const siteTitle = 'Laura Maestre';
-    const siteDescription = 'Laura Maestre';
+    const siteTitle = this.props.data.site.siteMetadata.title;
+    const siteDescription = this.props.data.site.siteMetadata.description;
 
     return (
       <div>
@@ -101,14 +101,14 @@ class HomeIndex extends React.Component {
 }
 
 export default HomeIndex;
-//
-// export const pageQuery = graphql`
-//   query PageQuery {
-//     site {
-//       siteMetadata {
-//         title
-//         description
-//       }
-//     }
-//   }
-// `;
+
+export const pageQuery = graphql`
+  query PageQuery {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+  }
+`;
