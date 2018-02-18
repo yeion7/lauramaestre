@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import BannerLanding from '../../components/BannerLanding';
+import FavIcon from '../../components/FavIcon';
 
 import pic08 from '../../assets/images/pic08.jpg';
 import pic09 from '../../assets/images/pic09.jpg';
@@ -16,6 +17,7 @@ const Landing = props => (
         content="¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?"
       />
     </Helmet>
+    <FavIcon type="all" />
 
     <BannerLanding
       title="Taller Renacer"

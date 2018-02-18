@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import Banner from '../components/Banner';
+import FavIcon from '../components/FavIcon';
 
 import pic01 from '../assets/images/pic01.jpg';
 import pic02 from '../assets/images/pic02.jpg';
@@ -21,6 +22,7 @@ class HomeIndex extends React.Component {
           <title>{siteTitle}</title>
           <meta name="description" content={siteDescription} />
         </Helmet>
+        <FavIcon type="all" />
 
         <Banner />
 
