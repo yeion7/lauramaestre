@@ -32,7 +32,7 @@
     "develop": "gatsby develop",
     "lint:md": "remark src/posts/",
     "format:js": "prettier '**/*.{js,jsx}' --write",
-    "build": "gatsby build"
+    "build": "npm run lint:md && gatsby build"
   },
   "devDependencies": {
     "prettier": "1.10.2",
