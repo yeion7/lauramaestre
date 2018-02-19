@@ -30,20 +30,20 @@ const Landing = props => (
           <header className="major">
             <h2>Qué lograras</h2>
           </header>
-          <div className="row 200%">
-            <div className="4u 12u$(small)">
+          <div className="row">
+            <div className="feature">
               <p>
                 Recordaras y sanarás las emociones que viviste durante tu
                 gestación.
               </p>
             </div>
-            <div className="4u 12u$(small)">
+            <div className="feature">
               <p>
                 Sanarás la forma como naciste ya que ella marca como te
                 presentas y te desenvuelves en la vida.
               </p>
             </div>
-            <div className="4u 12u$(small)">
+            <div className="feature">
               <p>
                 Crearás nuevos permisos y proyectos para crear la vida que
                 deseas.

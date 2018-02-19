@@ -1,0 +1,18 @@
+#features {
+  overflow-x: hidden;
+
+  > .inner {
+    > .row {
+      @include vendor('display', 'flex');
+      text-align: center;
+
+      @include breakpoint(medium) {
+        display: block;
+        text-align: left;
+      }
+
+      > .feature {
+      }
+    }
+  }
+}

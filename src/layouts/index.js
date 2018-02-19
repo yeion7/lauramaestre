@@ -11,21 +11,8 @@ class Template extends React.Component {
     super(props);
     this.state = {
       isMenuVisible: false,
-      loading: 'is-loading',
     };
     this.handleToggleMenu = this.handleToggleMenu.bind(this);
-  }
-
-  componentDidMount() {
-    this.timeoutId = setTimeout(() => {
-      this.setState({ loading: '' });
-    }, 100);
-  }
-
-  componentWillUnmount() {
-    if (this.timeoutId) {
-      clearTimeout(this.timeoutId);
-    }
   }
 
   handleToggleMenu() {
@@ -42,9 +29,7 @@ class Template extends React.Component {
 
     return (
       <div
-        className={`body ${this.state.loading} ${
-          this.state.isMenuVisible ? 'is-menu-visible' : ''
-        }`}
+        className={`body ${this.state.isMenuVisible ? 'is-menu-visible' : ''}`}
       >
         <div id="wrapper">
           <Header onToggleMenu={this.handleToggleMenu} withMenu={!isEvent} />
