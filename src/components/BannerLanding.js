@@ -21,33 +21,31 @@ class BannerLanding extends Component {
           <div className="content">
             <p>{description}</p>
           </div>
-          {this.state.countDown && (
-            <div id="content">
-              <Countdown
-                date={new Date('February 24, 2018 09:00:00')}
-                renderer={({ days, hours, minutes, seconds, completed }) => {
-                  return (
-                    !completed && (
-                      <div className="countdown">
-                        <div className="time">
-                          {days}
-                          <span>Días</span>
-                        </div>
-                        <div className="time">
-                          {hours}
-                          <span>Horas</span>
-                        </div>
-                        <div className="time">
-                          {minutes}
-                          <span>Min</span>
-                        </div>
+          <div id="content">
+            <Countdown
+              date={new Date('February 24, 2018 09:00:00')}
+              renderer={({ days, hours, minutes, seconds, completed }) => {
+                return (
+                  !completed && (
+                    <div className="countdown">
+                      <div className="time">
+                        {days}
+                        <span>Días</span>
                       </div>
-                    )
-                  );
-                }}
-              />,
-            </div>
-          )}
+                      <div className="time">
+                        {hours}
+                        <span>Horas</span>
+                      </div>
+                      <div className="time">
+                        {minutes}
+                        <span>Min</span>
+                      </div>
+                    </div>
+                  )
+                );
+              }}
+            />,
+          </div>
           <ul className="actions">
             <li>
               <a href="#contact" className="button special">
