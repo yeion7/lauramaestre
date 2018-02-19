@@ -57,9 +57,9 @@ const Landing = props => (
           <header className="major">
             <h2>Cuándo</h2>
           </header>
-          <div className="row 200%">
+          <div className="row">
             <div
-              className="4u 12u$(medium)"
+              className="feature"
               dangerouslySetInnerHTML={{
                 __html: `<iframe
                     frameborder="0"
@@ -70,11 +70,11 @@ const Landing = props => (
                   />`,
               }}
             />
-            <div className="4u 12u$(medium)">
+            <div className="feature">
               <h2>Villavicencio</h2>
               <h3>24 - 25 - 26 de febrero</h3>
             </div>
-            <div className="4u 12u$(medium)">
+            <div className="feature">
               <h2>Inversión</h2>
               <h3>$ 300.000</h3>
             </div>

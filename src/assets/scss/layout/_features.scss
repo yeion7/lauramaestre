@@ -1,4 +1,5 @@
-#features {
+#features,
+#details {
   overflow-x: hidden;
 
   > .inner {
@@ -12,6 +13,7 @@
       }
 
       > .feature {
+        flex: 30%;
       }
     }
   }
