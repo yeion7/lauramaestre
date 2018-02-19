@@ -25,101 +25,61 @@ const Landing = props => (
     />
 
     <div id="main">
-      <section id="one">
+      <section id="features">
         <div className="inner">
           <header className="major">
-            <h2>Sed amet aliquam</h2>
+            <h2>Qué lograras</h2>
           </header>
-          <p>
-            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-            magna sed nunc rhoncus condimentum sem. In efficitur ligula tate
-            urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor.
-            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
-            libero. Nullam et orci eu lorem consequat tincidunt vivamus et
-            sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula
-            tate urna.
-          </p>
+          <div className="row 200%">
+            <div className="4u 12u$(small)">
+              <p>
+                Recordaras y sanarás las emociones que viviste durante tu
+                gestación.
+              </p>
+            </div>
+            <div className="4u 12u$(small)">
+              <p>
+                Sanarás la forma como naciste ya que ella marca como te
+                presentas y te desenvuelves en la vida.
+              </p>
+            </div>
+            <div className="4u 12u$(small)">
+              <p>
+                Crearás nuevos permisos y proyectos para crear la vida que
+                deseas.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
-      <section id="two" className="spotlights">
-        <section>
-          <Link to="/generic" className="image">
-            <img src={pic08} alt="" />
-          </Link>
-          <div className="content">
-            <div className="inner">
-              <header className="major">
-                <h3>Orci maecenas</h3>
-              </header>
-              <p>
-                Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-                magna sed nunc rhoncus condimentum sem. In efficitur ligula tate
-                urna. Maecenas massa sed magna lacinia magna pellentesque lorem
-                ipsum dolor. Nullam et orci eu lorem consequat tincidunt.
-                Vivamus et sagittis tempus.
-              </p>
-              <ul className="actions">
-                <li>
-                  <Link to="/generic" className="button">
-                    Learn more
-                  </Link>
-                </li>
-              </ul>
+      <section id="details">
+        <div className="inner">
+          <header className="major">
+            <h2>Cuándo</h2>
+          </header>
+          <div className="row 200%">
+            <div
+              className="4u 12u$(medium)"
+              dangerouslySetInnerHTML={{
+                __html: `<iframe
+                    frameborder="0"
+                    style="border:0"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBYCgpafLYqaUQbYQMTEPoHMSaOEVFlfh0
+        &q=Finca+la+Dacha"
+                    allowfullscreen
+                  />`,
+              }}
+            />
+            <div className="4u 12u$(medium)">
+              <h2>Villavicencio</h2>
+              <h3>24 - 25 - 26 de febrero</h3>
+            </div>
+            <div className="4u 12u$(medium)">
+              <h2>Inversión</h2>
+              <h3>$ 300.000</h3>
             </div>
           </div>
-        </section>
-        <section>
-          <Link to="/generic" className="image">
-            <img src={pic09} alt="" />
-          </Link>
-          <div className="content">
-            <div className="inner">
-              <header className="major">
-                <h3>Rhoncus magna</h3>
-              </header>
-              <p>
-                Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-                magna sed nunc rhoncus condimentum sem. In efficitur ligula tate
-                urna. Maecenas massa sed magna lacinia magna pellentesque lorem
-                ipsum dolor. Nullam et orci eu lorem consequat tincidunt.
-                Vivamus et sagittis tempus.
-              </p>
-              <ul className="actions">
-                <li>
-                  <Link to="/generic" className="button">
-                    Learn more
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <section>
-          <Link to="/generic" className="image">
-            <img src={pic10} alt="" />
-          </Link>
-          <div className="content">
-            <div className="inner">
-              <header className="major">
-                <h3>Sed nunc ligula</h3>
-              </header>
-              <p>
-                Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-                magna sed nunc rhoncus condimentum sem. In efficitur ligula tate
-                urna. Maecenas massa sed magna lacinia magna pellentesque lorem
-                ipsum dolor. Nullam et orci eu lorem consequat tincidunt.
-                Vivamus et sagittis tempus.
-              </p>
-              <ul className="actions">
-                <li>
-                  <Link to="/generic" className="button">
-                    Learn more
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
+        </div>
       </section>
     </div>
   </div>

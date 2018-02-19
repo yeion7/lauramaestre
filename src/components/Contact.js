@@ -4,6 +4,8 @@ const Contact = props => (
   <section id="contact">
     <div className="inner">
       <section>
+        <h2>Registrate</h2>
+        <p>Aparta tu cupo registrandote</p>
         <form name="contact" data-netlify="true" netlify-honeypot="bot-field">
           <div style={{ display: 'none' }}>
             <label>
