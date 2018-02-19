@@ -33,8 +33,4 @@ const Menu = props => (
   </nav>
 );
 
-Menu.propTypes = {
-  onToggleMenu: React.PropTypes.func,
-};
-
 export default Menu;
