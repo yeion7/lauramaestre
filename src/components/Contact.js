@@ -13,11 +13,15 @@ const Contact = props => (
             </label>
           </div>
           <div className="field half first">
-            <label htmlFor="name">Nombre</label>
+            <label htmlFor="name" autocomplete="name">
+              Nombre
+            </label>
             <input type="text" name="name" id="name" />
           </div>
           <div className="field half">
-            <label htmlFor="email">Correo</label>
+            <label htmlFor="email" autocomplete="email">
+              Correo
+            </label>
             <input type="text" name="email" id="email" />
           </div>
           <ul className="actions">

@@ -60,18 +60,19 @@ class Landing extends React.Component {
                 <h2>Cuándo</h2>
               </header>
               <div className="row">
-                <div
-                  className="feature"
-                  dangerouslySetInnerHTML={{
-                    __html: `<iframe
-                        frameborder="0"
-                        style="border:0"
-                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBYCgpafLYqaUQbYQMTEPoHMSaOEVFlfh0
-            &q=Finca+la+Dacha"
-                        allowfullscreen
-                      />`,
-                  }}
-                />
+                <div className="feature">
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: `<iframe
+                          frameborder="0"
+                          style="border:0"
+                          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBYCgpafLYqaUQbYQMTEPoHMSaOEVFlfh0
+                    &q=Finca+la+Dacha"
+                          allowfullscreen
+                        />`,
+                    }}
+                  />
+                </div>
                 <div className="feature">
                   <h2>Villavicencio</h2>
                   <h3>24 - 25 - 26 de febrero</h3>
