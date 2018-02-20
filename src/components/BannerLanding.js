@@ -2,15 +2,6 @@ import React, { Component } from 'react';
 import Countdown from 'react-countdown-now';
 
 class BannerLanding extends Component {
-  state = {
-    countDown: false,
-  };
-
-  componentDidMount() {
-    this.setState({ countDown: true });
-    console.log('hola');
-  }
-
   render() {
     const { title, description } = this.props;
     return (
@@ -26,7 +17,6 @@ class BannerLanding extends Component {
             <Countdown
               date={new Date('February 24, 2018 09:00:00')}
               renderer={({ days, hours, minutes, seconds, completed }) => {
-                console.log({ seconds });
                 return (
                   !completed && (
                     <div className="countdown">
