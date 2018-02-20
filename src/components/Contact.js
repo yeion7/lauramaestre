@@ -9,7 +9,7 @@ const Contact = props => (
           data-netlify="true"
           netlify-honeypot="bot-field"
           method="post"
-          action="/thanks/"
+          action="/gracias/"
         >
           <div style={{ display: 'none' }}>
             <label>
