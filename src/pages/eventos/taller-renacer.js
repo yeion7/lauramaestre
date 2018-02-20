@@ -170,6 +170,7 @@ class Landing extends React.Component {
                     showStatus={false}
                     autoPlay={true}
                     infiniteLoop={true}
+                    showThumbs={false}
                     interval={10000}
                   >
                     <p>
