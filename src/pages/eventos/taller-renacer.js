@@ -3,10 +3,8 @@ import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import BannerLanding from '../../components/BannerLanding';
 import FavIcon from '../../components/FavIcon';
-
-import pic08 from '../../assets/images/pic08.jpg';
-import pic09 from '../../assets/images/pic09.jpg';
-import pic10 from '../../assets/images/pic10.jpg';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 class Landing extends React.Component {
   render() {
@@ -160,6 +158,50 @@ class Landing extends React.Component {
                   <p>Por PayU o consignación directa</p>
                 </li>
               </ul>
+            </div>
+          </section>
+          <section id="testimonial">
+            <div className="inner">
+              <header>
+                <h2 className="major">Testimoniales</h2>
+                <div className="inner">
+                  <Carousel
+                    showArrows={false}
+                    showStatus={false}
+                    autoPlay={true}
+                    infiniteLoop={true}
+                    interval={10000}
+                  >
+                    <p>
+                      "Hace un buen tiempo venían pasando situaciones en mi
+                      vida, que no lograba explicarme el porque de ello, gracias
+                      al Taller Renacer, me dio las pautas para reconocer los
+                      Proyectos inconscientes que me delegaron mis padres, para
+                      reconocer mi misión de Vida y una vez hago conciencia de
+                      estos temas, me es más fácil poder soltar, lo que debo
+                      soltar desde el amor y lo más apasionante es poder
+                      centrarme en mis propios proyectos, en mis propios
+                      objetivos de vida"
+                    </p>
+                    <p>
+                      "Realmente mi experiencia con el seminario Renacer de
+                      Laura Maestre fue maravillosa. Tener la oportunidad de ir
+                      al momento de mi concepción y nacimiento y también con su
+                      guía aceptar o descartar cada proyecto que tanto mi madre
+                      como mi padre me entregaron al momento de llegar a esta
+                      tierra fue primero que todo liberador."
+                    </p>
+                    <p>
+                      "Gracias al taller Renacer aprendí a entender las
+                      historias de mis padres, para sanar las heridas y
+                      Rencores. Hoy tengo conocimiento del ¿Por qué? de las
+                      experiencias de mi vida. Doy Gracias a Dios y a las
+                      personas como tú, Laura Maestre, que han llegado a mi vida
+                      para transformar mi proceso terrenal"
+                    </p>
+                  </Carousel>
+                </div>
+              </header>
             </div>
           </section>
         </div>

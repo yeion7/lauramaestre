@@ -7,16 +7,13 @@
       @include vendor('display', 'flex');
       @include vendor('flex-wrap', 'wrap') text-align: center;
 
-      @include breakpoint(small) {
-        display: block;
+      > .feature {
+        flex: 30%;
       }
+
       @include breakpoint(medium) {
         display: block;
         text-align: left;
-      }
-
-      > .feature {
-        flex: 30%;
       }
     }
   }
@@ -45,4 +42,8 @@
       }
     }
   }
+}
+
+.carousel .slide {
+  background: transparent !important;
 }
