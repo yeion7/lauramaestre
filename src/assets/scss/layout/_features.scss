@@ -5,8 +5,11 @@
   > .inner {
     > .row {
       @include vendor('display', 'flex');
-      text-align: center;
+      @include vendor('flex-wrap', 'wrap') text-align: center;
 
+      @include breakpoint(small) {
+        display: block;
+      }
       @include breakpoint(medium) {
         display: block;
         text-align: left;
@@ -14,6 +17,31 @@
 
       > .feature {
         flex: 30%;
+      }
+    }
+  }
+}
+
+#faq {
+  & ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    li {
+      @include breakpoint(xlarge) {
+        flex: 40%;
+        margin-right: 5%;
+      }
+
+      @include breakpoint(small) {
+        flex: 100%;
+        margin: 0 5%;
+      }
+
+      &:first-child {
+        border-top: solid 1px rgba(31, 31, 34, 0.4);
+        padding: 0.5em 0;
       }
     }
   }
