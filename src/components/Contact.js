@@ -4,9 +4,13 @@ const Contact = props => (
   <section id="contact">
     <div className="inner">
       <section>
-        <h2>Registrate</h2>
-        <p>Aparta tu cupo registrandote</p>
-        <form name="contact" data-netlify="true" netlify-honeypot="bot-field">
+        <form
+          name="contact"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          method="post"
+          action="/thanks/"
+        >
           <div style={{ display: 'none' }}>
             <label>
               Don’t fill this out: <input name="bot-field" />
@@ -14,11 +18,23 @@ const Contact = props => (
           </div>
           <div className="field half first">
             <label htmlFor="name">Nombre</label>
-            <input type="text" name="name" id="name" autoComplete="name" />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              autoComplete="name"
+              required
+            />
           </div>
           <div className="field half">
             <label htmlFor="email">Correo</label>
-            <input type="email" name="email" id="email" autoComplete="email" />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autoComplete="email"
+              required
+            />
           </div>
           <ul className="actions">
             <li>
