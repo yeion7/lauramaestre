@@ -34,7 +34,7 @@ class Template extends React.Component {
         <div id="wrapper">
           <Header onToggleMenu={this.handleToggleMenu} withMenu={!isEvent} />
           {children()}
-          <Contact />
+          <Contact pathname={pathname} />
           <Footer />
         </div>
         <Menu onToggleMenu={this.handleToggleMenu} />

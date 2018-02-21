@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { navigateTo } from 'gatsby-link';
 
 function encode(data) {
   return Object.keys(data)
@@ -8,7 +9,6 @@ function encode(data) {
 
 class Contact extends Component {
   state = {
-    text: 'Enviar',
     disabled: false,
   };
 
@@ -17,26 +17,31 @@ class Contact extends Component {
   };
 
   handleSubmit = e => {
-    console.log('works');
     e.preventDefault();
+
     this.setState({ disabled: true });
+    const { pathname } = this.props;
+    const { disabled, ...fields } = this.props;
 
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...this.state }),
-    }).then(({ status }) => {
+      body: encode({ 'form-name': pathname, ...fields }),
+    }).then(({ status, ...rest }) => {
       if (status === 200) {
         this.setState({
           name: '',
           email: '',
         });
+
+        console.log(rest);
+
+        navigateTo('/gracias');
       }
     });
   };
 
   render() {
-    console.log(this.state);
     return (
       <section id="contact">
         <div className="inner">
@@ -48,7 +53,6 @@ class Contact extends Component {
               name="contact"
               data-netlify="true"
               netlify-honeypot="bot-field"
-              action="/gracias/"
               method="post"
               onSubmit={this.handleSubmit}
             >
