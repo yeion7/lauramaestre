@@ -6,6 +6,8 @@ const FavIcon = ({ title, description, url, isPost, image }) => {
   return (
     <Helmet>
       {/* General tags */}
+      <html lang="es" />
+
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="image" content={image || lauraImage} />
