@@ -1,9 +1,12 @@
 import React from 'react';
 
-const Contact = props => (
+const Contact = ({ mail, phone }) => (
   <section id="contact">
     <div className="inner">
-      <section>
+      <section style={{ width: '100%', border: 'none' }}>
+        <header className="major">
+          <h3>Registrate</h3>
+        </header>
         <form
           name="contact"
           data-netlify="true"
@@ -43,24 +46,32 @@ const Contact = props => (
           </ul>
         </form>
       </section>
-      <section className="split">
-        <section>
-          <div className="contact-method">
-            <span className="icon alt fa-envelope" />
-            <h3>Email</h3>
-            <a href="mailto:hablame@lauramaestre.com">
-              hablame@lauramaestre.com
-            </a>
-          </div>
-        </section>
-        <section>
-          <div className="contact-method">
-            <span className="icon alt fa-whatsapp" />
-            <h3>Número</h3>
-            <span>(+57) 000-0000</span>
-          </div>
-        </section>
-      </section>
+      {/* <section className="split">
+        {
+          mail &&
+          <section>
+            <div className="contact-method">
+              <span className="icon alt fa-envelope" />
+              <h3>Email</h3>
+              <a href="mailto:hablame@lauramaestre.com">
+                hablame@lauramaestre.com
+              </a>
+            </div>
+          </section>
+
+        }
+        {
+          phone &&
+          <section>
+            <div className="contact-method">
+              <span className="icon alt fa-whatsapp" />
+              <h3>Número</h3>
+              <span>(+57) 000-0000</span>
+            </div>
+          </section>
+
+        }
+      </section> */}
     </div>
   </section>
 );

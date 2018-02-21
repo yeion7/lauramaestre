@@ -243,6 +243,16 @@
       min-width: 90px;
     }
 
+    &.seg {
+      display: block;
+    }
+
+    @include breakpoint(xsmall) {
+      &.seg {
+        display: none;
+      }
+    }
+
     span {
       display: block;
     }

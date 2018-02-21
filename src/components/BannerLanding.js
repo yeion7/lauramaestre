@@ -3,7 +3,7 @@ import Countdown from 'react-countdown-now';
 
 class BannerLanding extends Component {
   render() {
-    const { title, description } = this.props;
+    const { title, description, time } = this.props;
     return (
       <section id="banner">
         <div className="inner">
@@ -15,7 +15,7 @@ class BannerLanding extends Component {
           </div>
           <div id="content">
             <Countdown
-              date={new Date('February 24, 2018 09:00:00')}
+              date={new Date(time)}
               renderer={({ days, hours, minutes, seconds, completed }) => {
                 return (
                   !completed && (
@@ -31,6 +31,10 @@ class BannerLanding extends Component {
                       <div className="time">
                         {minutes}
                         <span>Min</span>
+                      </div>
+                      <div className="time seg">
+                        {seconds}
+                        <span>Seg</span>
                       </div>
                     </div>
                   )

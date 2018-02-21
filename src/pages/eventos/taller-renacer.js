@@ -22,6 +22,7 @@ class Landing extends React.Component {
         <BannerLanding
           title="Taller Renacer"
           description="¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?"
+          time="February 24, 2018 09:00:00"
         />
 
         <div id="main">
