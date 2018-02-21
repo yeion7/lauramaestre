@@ -1,2 +1,5 @@
 User-agent: *
-Disallow:
+Disallow: Disallow: /design
+Disallow: Disallow: /hello-world
+
+sitemap: https://lauramaestre.netlify.com/sitemap.xml
