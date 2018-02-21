@@ -25,17 +25,14 @@ class Contact extends Component {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...this.state }),
-    })
-      .then(({ status }) => {
-        if (status === 200) {
-          this.setState({
-            name: '',
-            email: '',
-          });
-          console.log('Success!', response);
-        }
-      })
-      .catch(error => alert(error));
+    }).then(({ status }) => {
+      if (status === 200) {
+        this.setState({
+          name: '',
+          email: '',
+        });
+      }
+    });
   };
 
   render() {
