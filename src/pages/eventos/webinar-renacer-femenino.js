@@ -3,21 +3,22 @@ import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import BannerLanding from '../../components/BannerLanding';
 import FavIcon from '../../components/FavIcon';
+import SEO from '../../components/SEO';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 class Landing extends React.Component {
   render() {
+    const { location } = this.props;
+
     return (
       <div>
         <FavIcon type="purple" />
-        <Helmet>
-          <title>Laura Maestre | webinar renacer</title>
-          <meta
-            name="description"
-            content="Conecta con tu esencia de mujer sanando las memorias de tu nacimiento"
-          />
-        </Helmet>
+        <SEO
+          title="Laura Maestre | webinar renacer"
+          description="Conecta con tu esencia de mujer sanando las memorias de tu nacimiento"
+          url={location.pathname}
+        />
 
         <BannerLanding
           title="Webinar renacer femenino"

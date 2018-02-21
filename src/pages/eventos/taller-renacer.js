@@ -3,22 +3,21 @@ import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import BannerLanding from '../../components/BannerLanding';
 import FavIcon from '../../components/FavIcon';
+import SEO from '../../components/SEO';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 class Landing extends React.Component {
   render() {
+    const { location } = this.props;
     return (
       <div>
         <FavIcon type="purple" />
-        <Helmet>
-          <title>Laura Maestre | Taller renacer</title>
-          <meta
-            name="description"
-            content="¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?"
-          />
-        </Helmet>
-
+        <SEO
+          title="Laura Maestre | Taller renacer"
+          description="¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?"
+          url={location.pathname}
+        />
         <BannerLanding
           title="Taller Renacer"
           description="¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?"
