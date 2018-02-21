@@ -21,7 +21,7 @@ class Contact extends Component {
 
     this.setState({ disabled: true });
     const { pathname } = this.props;
-    const { disabled, ...fields } = this.props;
+    const { disabled, ...fields } = this.state;
 
     fetch('/', {
       method: 'POST',
