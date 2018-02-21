@@ -42,6 +42,8 @@ class Contact extends Component {
   };
 
   render() {
+    const { pathname } = this.props;
+
     return (
       <section id="contact">
         <div className="inner">
@@ -50,10 +52,11 @@ class Contact extends Component {
               <h3>Registrate</h3>
             </header>
             <form
-              name="contact"
+              name={pathname}
               data-netlify="true"
               netlify-honeypot="bot-field"
               method="post"
+              action="/gracias/"
               onSubmit={this.handleSubmit}
             >
               <div style={{ display: 'none' }}>
