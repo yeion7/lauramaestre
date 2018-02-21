@@ -7,7 +7,10 @@ function encode(data) {
 }
 
 class Contact extends Component {
-  state = {};
+  state = {
+    text: 'Enviar',
+    disabled: false,
+  };
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -16,13 +19,22 @@ class Contact extends Component {
   handleSubmit = e => {
     console.log('works');
     e.preventDefault();
+    this.setState({ disabled: true });
 
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...this.state }),
     })
-      .then(response => console.log('Success!', response))
+      .then(({ status }) => {
+        if (status === 200) {
+          this.setState({
+            name: '',
+            email: '',
+          });
+          console.log('Success!', response);
+        }
+      })
       .catch(error => alert(error));
   };
 
@@ -39,6 +51,7 @@ class Contact extends Component {
               name="contact"
               data-netlify="true"
               netlify-honeypot="bot-field"
+              action="/gracias/"
               method="post"
               onSubmit={this.handleSubmit}
             >
@@ -71,7 +84,12 @@ class Contact extends Component {
               </div>
               <ul className="actions">
                 <li>
-                  <input type="submit" value="Enviar" className="special" />
+                  <input
+                    type="submit"
+                    value="Enviar"
+                    className="special"
+                    disabled={this.state.disabled}
+                  />
                 </li>
               </ul>
             </form>
