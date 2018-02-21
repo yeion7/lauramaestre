@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+}
+
 class Contact extends Component {
   state = {};
 
@@ -8,6 +14,7 @@ class Contact extends Component {
   };
 
   handleSubmit = e => {
+    console.log('works');
     e.preventDefault();
 
     fetch('/', {
