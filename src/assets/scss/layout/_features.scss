@@ -19,7 +19,13 @@
   }
 }
 
+#details {
+  background: lighten(_palette(bg-alt), 60%);
+}
+
 #faq {
+  background: lighten(_palette(bg-alt), 20%);
+
   & ul {
     display: flex;
     flex-wrap: wrap;
