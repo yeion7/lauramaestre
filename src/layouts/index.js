@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import Menu from '../components/Menu';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import { last } from 'lodash';
 
 class Template extends React.Component {
   constructor(props) {
@@ -26,7 +27,7 @@ class Template extends React.Component {
     const { pathname } = location;
 
     const isEvent = /eventos/g.test(pathname);
-
+    const path = last(pathname.split('/').filter(Boolean));
     return (
       <div
         className={`body ${this.state.isMenuVisible ? 'is-menu-visible' : ''}`}
@@ -34,7 +35,7 @@ class Template extends React.Component {
         <div id="wrapper">
           <Header onToggleMenu={this.handleToggleMenu} withMenu={!isEvent} />
           {children()}
-          <Contact pathname={pathname} />
+          <Contact pathname={path} />
           <Footer />
         </div>
         <Menu onToggleMenu={this.handleToggleMenu} />
