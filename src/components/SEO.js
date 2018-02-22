@@ -35,26 +35,6 @@ const FavIcon = ({ title, description, url, isPost, image }) => {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image || '/laura4.jpg'} />
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-        window.fbAsyncInit = function() {
-         FB.init({
-           appId      : '204324066814610',
-           xfbml      : true,
-           version    : 'v2.12'
-         });
-         FB.AppEvents.logPageView();};
-         (function(d, s, id){
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {return;}
-            js = d.createElement(s); js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-          }(document, 'script', 'facebook-jssdk'));
-      `,
-        }}
-      />
     </Helmet>
   );
 };
