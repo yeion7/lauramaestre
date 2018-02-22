@@ -29,14 +29,15 @@ class Landing extends React.Component {
         <div id="main">
           <section id="features">
             <div className="inner">
-              <header className="major">
+              <header>
                 <h2>Qué lograras</h2>
               </header>
               <div className="row">
                 <div>
                   <p>
-                    Recordaras y sanarás las emociones que viviste durante tu
-                    gestación.
+                    Reconocerás la influencia que han tenido las historias
+                    alrededor de tu nacimiento en los roles que desempeñas como
+                    la hermosa mujer que eres
                   </p>
                 </div>
               </div>

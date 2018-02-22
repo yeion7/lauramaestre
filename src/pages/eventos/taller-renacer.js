@@ -27,23 +27,27 @@ class Landing extends React.Component {
         <div id="main">
           <section id="features">
             <div className="inner">
-              <header className="major">
+              <header>
                 <h2>Qué lograras</h2>
               </header>
               <div className="row">
                 <div className="feature">
+                  <i class="fa fa-star fa-4x" style={{ color: 'white' }} />
                   <p>
                     Recordaras y sanarás las emociones que viviste durante tu
                     gestación.
                   </p>
                 </div>
                 <div className="feature">
+                  <i class="fa fa-medkit fa-4x" style={{ color: 'white' }} />
+
                   <p>
                     Sanarás la forma como naciste ya que ella marca como te
                     presentas y te desenvuelves en la vida.
                   </p>
                 </div>
                 <div className="feature">
+                  <i class="fa fa-plane fa-4x" style={{ color: 'white' }} />
                   <p>
                     Crearás nuevos permisos y proyectos para crear la vida que
                     deseas.
@@ -54,25 +58,40 @@ class Landing extends React.Component {
           </section>
           <section id="details">
             <div className="inner">
-              <header className="major">
+              <header>
                 <h2>Cuándo</h2>
               </header>
               <div className="row">
-                <div className="feature" />
                 <div className="feature">
-                  <h2>Villavicencio</h2>
-                  <h3>24 - 25 - 26 de febrero</h3>
+                  <div className="card">
+                    <i
+                      class="fa fa-map-marker fa-4x"
+                      style={{ color: 'cadetblue' }}
+                    />
+                    <h3>Villavicencio</h3>
+                  </div>
                 </div>
                 <div className="feature">
-                  <h2>Inversión</h2>
-                  <h3>$ 300.000</h3>
+                  <div className="card">
+                    <i
+                      class="fa fa-calendar-check-o fa-4x"
+                      style={{ color: 'cadetblue' }}
+                    />
+                    <h3>24 - 25 - 26 de Febrero</h3>
+                  </div>
+                </div>
+                <div className="feature">
+                  <div className="card" style={{ color: 'cadetblue' }}>
+                    <i class="fa fa-money fa-4x" />
+                    <h3>$ 300.000</h3>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
           <section id="faq">
             <div className="inner">
-              <header className="major">
+              <header>
                 <h2>Preguntas frecuentes</h2>
               </header>
               <ul className="alt row">
@@ -163,7 +182,7 @@ class Landing extends React.Component {
           <section id="testimonial">
             <div className="inner">
               <header>
-                <h2 className="major">Testimoniales</h2>
+                <h2>Testimoniales</h2>
                 <div className="inner">
                   <Carousel
                     showArrows={false}

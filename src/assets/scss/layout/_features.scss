@@ -20,7 +20,18 @@
 }
 
 #details {
-  background: lighten(_palette(bg-alt), 60%);
+  background: white;
+}
+
+#features,
+#testimonial,
+#faq {
+  color: white;
+
+  h2,
+  h3 {
+    color: inherit;
+  }
 }
 
 #faq {
@@ -52,4 +63,13 @@
 
 .carousel .slide {
   background: transparent !important;
+}
+
+.card {
+  background-color: #fff;
+  width: 300px;
+  margin: 50px auto 0;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  min-height: 240px;
 }

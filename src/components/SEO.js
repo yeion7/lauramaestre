@@ -1,6 +1,5 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import lauraImage from '../assets/images/laura4.jpg';
 
 const FavIcon = ({ title, description, url, isPost, image }) => {
   return (
@@ -10,7 +9,7 @@ const FavIcon = ({ title, description, url, isPost, image }) => {
 
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="image" content={image || lauraImage} />
+      <meta name="image" content={image || '/laura4.jpg'} />
 
       {/* Schema.org tags */}
       {/* <script type="application/ld+json">
