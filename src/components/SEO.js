@@ -23,7 +23,7 @@ const FavIcon = ({ title, description, url, isPost, image }) => {
       {isPost && <meta property="og:type" content="article" />}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image || lauraImage} />
+      <meta property="og:image" content={image || '/laura4.jpg'} />
       <meta property="fb:app_id" content={204324066814610} />
 
       {/* Twitter Card tags */}
@@ -34,7 +34,7 @@ const FavIcon = ({ title, description, url, isPost, image }) => {
       /> */}
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image || lauraImage} />
+      <meta name="twitter:image" content={image || '/laura4.jpg'} />
     </Helmet>
   );
 };
