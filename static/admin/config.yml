@@ -1,9 +1,5 @@
-baseurl: "/"
-languageCode: "es-CO"
-
 backend:
   name: git-gateway
-  repo: yeion7/lauramaestre
   branch: master
 
 media_folder: static/img
