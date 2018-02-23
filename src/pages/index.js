@@ -3,6 +3,7 @@ import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import Banner from '../components/Banner';
 import FavIcon from '../components/FavIcon';
+import graphql from "graphql";
 
 import pic01 from '../assets/images/pic01.jpg';
 import pic02 from '../assets/images/pic02.jpg';
@@ -13,6 +14,7 @@ import pic06 from '../assets/images/pic06.jpg';
 
 class HomeIndex extends React.Component {
   render() {
+    console.log(this.props);
     const siteTitle = this.props.data.site.siteMetadata.title;
     const siteDescription = this.props.data.site.siteMetadata.description;
 
@@ -102,7 +104,7 @@ class HomeIndex extends React.Component {
 
 export default HomeIndex;
 
-export const pageQuery = graphql`
+export const query = graphql`
   query PageQuery {
     site {
       siteMetadata {
