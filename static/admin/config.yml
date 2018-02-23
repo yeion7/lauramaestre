@@ -2,14 +2,9 @@ baseurl: "/"
 languageCode: "es-CO"
 
 backend:
-  name: netlify-api
-  url: http://localhost:8080
-
-production:
-  backend:
-    name: git-gateway
-    repo: yeion7/lauramaestre
-    branch: master
+  name: git-gateway
+  repo: yeion7/lauramaestre
+  branch: master
 
 media_folder: static/img
 public_folder: /img
