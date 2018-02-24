@@ -9,31 +9,30 @@ const Features = () => {
         </header>
         <div className="row">
           <div className="feature">
-            <i class="fa fa-star fa-4x" style={{ color: 'white' }} />
+            <i className="fa fa-star fa-4x" style={{ color: 'white' }} />
             <p>
               Recordaras y sanarás las emociones que viviste durante tu
               gestación.
             </p>
           </div>
           <div className="feature">
-            <i class="fa fa-medkit fa-4x" style={{ color: 'white' }} />
+            <i className="fa fa-medkit fa-4x" style={{ color: 'white' }} />
 
             <p>
-              Sanarás la forma como naciste ya que ella marca como te
-              presentas y te desenvuelves en la vida.
+              Sanarás la forma como naciste ya que ella marca como te presentas
+              y te desenvuelves en la vida.
             </p>
           </div>
           <div className="feature">
-            <i class="fa fa-plane fa-4x" style={{ color: 'white' }} />
+            <i className="fa fa-plane fa-4x" style={{ color: 'white' }} />
             <p>
-              Crearás nuevos permisos y proyectos para crear la vida que
-              deseas.
+              Crearás nuevos permisos y proyectos para crear la vida que deseas.
             </p>
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default Features;
