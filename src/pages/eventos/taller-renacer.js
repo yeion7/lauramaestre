@@ -86,7 +86,7 @@ class Landing extends React.Component {
                 <div className="feature">
                   <div className="card" style={{ color: 'cadetblue' }}>
                     <i class="fa fa-money fa-4x" />
-                    <h3>$ 300.000</h3>
+                    <h3>$ 350.000</h3>
                   </div>
                 </div>
               </div>
@@ -113,6 +113,14 @@ class Landing extends React.Component {
                     emociones para ir a momentos de etapas tempranas como
                     concepción, gestación y nacimiento; resentir la emoción,
                     colocar una nueva y reconstruir una nueva historia.
+                  </p>
+                </li>
+                <li>
+                  <h3>¿Qué descuentos tengo?</h3>
+                  <p>
+                    Recibes un descuento por comprar antes las entradas,
+                    descuento 30% antes de 28 feb, Descuento 15% antes de 10
+                    marzo.
                   </p>
                 </li>
                 <li>
