@@ -23,7 +23,7 @@ class Landing extends React.Component {
         <BannerLanding
           title="Webinar renacer femenino"
           description="Conecta con tu esencia de mujer sanando las memorias de tu nacimiento"
-          time="March 8, 2018 12:00:00"
+          time="March 7, 2018 19:00:00"
         />
 
         <div id="main">

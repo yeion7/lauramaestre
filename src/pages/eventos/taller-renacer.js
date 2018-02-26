@@ -24,7 +24,7 @@ class Landing extends React.Component {
         <BannerLanding
           title="Taller Renacer"
           description="¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?"
-          time="February 24, 2018 09:00:00"
+          time="March 17, 2018 09:00:00"
         />
 
         <div id="main">
@@ -71,7 +71,7 @@ class Landing extends React.Component {
                       class="fa fa-map-marker fa-4x"
                       style={{ color: 'cadetblue' }}
                     />
-                    <h3>Villavicencio</h3>
+                    <h3>Bucaramanga</h3>
                   </div>
                 </div>
                 <div className="feature">
@@ -80,7 +80,7 @@ class Landing extends React.Component {
                       class="fa fa-calendar-check-o fa-4x"
                       style={{ color: 'cadetblue' }}
                     />
-                    <h3>24 - 25 - 26 de Febrero</h3>
+                    <h3>17 de Marzo</h3>
                   </div>
                 </div>
                 <div className="feature">
