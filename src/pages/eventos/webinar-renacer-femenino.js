@@ -21,7 +21,7 @@ class Landing extends React.Component {
         />
 
         <BannerLanding
-          title="Webinar renacer femenino"
+          title="Webinar 5 claves para conectar con tu esencia de mujer"
           description="Conecta con tu esencia de mujer sanando las memorias de tu nacimiento"
           time="March 7, 2018 19:00:00"
         />
