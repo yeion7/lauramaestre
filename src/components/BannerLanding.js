@@ -13,35 +13,37 @@ class BannerLanding extends Component {
           <div className="content">
             <p>{description}</p>
           </div>
-          <div id="content">
-            <Countdown
-              date={new Date(time)}
-              renderer={({ days, hours, minutes, seconds, completed }) => {
-                return (
-                  !completed && (
-                    <div className="countdown">
-                      <div className="time">
-                        {days}
-                        <span>Días</span>
+          {time && (
+            <div id="content">
+              <Countdown
+                date={new Date(time)}
+                renderer={({ days, hours, minutes, seconds, completed }) => {
+                  return (
+                    !completed && (
+                      <div className="countdown">
+                        <div className="time">
+                          {days}
+                          <span>Días</span>
+                        </div>
+                        <div className="time">
+                          {hours}
+                          <span>Horas</span>
+                        </div>
+                        <div className="time">
+                          {minutes}
+                          <span>Min</span>
+                        </div>
+                        <div className="time seg">
+                          {seconds}
+                          <span>Seg</span>
+                        </div>
                       </div>
-                      <div className="time">
-                        {hours}
-                        <span>Horas</span>
-                      </div>
-                      <div className="time">
-                        {minutes}
-                        <span>Min</span>
-                      </div>
-                      <div className="time seg">
-                        {seconds}
-                        <span>Seg</span>
-                      </div>
-                    </div>
-                  )
-                );
-              }}
-            />,
-          </div>
+                    )
+                  );
+                }}
+              />,
+            </div>
+          )}
           <ul className="actions">
             <li>
               <a href="#contact" className="button special">
