@@ -71,7 +71,7 @@ class Landing extends React.Component {
                       class="fa fa-map-marker fa-4x"
                       style={{ color: 'cadetblue' }}
                     />
-                    <h3>Bucaramanga</h3>
+                    <h3>Bogotá</h3>
                   </div>
                 </div>
                 <div className="feature">
