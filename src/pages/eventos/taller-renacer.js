@@ -80,7 +80,7 @@ class Landing extends React.Component {
                       class="fa fa-calendar-check-o fa-4x"
                       style={{ color: 'cadetblue' }}
                     />
-                    <h3>17 de Marzo</h3>
+                    <h3>24 de Marzo</h3>
                   </div>
                 </div>
                 <div className="feature">
