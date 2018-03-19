@@ -1,5 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 import User1 from '../assets/images/user1.jpg';
 import User2 from '../assets/images/user2.jpg';
@@ -21,15 +22,14 @@ const Testimonial = ({}) => (
           >
             <div>
               <p>
-                "Hace un buen tiempo venían pasando situaciones en mi
-                vida, que no lograba explicarme el porque de ello,
-                gracias al Taller Renacer, me dio las pautas para
-                reconocer los Proyectos inconscientes que me delegaron
-                mis padres, para reconocer mi misión de Vida y una vez
-                hago conciencia de estos temas, me es más fácil poder
-                soltar, lo que debo soltar desde el amor y lo más
-                apasionante es poder centrarme en mis propios proyectos,
-                en mis propios objetivos de vida"
+                "Hace un buen tiempo venían pasando situaciones en mi vida, que
+                no lograba explicarme el porque de ello, gracias al Taller
+                Renacer, me dio las pautas para reconocer los Proyectos
+                inconscientes que me delegaron mis padres, para reconocer mi
+                misión de Vida y una vez hago conciencia de estos temas, me es
+                más fácil poder soltar, lo que debo soltar desde el amor y lo
+                más apasionante es poder centrarme en mis propios proyectos, en
+                mis propios objetivos de vida"
               </p>
               <img
                 src={User3}
@@ -39,12 +39,12 @@ const Testimonial = ({}) => (
             </div>
             <div>
               <p>
-                "Realmente mi experiencia con el seminario Renacer de
-                Laura Maestre fue maravillosa. Tener la oportunidad de
-                ir al momento de mi concepción y nacimiento y también
-                con su guía aceptar o descartar cada proyecto que tanto
-                mi madre como mi padre me entregaron al momento de
-                llegar a esta tierra fue primero que todo liberador."
+                "Realmente mi experiencia con el seminario Renacer de Laura
+                Maestre fue maravillosa. Tener la oportunidad de ir al momento
+                de mi concepción y nacimiento y también con su guía aceptar o
+                descartar cada proyecto que tanto mi madre como mi padre me
+                entregaron al momento de llegar a esta tierra fue primero que
+                todo liberador."
               </p>
               <img
                 src={User1}
@@ -54,12 +54,11 @@ const Testimonial = ({}) => (
             </div>
             <div>
               <p>
-                "Gracias al taller Renacer aprendí a entender las
-                historias de mis padres, para sanar las heridas y
-                Rencores. Hoy tengo conocimiento del ¿Por qué? de las
-                experiencias de mi vida. Doy Gracias a Dios y a las
-                personas como tú, Laura Maestre, que han llegado a mi
-                vida para transformar mi proceso terrenal"
+                "Gracias al taller Renacer aprendí a entender las historias de
+                mis padres, para sanar las heridas y Rencores. Hoy tengo
+                conocimiento del ¿Por qué? de las experiencias de mi vida. Doy
+                Gracias a Dios y a las personas como tú, Laura Maestre, que han
+                llegado a mi vida para transformar mi proceso terrenal"
               </p>
               <img
                 src={User2}
@@ -74,4 +73,4 @@ const Testimonial = ({}) => (
   </section>
 );
 
-export default Testimonial
+export default Testimonial;
