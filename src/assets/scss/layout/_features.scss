@@ -34,9 +34,31 @@
   }
 }
 
-#faq {
-  background: lighten(_palette(bg-alt), 20%);
+#features.blue {
+  background: darken(_palette(accent5), 5%);
+}
 
+#testimonial.blue {
+  background: darken(_palette(accent5), 1%);
+}
+
+#faq.blue {
+  background: darken(_palette(accent5), 10%);
+}
+
+#features.violet {
+  background: lighten(_palette(accent3), 0%);
+}
+
+#testimonial.violet {
+  background: lighten(_palette(accent3), 3%);
+}
+
+#faq.violet {
+  background: darken(_palette(accent3), 5%);
+}
+
+#faq {
   & ul {
     display: flex;
     flex-wrap: wrap;

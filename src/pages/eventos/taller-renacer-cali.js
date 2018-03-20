@@ -22,6 +22,7 @@ class Landing extends React.Component {
           title="Taller Renacer"
           description="¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?"
           time="April 7, 2018 09:00:00"
+          color="violet"
         />
 
         <div id="main">
@@ -41,10 +42,16 @@ class Landing extends React.Component {
                 text: `Crearás nuevos permisos y proyectos para crear la vida que deseas.`,
               },
             ]}
+            color="violet"
           />
-          <Details place="Cali" date="7 de Abril" price="$300.000" />
-          <Faq />
-          <Testimonial />
+          <Details
+            color="violet"
+            place="Cali"
+            date="7 de Abril"
+            price="$300.000"
+          />
+          <Faq color="violet" />
+          <Testimonial color="violet" />
         </div>
       </div>
     );

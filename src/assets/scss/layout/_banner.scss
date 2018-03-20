@@ -229,7 +229,6 @@
   justify-content: flex-end;
 
   .time {
-    background: _palette(bg-alt);
     padding: 5px;
     margin: 0 5px;
     text-align: center;
@@ -254,6 +253,14 @@
 
     span {
       display: block;
+    }
+
+    &.violet {
+      background: _palette(accent3);
+    }
+
+    &.blue {
+      background: _palette(accent5);
     }
   }
 }

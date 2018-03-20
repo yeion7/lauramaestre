@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Features = ({ achievements = [] }) => {
+const Features = ({ color, achievements = [] }) => {
   return (
-    <section id="features">
+    <section id="features" className={color}>
       <div className="inner">
         <header>
           <h2>Qué lograras</h2>

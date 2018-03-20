@@ -6,8 +6,8 @@ import User1 from '../assets/images/user1.jpg';
 import User2 from '../assets/images/user2.jpg';
 import User3 from '../assets/images/user3.jpg';
 
-const Testimonial = ({}) => (
-  <section id="testimonial">
+const Testimonial = ({ color }) => (
+  <section id="testimonial" className={color}>
     <div className="inner">
       <header>
         <h2>Testimoniales</h2>

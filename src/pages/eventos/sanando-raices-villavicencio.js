@@ -24,6 +24,7 @@ class Landing extends React.Component {
           description="¿Te has preguntado porqué no tienes los resultados que quieres en tu vida? ¿Has sentido que hay historias de tu familia que se repiten?"
           time="May 5, 2018 09:00:00"
           image={Image}
+          color="blue"
         />
 
         <div id="main">
@@ -42,14 +43,16 @@ class Landing extends React.Component {
                 text: `Crearás nuevos permisos y proyectos para crear la vida que deseas.`,
               },
             ]}
+            color="blue"
           />
           <Details
             place="Villavicencio, Meta."
             date="5 de Mayo"
             price="$130.000"
+            color="blue"
           />
-          <Faq />
-          <Testimonial />
+          <Faq color="blue" />
+          <Testimonial color="blue" />
         </div>
       </div>
     );

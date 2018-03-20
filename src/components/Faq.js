@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Faq = () => {
+const Faq = ({ color }) => {
   return (
-    <section id="faq">
+    <section id="faq" className={color}>
       <div className="inner">
         <header>
           <h2>Preguntas frecuentes</h2>

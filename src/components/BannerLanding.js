@@ -4,7 +4,7 @@ import LauraImage from '../assets/images/laura4.jpg';
 
 class BannerLanding extends Component {
   render() {
-    const { title, description, time, image } = this.props;
+    const { title, description, time, image, color = 'violet' } = this.props;
     return (
       <section
         id="banner"
@@ -25,19 +25,19 @@ class BannerLanding extends Component {
                   return (
                     !completed && (
                       <div className="countdown">
-                        <div className="time">
+                        <div className={`time ${color}`}>
                           {days}
                           <span>Días</span>
                         </div>
-                        <div className="time">
+                        <div className={`time ${color}`}>
                           {hours}
                           <span>Horas</span>
                         </div>
-                        <div className="time">
+                        <div className={`time ${color}`}>
                           {minutes}
                           <span>Min</span>
                         </div>
-                        <div className="time seg">
+                        <div className={`time seg ${color}`}>
                           {seconds}
                           <span>Seg</span>
                         </div>

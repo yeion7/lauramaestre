@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Details = ({ place, date, price }) => {
+const Details = ({ color, place, date, price }) => {
   return (
-    <section id="details">
+    <section id="details" className={color}>
       <div className="inner">
         <header>
           <h2>Cuándo</h2>

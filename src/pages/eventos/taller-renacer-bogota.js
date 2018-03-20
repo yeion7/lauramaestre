@@ -22,9 +22,11 @@ class Landing extends React.Component {
           title="Taller Renacer"
           description="¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?"
           time="March 24, 2018 09:00:00"
+          color="violet"
         />
         <div id="main">
           <Feautures
+            color="violet"
             achievements={[
               {
                 icon: 'fa-star',
@@ -42,9 +44,14 @@ class Landing extends React.Component {
             ]}
           />
 
-          <Details place="Bogotá" date="24 de Marzo" price="$300.000" />
-          <Faq />
-          <Testimonial />
+          <Details
+            color="violet"
+            place="Bogotá"
+            date="24 de Marzo"
+            price="$300.000"
+          />
+          <Faq color="violet" />
+          <Testimonial color="violet" />
         </div>
       </div>
     );
