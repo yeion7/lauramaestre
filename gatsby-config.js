@@ -4,7 +4,7 @@ module.exports = {
     author: 'Yeison Daza',
     description:
       '¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?',
-    siteUrl: `https://www.lauramaestre.com`,
+    siteUrl: `https://lauramaestre.netlify.com`,
   },
   pathPrefix: '/',
   plugins: [
