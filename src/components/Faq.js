@@ -27,26 +27,11 @@ const Faq = () => {
           </li>
           <li>
             <h3>¿Qué duración tiene el taller?</h3>
-            <p>El taller dura un día de 8am -6pm.</p>
+            <p>El taller dura un día de 8am-6pm.</p>
           </li>
           <li>
             <h3>¿Debo llevar comidas?</h3>
             <p>El taller incluye refrigerio mañana y tarde y almuerzo.</p>
-          </li>
-          <li>
-            <h3>¿Cuál es la fecha de los talleres?</h3>
-            <p>
-              Se puede elegir entre tres fechas: sábado 24 de febrero, domingo
-              25 de febrero o domingo 26 de febrero.
-            </p>
-          </li>
-          <li>
-            <h3>¿En qué lugar se realiza el taller?</h3>
-            <p>
-              En la Finca Casa Campestre San Miguel, vía de Villavicencio a
-              Acacías después de la Nohora. Se estableció un punto de Encuentro
-              en el Centro comercial Viva. Si necesita transporte nos informa.
-            </p>
           </li>
           <li>
             <h3>¿Qué Incluye la inversión del taller?</h3>
@@ -76,10 +61,7 @@ const Faq = () => {
           </li>
           <li>
             <h3>¿El taller es presencial o virtual?</h3>
-            <p>
-              El taller Renacer es presencial, aunque virtual por Skype puede
-              hacerse el mismo ejercicio personalizado
-            </p>
+            <p>El evento es presencial</p>
           </li>
           <li>
             <h3>¿Qué métodos de pago existen?</h3>

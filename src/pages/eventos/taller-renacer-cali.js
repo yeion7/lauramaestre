@@ -25,7 +25,23 @@ class Landing extends React.Component {
         />
 
         <div id="main">
-          <Feautures />
+          <Feautures
+            achievements={[
+              {
+                icon: 'fa-star',
+                text: `Recordaras y sanarás las emociones que viviste durante tu
+                gestación.`,
+              },
+              {
+                icon: 'fa-medkit',
+                text: `Sanarás la forma como naciste ya que ella marca como te presentas y te desenvuelves en la vida.`,
+              },
+              {
+                icon: 'fa-plane',
+                text: `Crearás nuevos permisos y proyectos para crear la vida que deseas.`,
+              },
+            ]}
+          />
           <Details place="Cali" date="7 de Abril" price="$300.000" />
           <Faq />
           <Testimonial />

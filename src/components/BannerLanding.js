@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import Countdown from 'react-countdown-now';
+import LauraImage from '../assets/images/laura4.jpg';
 
 class BannerLanding extends Component {
   render() {
-    const { title, description, time } = this.props;
+    const { title, description, time, image } = this.props;
     return (
-      <section id="banner">
+      <section
+        id="banner"
+        style={{ backgroundImage: `url(${image || LauraImage})` }}
+      >
         <div className="inner">
           <header className="">
             <h1>{title}</h1>
