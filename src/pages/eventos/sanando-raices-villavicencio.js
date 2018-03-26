@@ -52,7 +52,6 @@ class Landing extends React.Component {
             color="blue"
           />
           <Faq color="blue" />
-          <Testimonial color="blue" />
         </div>
       </div>
     );
