@@ -13,7 +13,6 @@
 
       @include breakpoint(medium) {
         display: block;
-        text-align: left;
       }
     }
   }
@@ -89,11 +88,15 @@
 
 .card {
   background-color: #fff;
-  width: 300px;
+  min-width: 280px;
   margin: 50px auto 0;
   padding: 30px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .picture__testimonial {
