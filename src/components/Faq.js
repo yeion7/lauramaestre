@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Faq = ({ color }) => {
+const Faq = ({ color, questions = [] }) => {
   return (
     <section id="faq" className={color}>
       <div className="inner">
@@ -67,6 +67,12 @@ const Faq = ({ color }) => {
             <h3>¿Qué métodos de pago existen?</h3>
             <p>Por PayU o consignación directa</p>
           </li>
+          {questions.map(({ question, answer }) => (
+            <li>
+              <h3>{question}</h3>
+              <p>{answer}</p>
+            </li>
+          ))}
         </ul>
       </div>
     </section>
