@@ -9,7 +9,7 @@ const Faq = ({ color }) => {
         </header>
         <ul className="alt row">
           <li>
-            <h3>Cuál es la metodología utilizada en el taller?</h3>
+            <h3>¿Cuál es la metodología utilizada en el taller?</h3>
             <p>
               El taller es terapeútico y casi personalizado. Sólo tiene 6 cupos.
               Cada persona recibe terapia y se hace el correspondiente
