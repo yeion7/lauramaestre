@@ -34,6 +34,11 @@ const Details = ({ color, place, date, price }) => {
             </div>
           </div>
         </div>
+        <div className="inner align-center" style={{ padding: '15px 0' }}>
+          <a href="#contact" className="button big icon fa-check ">
+            Registrate
+          </a>
+        </div>
       </div>
     </section>
   );
