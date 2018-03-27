@@ -1,5 +1,5 @@
 import React from 'react';
-import Laura from '../assets/images/laura6.jpg';
+import Laura from '../assets/images/laura1.jpg';
 
 const Self = ({ color, achievements = [] }) => {
   return (
@@ -10,12 +10,9 @@ const Self = ({ color, achievements = [] }) => {
         </header>
         <div className="row">
           <div className="3u 12u$(small)">
-            <img
-              src={Laura}
-              alt="Foto Laura Maestre"
-              width="250px"
-              height="250px"
-              style={{ borderRadius: '50%' }}
+            <div
+              className="laura"
+              style={{ backgroundImage: `url(${Laura})` }}
             />
           </div>
           <div className="9u 12u$(small)">
