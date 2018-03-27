@@ -90,7 +90,7 @@ class Landing extends React.Component {
             color={color}
             place="Cali"
             date="7 de Abril"
-            price="$300.000"
+            price="$350.000"
           />
           <Faq
             questions={[
