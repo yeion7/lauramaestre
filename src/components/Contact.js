@@ -110,7 +110,7 @@ class Contact extends Component {
                   <a
                     target="_blank"
                     href="https://api.whatsapp.com/send?phone=573214866637"
-                    className="button special icon fa-whatsapp"
+                    className="button icon fa-whatsapp"
                   >
                     Contactar
                   </a>
