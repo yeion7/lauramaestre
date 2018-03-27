@@ -1,5 +1,5 @@
 import React from 'react';
-import Laura from '../assets/images/laura1.jpg';
+import Laura from '../assets/images/laura6.jpg';
 
 const Self = ({ color, achievements = [] }) => {
   return (

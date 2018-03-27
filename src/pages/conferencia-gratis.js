@@ -5,7 +5,7 @@ import Banner from '../components/Banner';
 import FavIcon from '../components/FavIcon';
 import BannerLanding from '../components/BannerLanding';
 import Feautures from '../components/Feautures';
-import Laura from '../assets/images/laura1.jpg';
+import Laura from '../assets/images/laura5.jpg';
 
 class Gift extends React.Component {
   render() {
