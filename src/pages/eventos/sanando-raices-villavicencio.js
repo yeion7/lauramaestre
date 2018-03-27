@@ -63,7 +63,51 @@ class Landing extends React.Component {
             price="$130.000"
             color={color}
           />
-          <Faq color={color} />
+          <Faq
+            questions={[
+              {
+                question: `¿Qué duración tiene el taller?`,
+                answer: `El taller dura un día de 8am-6pm.`,
+              },
+              {
+                question: `¿Qué Incluye la inversión del taller?`,
+                answer: `Incluye Refrigerios, recordatorio`,
+              },
+              {
+                question: `¿Debo llevar comidas?`,
+                answer: `El taller sólo incluye refrigerios; no incluye el almuerzo.`,
+              },
+              {
+                question: `¿En qué ropa debo llevar al taller?`,
+                answer: `Ropa cómoda. Al final de taller se pide una prenda blanca puede ser completa (vestido) o camisa o pantalón; pero esta es al final.`,
+              },
+              {
+                question: `¿Debo tener una preparación anterior al taller?`,
+                answer: `La única preparación es que una semana antes, se envían una ficha para llenar respecto a tu nacimiento y así empezar a abrir el inconsciente.`,
+              },
+              {
+                question: `¿Cuál es la metodología utilizada en el taller?`,
+                answer: `El taller es grupal y los participantes realizarán su árbol genealógico donde descubrirán a través de fechas, nombres, enfermedades, características, si están reparando historias familiares que no les dejan avanzar.`,
+              },
+              {
+                question: `¿Debe ser mayor de edad para hacer el taller?`,
+                answer: `Se recomienda mayor de 15 años`,
+              },
+              {
+                question: `¿El taller es presencial o virtual?`,
+                answer: `Por ahora sólo presencial`,
+              },
+              {
+                question: `¿Qué métodos de pago existen?`,
+                answer: `Por PayU o consignación directa`,
+              },
+              {
+                question: `¿En qué lugar se realiza el taller?`,
+                answer: `En el Hotel Saloma.  Calle 26 #38-69, Villavicencio. Meta.`,
+              },
+            ]}
+            color={color}
+          />
         </div>
       </div>
     );
