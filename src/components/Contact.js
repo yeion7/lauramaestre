@@ -49,7 +49,7 @@ class Contact extends Component {
         <div className="inner">
           <section style={{ width: '100%', border: 'none' }}>
             <header className="major">
-              <h3>Registrate</h3>
+              <h3>Dejanos tu duda</h3>
             </header>
             <form
               name={pathname}
@@ -72,6 +72,7 @@ class Contact extends Component {
                   id="name"
                   autoComplete="name"
                   required
+                  placeholder="Tu nombre"
                   onChange={this.handleChange}
                 />
               </div>
@@ -83,7 +84,17 @@ class Contact extends Component {
                   id="email"
                   autoComplete="email"
                   required
+                  placeholder="tucorreo@gmail.com"
                   onChange={this.handleChange}
+                />
+              </div>
+              <div className="12u">
+                <label htmlFor="message">Mensaje</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Tu duda"
+                  rows="6"
                 />
               </div>
               <ul className="actions">
@@ -94,6 +105,15 @@ class Contact extends Component {
                     className="special"
                     disabled={this.state.disabled}
                   />
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://api.whatsapp.com/send?phone=573214866637"
+                    className="button special icon fa-whatsapp"
+                  >
+                    Contactar
+                  </a>
                 </li>
               </ul>
             </form>

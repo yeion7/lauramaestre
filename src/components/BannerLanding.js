@@ -51,7 +51,7 @@ class BannerLanding extends Component {
           <ul className="actions">
             <li>
               <a href="#contact" className="button special">
-                Registrarme
+                Más información
               </a>
             </li>
           </ul>

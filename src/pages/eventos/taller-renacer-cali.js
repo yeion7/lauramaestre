@@ -6,10 +6,13 @@ import Details from '../../components/Details';
 import Faq from '../../components/Faq';
 import Feautures from '../../components/Feautures';
 import Testimonial from '../../components/Testimonial';
+import Questions from '../../components/Questions';
+import Self from '../../components/Self';
 
 class Landing extends React.Component {
   render() {
     const { location } = this.props;
+    const color = 'violet';
     return (
       <div>
         <FavIcon type="purple" />
@@ -22,7 +25,7 @@ class Landing extends React.Component {
           title="Taller Renacer"
           description="¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?"
           time="April 7, 2018 09:00:00"
-          color="violet"
+          color={color}
         />
 
         <div id="main">
@@ -42,10 +45,24 @@ class Landing extends React.Component {
                 text: `Crearás nuevos permisos y proyectos para crear la vida que deseas.`,
               },
             ]}
-            color="violet"
+            color={color}
           />
+          <Questions
+            questions={[
+              `¿Tienes miedos que no te dejan avanzar en el camino de cumplir tus sueños?`,
+              `¿Has tenido dificultad en tener una  relación de pareja que quieres?`,
+              `¿Pierdes el control muy fácil de tus emociones y actúas bajo el miedo, rabia o tristeza?`,
+              `¿Sientes que tu vida no tiene sentido?`,
+              `¿No te dedicas a lo que te gusta o en lo que te dedicas no generas los resultados económicos que quieres?`,
+              `¿Actualmente no tienes las condiciones ideales de salud?`,
+
+              `Si alguna de las preguntas contestaste que sí…entonces en el Taller Renacer encontrarás aquello que te ha limitado para lograr lo que quieres`,
+            ]}
+            color={color}
+          />
+          <Self color={color} />
           <Details
-            color="violet"
+            color={color}
             place="Cali"
             date="7 de Abril"
             price="$300.000"
@@ -93,7 +110,7 @@ class Landing extends React.Component {
                 answer: `Por PayU o consignación directa`,
               },
             ]}
-            color="violet"
+            color={color}
           />
           <Testimonial color="violet" />
         </div>

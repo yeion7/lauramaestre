@@ -33,7 +33,7 @@ class Template extends React.Component {
         className={`body ${this.state.isMenuVisible ? 'is-menu-visible' : ''}`}
       >
         <div id="wrapper">
-          <Header onToggleMenu={this.handleToggleMenu} withMenu={!isEvent} />
+          <Header onToggleMenu={this.handleToggleMenu} withMenu={false} />
           {children()}
           <Contact pathname={path} />
           <Footer />
