@@ -24,7 +24,8 @@
 
 #features,
 #testimonial,
-#faq {
+#faq,
+#questions {
   color: white;
 
   h2,
@@ -45,6 +46,13 @@
   background: darken(_palette(accent5), 10%);
 }
 
+#questions.blue {
+  background: darken(_palette(accent5), 10%);
+}
+
+#questions.violet {
+  background: lighten(_palette(accent3), 0%);
+}
 #features.violet {
   background: lighten(_palette(accent3), 0%);
 }
@@ -57,7 +65,8 @@
   background: darken(_palette(accent3), 5%);
 }
 
-#faq {
+#faq,
+#questions {
   & ul {
     display: flex;
     flex-wrap: wrap;
