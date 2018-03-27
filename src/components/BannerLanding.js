@@ -4,7 +4,14 @@ import LauraImage from '../assets/images/laura4.jpg';
 
 class BannerLanding extends Component {
   render() {
-    const { title, description, time, image, color = 'violet' } = this.props;
+    const {
+      title,
+      description,
+      time,
+      image,
+      color = 'violet',
+      cta = 'Más información',
+    } = this.props;
     return (
       <section
         id="banner"
@@ -51,7 +58,7 @@ class BannerLanding extends Component {
           <ul className="actions">
             <li>
               <a href="#contact" className="button special">
-                Más información
+                {cta}
               </a>
             </li>
           </ul>

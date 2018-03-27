@@ -23,6 +23,7 @@ class Gift extends React.Component {
           title="Reclama tu entrenamiento virtual gratis"
           description="Liberate de tus historías familiares limitantes"
           image={Image}
+          cta="Registrarme"
         />
       </div>
     );

@@ -23,6 +23,7 @@ class Gift extends React.Component {
           title="Conferencia renacer gratis"
           description="¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?"
           image={Laura}
+          cta="Registrarme"
         />
         <div id="main">
           <Feautures
