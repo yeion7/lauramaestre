@@ -7,6 +7,7 @@ import Faq from '../../components/Faq';
 import Feautures from '../../components/Feautures';
 import Testimonial from '../../components/Testimonial';
 import Questions from '../../components/Questions';
+import FreeContent from '../../components/FreeContent';
 import Image from '../../assets/images/landing.jpg';
 
 class Landing extends React.Component {
@@ -63,6 +64,7 @@ class Landing extends React.Component {
             price="$130.000"
             color={color}
           />
+          <FreeContent color={color} />
           <Faq
             questions={[
               {

@@ -11,30 +11,46 @@ import SEO from '../components/SEO';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
+export const LandingTemplate = ({
+  favicon,
+  title,
+  description,
+  date,
+  pathname,
+  theme,
+}) => {
+  return (
+    <div>
+      {/* <FavIcon type={theme.favicon} /> */}
+
+      <SEO
+        title={`Laura Maestre | ${title}`}
+        description={description}
+        url={pathname}
+      />
+
+      <BannerLanding
+        title={title}
+        description={description}
+        time={date}
+        // color={theme.color}
+      />
+
+      {/* <div id="main">
+        <Feautures />
+        <Details />
+        <Faq />
+        <Testimonial />
+      </div> */}
+    </div>
+  );
+};
 class EventPageTemplate extends React.Component {
   render() {
     const data = this.props.data.markdownRemark.frontmatter;
-    const { date, description, title } = data;
     const { location } = this.props;
 
-    return (
-      <div>
-        <FavIcon type="purple" />
-        <SEO
-          title={`Laura Maestre | ${title}`}
-          description={description}
-          url={location.pathname}
-        />
-        <BannerLanding title={title} description={description} time={date} />
-
-        <div id="main">
-          <Feautures />
-          <Details />
-          <Faq />
-          <Testimonial />
-        </div>
-      </div>
-    );
+    return <LandingTemplate {...data} pathname={location.pathname} />;
   }
 }
 
