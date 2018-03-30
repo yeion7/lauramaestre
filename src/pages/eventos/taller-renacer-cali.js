@@ -62,9 +62,9 @@ class Landing extends React.Component {
             color={color}
           />
           <div className="inner">
+            <h2>También tenemos recursos GRATIS para ti</h2>
             <div className="row">
-              <h2>También tenemos recursos GRATIS para ti</h2>
-              <div className="6u 12u$(small) box align-center ">
+              <div className="12u$(small) box align-center ">
                 <i className="fa fa-3x fa-calendar" />
                 <h3>Agenda un sesión gratuita de 30 minutos</h3>
                 <a
@@ -75,7 +75,7 @@ class Landing extends React.Component {
                   Inscribirme
                 </a>
               </div>
-              <div className="6u 12u$(small) box align-center ">
+              <div className="12u$(small) box align-center ">
                 <i className="fa fa-3x fa-child" />
                 <h3>Asiste a nuestra conferencia gratuita</h3>
                 <Link to="/conferencia-gratis" className="button icon fa-check">

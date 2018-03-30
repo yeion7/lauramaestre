@@ -78,5 +78,18 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-offline',
     `gatsby-plugin-sass`,
+    `gatsby-plugin-netlify`,
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: 'pixel id here',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-facebook-analytics`,
+      options: {
+        appId: 'YOUR_APP_ID',
+      },
+    },
   ],
 };

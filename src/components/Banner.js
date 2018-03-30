@@ -1,15 +1,21 @@
 import React from 'react';
+import LauraImage from '../assets/images/laura4.jpg';
 
-const Banner = props => (
-  <section id="banner" className="major">
+const Banner = ({
+  title = 'Diseña tu vida',
+  description = 'Sueña - Sana - Transforma - Actua',
+}) => (
+  <section
+    id="banner"
+    className="major"
+    style={{ backgroundImage: `url(${LauraImage})` }}
+  >
     <div className="inner">
       <header>
-        <h1>Hola, soy Laura</h1>
+        <h1>{title}</h1>
       </header>
       <div className="content">
-        <p>
-          ¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?
-        </p>
+        <p>{description}</p>
       </div>
     </div>
   </section>

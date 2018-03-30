@@ -12,7 +12,9 @@
       }
 
       @include breakpoint(medium) {
-        display: block;
+        > .feature {
+          flex: 100%;
+        }
       }
     }
   }
@@ -120,4 +122,49 @@
   width: 150px !important;
   height: 150px !important;
   border-radius: 50%;
+}
+
+.self {
+  &-image {
+    width: 30%;
+  }
+
+  &-description {
+    width: 70%;
+  }
+
+  @include breakpoint(small) {
+    &-image {
+      width: 100%;
+
+      & > div {
+        margin: 0 auto;
+        width: 180px;
+        height: 180px;
+      }
+    }
+
+    &-description {
+      width: 100%;
+    }
+  }
+}
+
+.events {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &-card {
+    width: 300px;
+    text-align: center;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include breakpoint(small) {
+      width: 100%;
+    }
+  }
 }
