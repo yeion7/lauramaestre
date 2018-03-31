@@ -9,6 +9,8 @@ const PostPreview = props => {
       description={entry.getIn(['data', 'description'])}
       content={widgetFor('body')}
       preview={true}
+      titleForm={entry.getIn(['data', 'form', 'title'])}
+      listID={entry.getIn(['data', 'form', 'listID'])}
     />
   );
 };

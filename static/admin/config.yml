@@ -21,3 +21,7 @@ collections:
       - {label: "Fecha de publicación", name: "date", widget: "datetime"}
       - {label: "Descripción", name: "description", widget: "text"}
       - {label: "Post", name: "body", widget: "markdown"}
+      - {label: "Formulario", name: "form", widget: object, fields: [
+          {label: "Titulo", name: "title", widget: string, default: "Agenda una llamada"},
+          {label: "ID Lista", name: "listID", widget: string}]
+        }

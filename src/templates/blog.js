@@ -7,6 +7,7 @@ import SEO from '../components/SEO';
 import FavIcon from '../components/FavIcon';
 import Laura from '../assets/images/laura1.jpg';
 import Content, { HTMLContent } from '../components/Content';
+import Contact from '../components/Contact';
 
 export const Post = ({
   title = '',
@@ -19,6 +20,8 @@ export const Post = ({
   preview = false,
   content = {},
   contentComponent,
+  titleForm,
+  listID,
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -82,6 +85,7 @@ export const Post = ({
                 </div>
               </section>
             )}
+            <Contact title={titleForm} listID={listID} />
           </div>
         </section>
       </div>
@@ -91,6 +95,7 @@ export const Post = ({
 
 class BlogPostTemplate extends React.Component {
   render() {
+    console.log(this.props);
     const { preview } = this.props;
     const { next, events } = this.props.pathContext;
     const post = this.props.data.markdownRemark;
@@ -104,6 +109,8 @@ class BlogPostTemplate extends React.Component {
         contentComponent={HTMLContent}
         content={post.html}
         preview={preview}
+        titleForm={post.frontmatter.form.title}
+        listID={post.frontmatter.form.listID}
       />
     );
   }
@@ -122,6 +129,10 @@ export const pageQuery = graphql`
         description
         imagen
         path
+        form {
+          listID
+          title
+        }
       }
     }
   }

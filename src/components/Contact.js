@@ -32,6 +32,9 @@ class Contact extends Component {
       `${URL}?u=${U}&amp;id=${listID}&${encode(fields)}`,
       { param: 'c' },
       (error, { result }) => {
+        if (error) {
+          return;
+        }
         switch (result) {
           case 'error':
             this.setState({ disabled: false, error: true });
