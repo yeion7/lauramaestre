@@ -9,6 +9,7 @@ import Testimonial from '../../components/Testimonial';
 import Questions from '../../components/Questions';
 import FreeContent from '../../components/FreeContent';
 import Image from '../../assets/images/landing.jpg';
+import Link from 'gatsby-link';
 
 class Landing extends React.Component {
   render() {

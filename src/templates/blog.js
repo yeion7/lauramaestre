@@ -96,7 +96,6 @@ export const Post = ({
 
 class BlogPostTemplate extends React.Component {
   render() {
-    console.log(this.props);
     const { preview } = this.props;
     const { next, events } = this.props.pathContext;
     const post = this.props.data.markdownRemark;
