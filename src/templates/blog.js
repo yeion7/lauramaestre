@@ -6,6 +6,7 @@ import graphql from 'graphql';
 
 class BlogPostTemplate extends React.Component {
   render() {
+    console.log(this.props);
     const post = this.props.data.markdownRemark;
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
 
@@ -19,7 +20,10 @@ class BlogPostTemplate extends React.Component {
                 <h1>{post.frontmatter.title}</h1>
                 <p>{post.frontmatter.date}</p>
               </header>
-              <div dangerouslySetInnerHTML={{ __html: post.html }} />
+              <div
+                className="blog"
+                dangerouslySetInnerHTML={{ __html: post.html }}
+              />
               <section id="two">
                 <div className="inner">
                   <header className="major">
@@ -76,14 +80,14 @@ class BlogPostTemplate extends React.Component {
 export default BlogPostTemplate;
 
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
+  query BlogPostByPath($slug: String!) {
     site {
       siteMetadata {
         title
         author
       }
     }
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+    markdownRemark(frontmatter: { path: { eq: $slug } }) {
       id
       html
       frontmatter {

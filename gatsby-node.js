@@ -8,7 +8,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
 
   return new Promise((resolve, reject) => {
-
     resolve(
       graphql(
         `
@@ -26,21 +25,50 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           }
         `
       ).then(result => {
-
-        console.log(JSON.stringify(result.data.allMarkdownRemark, undefined, 2));
+        console.log(JSON.stringify(result.data, undefined, 2));
 
         if (result.errors) {
           console.log(result.errors);
           reject(result.errors);
         }
 
+        const blogSet = new Set();
+
         // Create blog posts pages.
         _.each(result.data.allMarkdownRemark.edges, edge => {
-          createPage({
-            path: edge.node.frontmatter.path,
-            component: path.resolve(`src/templates/${String(edge.node.frontmatter.templateKey)}.js`),
-            context: {
+          if (edge.node.frontmatter.templateKey === 'blog') {
+            blogSet.add(edge);
+          } else {
+            createPage({
               path: edge.node.frontmatter.path,
+              component: path.resolve(
+                `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+              ),
+              context: {
+                path: `${edge.node.frontmatter.templateKey}${
+                  edge.node.frontmatter.path
+                }`,
+              },
+            });
+          }
+        });
+
+        const posts = Array.from(blogSet);
+
+        _.each(posts, (post, index) => {
+          const previous =
+            index === posts.length - 1 ? false : posts[index + 1].node;
+          const next = index === 0 ? false : posts[index - 1].node;
+
+          createPage({
+            path: `/blog/${post.node.frontmatter.path}`,
+            component: path.resolve(
+              `src/templates/${String(post.node.frontmatter.templateKey)}.js`
+            ),
+            context: {
+              slug: post.node.frontmatter.path,
+              previous,
+              next,
             },
           });
         });
