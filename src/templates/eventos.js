@@ -57,8 +57,8 @@ class EventPageTemplate extends React.Component {
 export default EventPageTemplate;
 
 export const pageQuery = graphql`
-  query EventByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query EventByPath($slug: String!) {
+    markdownRemark(frontmatter: { path: { eq: $slug } }) {
       id
       html
       frontmatter {
