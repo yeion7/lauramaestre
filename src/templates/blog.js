@@ -6,37 +6,43 @@ import graphql from 'graphql';
 import SEO from '../components/SEO';
 import FavIcon from '../components/FavIcon';
 import Laura from '../assets/images/laura1.jpg';
+import Content, { HTMLContent } from '../components/Content';
 
-class BlogPostTemplate extends React.Component {
-  render() {
-    console.log(this.props);
-    const { next, events } = this.props.pathContext;
+export const Post = ({
+  title = '',
+  description = '',
+  path = '',
+  date = '',
+  imagen = '',
+  next = {},
+  events = {},
+  preview = false,
+  content = {},
+  contentComponent,
+}) => {
+  const PostContent = contentComponent || Content;
 
-    console.log(events);
-    const post = this.props.data.markdownRemark;
-    const { title, description, path, imagen } = post.frontmatter;
-    return (
-      <div>
-        <SEO
-          title={title}
-          description={description}
-          url={path}
-          isPost
-          image={imagen || Laura}
-        />
-        <FavIcon />
-        <div id="main" className="alt">
-          <section id="one">
-            <div className="inner">
-              <header className="major">
-                <h1>{post.frontmatter.title}</h1>
-                <p>{post.frontmatter.date}</p>
-              </header>
-              <div
-                className="blog"
-                dangerouslySetInnerHTML={{ __html: post.html }}
-              />
-              {next && (
+  return (
+    <div>
+      <SEO
+        title={title}
+        description={description}
+        url={path}
+        isPost
+        image={imagen || Laura}
+      />
+      <FavIcon />
+      <div id="main" className="alt">
+        <section id="one">
+          <div className="inner">
+            <header className="major">
+              <h1>{title}</h1>
+              <p>{date}</p>
+            </header>
+            <PostContent content={content} className="blog" />
+
+            {next &&
+              !preview && (
                 <div className="align-center">
                   <Link
                     className="button "
@@ -46,6 +52,7 @@ class BlogPostTemplate extends React.Component {
                   </Link>
                 </div>
               )}
+            {!preview && (
               <section id="two">
                 <div className="inner">
                   <header className="major">
@@ -74,10 +81,30 @@ class BlogPostTemplate extends React.Component {
                   </div>
                 </div>
               </section>
-            </div>
-          </section>
-        </div>
+            )}
+          </div>
+        </section>
       </div>
+    </div>
+  );
+};
+
+class BlogPostTemplate extends React.Component {
+  render() {
+    const { preview } = this.props;
+    const { next, events } = this.props.pathContext;
+    const post = this.props.data.markdownRemark;
+
+    return (
+      <Post
+        {...post.frontmatter}
+        post={post}
+        next={next}
+        events={events}
+        contentComponent={HTMLContent}
+        content={post.html}
+        preview={preview}
+      />
     );
   }
 }
