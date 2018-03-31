@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import Laura from '../assets/images/laura1.jpg';
 
-const FavIcon = ({ title, description, url, isPost, image }) => {
+const FavIcon = ({ title, description, url, isPost, image, isAbout }) => {
   const schemaOrgJSONLD = [
     {
       '@context': 'http://schema.org',
@@ -41,6 +41,22 @@ const FavIcon = ({ title, description, url, isPost, image }) => {
           url: image,
         },
         description,
+      },
+    ]);
+  }
+
+  if (isAbout) {
+    schemaOrgJSONLD.push([
+      {
+        '@context': 'http://schema.org',
+        '@type': 'Person',
+        name: 'Laura Maestre',
+        url,
+        jobTitle: 'Renacedora en Bioreprogramación.',
+        alumniOf: 'Organización Mundial de Terapia Regresiva Reconstructiva',
+        gender: 'female',
+        image: Laura,
+        sameAs: ['https://www.facebook.com/terapeutalauramaestre/'],
       },
     ]);
   }
