@@ -10,7 +10,7 @@ description: >-
   del molde,  se si has escuchado frases como: deja de soñar despierto o coloca
   los pies en la tierra...
 ---
-![Princesa Laura](/laura-princesa (1).jpg)
+![Laura Maestre](/laura-princesa (1).jpg)
 
 ¿Qué sentirías si en el 2018 cada uno de los sueños que tienes se  cumplen? Wow, creo que describir eso sería mágico; así que te invito a que te salgas del molde,  se si has escuchado frases como: deja de soñar despierto o coloca los pies en la tierra;  yo  estoy convencida que el mundo es de los grandes soñadores, porque sólo aquellos que se atreven a salir al mundo, cumplir sus sueños, vencer cada reto y disfrutar cada aprendizaje, pueden tener la felicidad de su sueño cumplido.
 
