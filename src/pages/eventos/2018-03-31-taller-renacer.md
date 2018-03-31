@@ -1,6 +1,7 @@
 ---
-templateKey: landing-page
+templateKey: eventos
 path: taller-renacer-prueba
+imagen: /img/laura-princesa.jpg
 title: TALLER RENACER
 subtitle: ¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?
 cta: Más información
@@ -55,8 +56,10 @@ testimonials:
 form:
   listID: '123123123'
   title: Agenda una sesión gratis
+  showMessage: false
 theme:
-  color: purple
+  favicon: purple
+  color: violet
   showAchievements: true
   showDetails: true
   showFaqs: true
@@ -64,5 +67,5 @@ theme:
   showSelf: true
   showSituations: true
   showTestimonials: true
+  showFreeContent: true
 ---
-

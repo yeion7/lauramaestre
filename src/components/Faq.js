@@ -9,7 +9,7 @@ const Faq = ({ color, questions = [] }) => {
         </header>
         <ul className="alt row">
           {questions.map(({ question, answer }) => (
-            <li>
+            <li key={question}>
               <h3>{question}</h3>
               <p>{answer}</p>
             </li>

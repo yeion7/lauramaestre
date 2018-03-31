@@ -9,6 +9,10 @@ description: >-
   Wow, creo que describir eso sería mágico; así que te invito a que te salgas
   del molde,  se si has escuchado frases como: deja de soñar despierto o coloca
   los pies en la tierra...
+form:
+  listID: e0650c513d
+  title: Agenda una sesión gratis
+  showMessage: false
 ---
 
 ![Laura Maestre](/img/laura-princesa.jpg)

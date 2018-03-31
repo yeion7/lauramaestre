@@ -64,7 +64,27 @@ class Landing extends React.Component {
             price="$130.000"
             color={color}
           />
-          <FreeContent color={color} />
+          <section
+            id="features"
+            className={color}
+            style={{ textAlign: 'center' }}
+          >
+            <div className="inner">
+              <i className="fa fa-gift fa-4x" style={{ color: 'white' }} />
+              <header>
+                <h2>
+                  Reclama tu entrenamiento virtual gratis: liberate de tus
+                  historías familiares limitantes
+                </h2>
+                <Link
+                  to="/regalo-liberate-historias/"
+                  className="button special icon fa-gift big"
+                >
+                  Reclamar regalo
+                </Link>
+              </header>
+            </div>
+          </section>
           <Faq
             questions={[
               {

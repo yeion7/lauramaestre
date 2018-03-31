@@ -51,7 +51,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
               ),
               context: {
-                path: `${edge.node.frontmatter.templateKey}${
+                slug: `${edge.node.frontmatter.templateKey}${
                   edge.node.frontmatter.path
                 }`,
               },

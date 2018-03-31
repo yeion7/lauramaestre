@@ -12,10 +12,12 @@ description: >-
 form:
   listID: e0650c513d
   title: Agenda una sesión gratis
+  showMessage: false
 ---
+
 ![Laura en una aventura](/img/laura_aventura.jpg)
 
-La vida constantemente nos presenta diferentes aventuras extremas, donde nos emocionamos, nos trazamos objetivos y a pesar de que exista el  miedo, estamos dispuesto a enfrentarlo. Muchas veces tenemos que vencer obstáculos, diseñar nuevas  rutas, correr riesgos; sin embargo no todos tienen los mismos miedos, no todos están dispuestos a caerse y algunos no les gusta correr riesgos; y esta es la razón por la que cada persona empieza a vivir la aventura de la vida de manera diferente.
+La vida constantemente nos presenta diferentes aventuras extremas, donde nos emocionamos, nos trazamos objetivos y a pesar de que exista el miedo, estamos dispuesto a enfrentarlo. Muchas veces tenemos que vencer obstáculos, diseñar nuevas rutas, correr riesgos; sin embargo no todos tienen los mismos miedos, no todos están dispuestos a caerse y algunos no les gusta correr riesgos; y esta es la razón por la que cada persona empieza a vivir la aventura de la vida de manera diferente.
 
 Entonces cuando vamos a emprender una nueva aventura en nuestra vida, como es el caso de cumplir sueños, nos encontramos con diferentes tipos de aventureros:
 
@@ -33,11 +35,11 @@ Lo ideal sería convertirnos en un aventurero sembrador. Los siguientes son los 
 3. Transformar: Cambiar pensamientos y emociones enfocados en los sueños que quiere lograr.
 4. Actuar: Escoger acciones para cumplir sus sueños y convertirlas en hábitos.
 
-La razón por la que debemos realizar estos 4 pasos todos los días son porque el cómo enfrentamos cada aventura de nuestra vida, es el resultado  de muchas aventuras que hemos vivido, las cuáles están grabadas en nuestro equipo de seguridad, es decir en nuestra mente inconsciente, aquella mente que guardó información que nos protegía para no recordar momentos que eran difíciles de enfrentar.
+La razón por la que debemos realizar estos 4 pasos todos los días son porque el cómo enfrentamos cada aventura de nuestra vida, es el resultado de muchas aventuras que hemos vivido, las cuáles están grabadas en nuestro equipo de seguridad, es decir en nuestra mente inconsciente, aquella mente que guardó información que nos protegía para no recordar momentos que eran difíciles de enfrentar.
 
-Las principales aventuras de nuestra vida donde se grabaron recuerdos más importantes en nuestra mente inconsciente son: Concepción, Gestación, Nacimiento,  Etapa de 0-7 años. Lo anterior es la razón por la que hablamos de la importancia de sanar nuestro niño interior, ese niño que está esperando que nos acordemos de él y que cada vez que tenemos un reto en nuestra vida él sale para mostrar sus miedos, su rabia y sus angustias.
+Las principales aventuras de nuestra vida donde se grabaron recuerdos más importantes en nuestra mente inconsciente son: Concepción, Gestación, Nacimiento, Etapa de 0-7 años. Lo anterior es la razón por la que hablamos de la importancia de sanar nuestro niño interior, ese niño que está esperando que nos acordemos de él y que cada vez que tenemos un reto en nuestra vida él sale para mostrar sus miedos, su rabia y sus angustias.
 
-La invitación es que te conviertas en un aventurero sembrador, aquél que todos los días sueña-sana-transforma y actúa, de esta forma podrás vivir una vida mágica, donde sí se pueden cumplir sus sueños, sintiendo la adrenalina de cada reto y  disfrutando  la aventura de la vida.
+La invitación es que te conviertas en un aventurero sembrador, aquél que todos los días sueña-sana-transforma y actúa, de esta forma podrás vivir una vida mágica, donde sí se pueden cumplir sus sueños, sintiendo la adrenalina de cada reto y disfrutando la aventura de la vida.
 
 Recuerda que Dios y el Universo te han entregado para lograr tus sueños, tú eres el único responsable diseñar la vida que quieres.
 

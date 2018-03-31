@@ -2,23 +2,29 @@ import React from 'react';
 import Link from 'gatsby-link';
 const FreeContent = ({ color, questions = [] }) => {
   return (
-    <section id="features" className={color} style={{ textAlign: 'center' }}>
-      <div className="inner">
-        <i className="fa fa-gift fa-4x" style={{ color: 'white' }} />
-        <header>
-          <h2>
-            Reclama tu entrenamiento virtual gratis: liberate de tus historías
-            familiares limitantes
-          </h2>
-          <Link
-            to="/regalo-liberate-historias/"
-            className="button special icon fa-gift big"
+    <div className="inner">
+      <h2>También tenemos recursos GRATIS para ti</h2>
+      <div className="row">
+        <div className="12u$(small) box align-center ">
+          <i className="fa fa-3x fa-calendar" />
+          <h3>Agenda un sesión gratuita de 30 minutos</h3>
+          <a
+            target="_blank"
+            href="https://calendly.com/hablame"
+            className="button icon fa-check"
           >
-            Reclamar regalo
+            Inscribirme
+          </a>
+        </div>
+        <div className="12u$(small) box align-center ">
+          <i className="fa fa-3x fa-child" />
+          <h3>Asiste a nuestra conferencia gratuita</h3>
+          <Link to="/conferencia-gratis" className="button icon fa-check">
+            Asistir
           </Link>
-        </header>
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 

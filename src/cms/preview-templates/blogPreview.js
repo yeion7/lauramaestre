@@ -11,6 +11,7 @@ const PostPreview = props => {
       preview={true}
       titleForm={entry.getIn(['data', 'form', 'title'])}
       listID={entry.getIn(['data', 'form', 'listID'])}
+      showMessage={entry.getIn(['data', 'form', 'showMessage'])}
     />
   );
 };

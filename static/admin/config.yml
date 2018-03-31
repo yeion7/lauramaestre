@@ -23,5 +23,139 @@ collections:
       - {label: "Post", name: "body", widget: "markdown"}
       - {label: "Formulario", name: "form", widget: object, fields: [
           {label: "Titulo", name: "title", widget: string, default: "Agenda una llamada"},
-          {label: "ID Lista", name: "listID", widget: string}]
+          {label: "ID Lista", name: "listID", widget: string},
+          {label: "Con mensaje", name: "showMessage", widget: "boolean", default: false}]
         }
+  - name: "eventos"
+    label: "Eventos"
+    folder: "src/pages/eventos"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "eventos"}
+      - {label: "URL", name: "path", widget: "string"}
+      - {label: "Imagen", name: "imagen", widget: "image"}
+      - {label: "Titulo", name: "title", widget: "string"}
+      - {label: "Sub-Titulo", name: "subtitle", widget: "string"}
+      - {label: "CTA", name: "cta", widget: "string"}
+      - {label: "Fecha", name: "date", widget: "datetime"}
+      - {label: "Descripción", name: "description", widget: "text"}
+      - {label: "Qué lograras", name: achievements, widget: list, fields: [
+      {label: Texto, name: text, widget: string},
+      {label: Icono, name: icon, widget: select, options: [
+      {label: "fa-star", value: "fa-star"},
+      {label: "fa-medkit", value: "fa-medkit"},
+      {label: "fa-plane", value: "fa-plane"},
+      {label: "fa-glass", value: "fa-glass"},
+      {label: "fa-music", value: "fa-music"},
+      {label: "fa-search", value: "fa-search"},
+      {label: "fa-heart", value: "fa-heart"},
+      {label: "fa-star", value: "fa-star"},
+      {label: "fa-user", value: "fa-user"},
+      {label: "fa-film", value: "fa-film"},
+      {label: "fa-check", value: "fa-check"},
+      {label: "fa-close", value: "fa-close"},
+      {label: "fa-times", value: "fa-times"},
+      {label: "fa-signal", value: "fa-signal"},
+      {label: "fa-gear", value: "fa-gear"},
+      {label: "fa-cog", value: "fa-cog"},
+      {label: "fa-home", value: "fa-home"},
+      {label: "fa-clock-o", value: "fa-clock-o"},
+      {label: "fa-road", value: "fa-road"},
+      {label: "fa-download", value: "fa-download"},
+      {label: "fa-inbox", value: "fa-inbox"},
+      {label: "fa-refresh", value: "fa-refresh"},
+      {label: "fa-lock", value: "fa-lock"},
+      {label: "fa-headphones", value: "fa-headphones"},
+      {label: "fa-tag", value: "fa-tag"},
+      {label: "fa-book", value: "fa-book"},
+      {label: "fa-bookmark", value: "fa-bookmark"},
+      {label: "fa-print", value: "fa-print"},
+      {label: "fa-camera", value: "fa-camera"},
+      {label: "fa-list", value: "fa-list"},
+      {label: "fa-video-camera", value: "fa-video-camera"},
+      {label: "fa-photo", value: "fa-photo"},
+      {label: "fa-image", value: "fa-image"},
+      {label: "fa-pencil", value: "fa-pencil"},
+      {label: "fa-tint", value: "fa-tint"},
+      {label: "fa-arrows", value: "fa-arrows"},
+      {label: "fa-play", value: "fa-play"},
+      {label: "fa-pause", value: "fa-pause"},
+      {label: "fa-stop", value: "fa-stop"},
+      {label: "fa-eject", value: "fa-eject"},
+      {label: "fa-crosshairs", value: "fa-crosshairs"},
+      {label: "fa-ban", value: "fa-ban"},
+      {label: "fa-leaf", value: "fa-leaf"},
+      {label: "fa-fire", value: "fa-fire"},
+      {label: "fa-eye", value: "fa-eye"},
+      {label: "fa-warning", value: "fa-warning"},
+      {label: "fa-plane", value: "fa-plane"},
+      {label: "fa-calendar", value: "fa-calendar"},
+      {label: "fa-comment", value: "fa-comment"},
+      {label: "fa-magnet", value: "fa-magnet"},
+      {label: "fa-retweet", value: "fa-retweet"},
+      {label: "fa-folder", value: "fa-folder"},
+      {label: "fa-folder-open", value: "fa-folder-open"},
+      {label: "fa-key", value: "fa-key"},
+      {label: "fa-gears", value: "fa-gears"},
+      {label: "fa-trophy", value: "fa-trophy"},
+      {label: "fa-lemon-o", value: "fa-lemon-o"},
+      {label: "fa-phone", value: "fa-phone"},
+      {label: "fa-phone-square", value: "fa-phone-square"},
+      {label: "fa-feed", value: "fa-feed"},
+      {label: "fa-tasks", value: "fa-tasks"},
+      {label: "fa-filter", value: "fa-filter"},
+      {label: "fa-undo", value: "fa-undo"},
+      {label: "fa-legal", value: "fa-legal"},
+      {label: "fa-tachometer", value: "fa-tachometer"},
+      {label: "fa-flash", value: "fa-flash"},
+      {label: "fa-umbrella", value: "fa-umbrella"},
+      {label: "fa-suitcase", value: "fa-suitcase"},
+      {label: "fa-coffee", value: "fa-coffee"},
+      {label: "fa-spoon", value: "fa-spoon"},
+      {label: "fa-cube", value: "fa-cube"},
+      {label: "fa-cubes", value: "fa-cubes"},
+      {label: "fa-steam", value: "fa-steam"},
+      {label: "fa-steam-square", value: "fa-steam-square"},
+      {label: "fa-recycle", value: "fa-recycle"},
+      {label: "fa-automobile", value: "fa-automobile"},
+      {label: "fa-car", value: "fa-car"},
+      {label: "fa-cab", value: "fa-cab"},
+      {label: "fa-bed", value: "fa-bed"},
+      {label: "fa-train", value: "fa-train"},
+      {label: "fa-subway", value: "fa-subway"},
+      {label: "fa-medium", value: "fa-medium"},
+      {label: "fa-battery-full", value: "fa-battery-full"},
+      {label: "fa-battery-empty", value: "fa-battery-empty"},
+      ]}]}
+      - {label: "situaciones en tu vida", name: situations, widget: list, fields: [{label: Pregunta, name: question, widget: string}]}
+      - {label: "Cuando", name: details, widget: object, allow_add: "false", fields: [{label: Ciudad, name: city, widget: string}, {label: Fecha, name: date, widget: string}, {label: Valor, name: price, widget: string}]}
+      - {label: "preguntas frecuentes", name: faqs, widget: list, fields: [{label: Pregunta, name: question, widget: string}, {label: Respuesta, name: answer, widget: string}]}
+      - {label: "Testimoniales", name: testimonials, widget: list, fields: [{label: Testimonio, name: testimony, widget: string}, {label: Nombre, name: name, widget: string}, {label: Imagen, name: imagen, widget: image}]}
+      - {label: "Formulario", name: "form", widget: object, fields: [
+          {label: "Titulo", name: "title", widget: string, default: "Agenda una llamada"},
+          {label: "ID Lista", name: "listID", widget: string},
+          {label: "Con mensaje", name: "showMessage", widget: "boolean", default: false}
+          ]
+        }
+      - {label: "Apariencia", name: "theme", widget: "object", fields: [
+        {label: "FavIcon", name: "favicon", widget: "select", default:  "orange", options: [
+          { label: "purple", value: "purple"},
+          { label: "blue", value: "blue" },
+          { label: "orange", value: "orange" },
+          { label: "yellow", value: "yellow" },
+          { label: "all", value: "all" }]},
+        {label: "Color", name: "color", widget: "select",options: [
+          { label: "purple", value: "purple" },
+          { label: "blue", value: "blue" },
+          { label: "orange", value: "orange" },
+          { label: "yellow", value: "yellow" }]},
+        {label: "Ver qué lograras", name: "showAchievements", widget: "boolean", default: true},
+        {label: "Ver situaciones de tu vida", name: "showSituations", widget: "boolean", default: true},
+        {label: "Ver quien es Laura", name: "showSelf", widget: "boolean", default: true},
+        {label: "Ver cuando", name: "showDetails", widget: "boolean", default: true},
+        {label: "Ver Preguntas frecuentes", name: "showFaqs", widget: "boolean", default: true},
+        {label: "Ver testimoniales", name: "showTestimonials", widget: "boolean", default: true},
+        {label: "Ver Formulario", name: "showForm", widget: "boolean", default: true},
+        {label: "Ver Contenido gratis", name: "showFreeContent", widget: "boolean", default: true},
+      ]}

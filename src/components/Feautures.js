@@ -9,7 +9,7 @@ const Features = ({ color, achievements = [] }) => {
         </header>
         <div className="row">
           {achievements.map(({ text, icon = 'fa-star' } = {}) => (
-            <div className="feature">
+            <div className="feature" key={text}>
               <i className={`fa fa-4x ${icon}`} style={{ color: 'white' }} />
               <p>{text}</p>
             </div>

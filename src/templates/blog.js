@@ -22,6 +22,7 @@ export const Post = ({
   contentComponent,
   titleForm,
   listID,
+  showMessage,
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -85,7 +86,7 @@ export const Post = ({
                 </div>
               </section>
             )}
-            <Contact title={titleForm} listID={listID} />
+            <Contact title={titleForm} listID={listID} expanded={showMessage} />
           </div>
         </section>
       </div>
@@ -111,6 +112,7 @@ class BlogPostTemplate extends React.Component {
         preview={preview}
         titleForm={post.frontmatter.form.title}
         listID={post.frontmatter.form.listID}
+        showMessage={post.frontmatter.form.showMessage}
       />
     );
   }
@@ -132,6 +134,7 @@ export const pageQuery = graphql`
         form {
           listID
           title
+          showMessage
         }
       }
     }
