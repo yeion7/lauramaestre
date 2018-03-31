@@ -22,7 +22,7 @@ const landingPreview = props => {
   const theme = entryTheme ? entryTheme.toJS() : {};
 
   const entryForm = entry.getIn(['data', 'form']);
-  const form = form ? form.toJS() : {};
+  const form = entryForm ? entryForm.toJS() : {};
 
   return (
     <LandingTemplate
