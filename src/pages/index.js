@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import Banner from '../components/Banner';
 import FavIcon from '../components/FavIcon';
 import Self from '../components/Self';
+import Contact from '../components/Contact';
 import SEO from '../components/SEO';
 import graphql from 'graphql';
 
@@ -24,6 +25,7 @@ class HomeIndex extends React.Component {
         <FavIcon type="all" />
 
         <Banner />
+
         <Self color="blue" />
 
         <div id="main">
