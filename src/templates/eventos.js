@@ -19,6 +19,7 @@ export const LandingTemplate = ({
   favicon,
   title = '',
   description = '',
+  imagen,
   date = '',
   path = '',
   theme = {},
@@ -45,6 +46,7 @@ export const LandingTemplate = ({
       <FavIcon type={theme.favicon} />
 
       <SEO
+        image={imagen}
         title={`Laura Maestre | ${title}`}
         description={description}
         url={path}
@@ -93,9 +95,11 @@ export const LandingTemplate = ({
 class EventPageTemplate extends React.Component {
   render() {
     const data = this.props.data.markdownRemark.frontmatter;
-    const { location } = this.props;
+    const { siteUrl } = this.props.data.site.siteMetadata;
 
-    return <LandingTemplate {...data} pathname={location.pathname} />;
+    return (
+      <LandingTemplate {...data} path={`${siteUrl}/eventos/${data.path}`} />
+    );
   }
 }
 
@@ -103,6 +107,11 @@ export default EventPageTemplate;
 
 export const pageQuery = graphql`
   query EventByPath($slug: String!) {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
     markdownRemark(frontmatter: { path: { eq: $slug } }) {
       id
       html
@@ -151,6 +160,7 @@ export const pageQuery = graphql`
           showSelf
           showSituations
           showTestimonials
+          showFreeContent
         }
       }
     }

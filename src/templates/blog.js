@@ -99,6 +99,7 @@ class BlogPostTemplate extends React.Component {
     const { preview } = this.props;
     const { next, events } = this.props.pathContext;
     const post = this.props.data.markdownRemark;
+    const { siteUrl } = this.props.data.site.siteMetadata;
 
     return (
       <Post
@@ -112,6 +113,7 @@ class BlogPostTemplate extends React.Component {
         titleForm={post.frontmatter.form.title}
         listID={post.frontmatter.form.listID}
         showMessage={post.frontmatter.form.showMessage}
+        path={`${siteUrl}/eventos/${post.frontmatter.path}`}
       />
     );
   }
@@ -121,6 +123,11 @@ export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostByPath($slug: String!) {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
     markdownRemark(frontmatter: { path: { eq: $slug } }) {
       id
       html
