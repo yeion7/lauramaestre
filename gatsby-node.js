@@ -18,6 +18,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                   frontmatter {
                     path
                     templateKey
+                    date
+                    title
+                    description
                   }
                 }
               }
@@ -33,11 +36,14 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
 
         const blogSet = new Set();
+        const eventSet = new Set();
 
         // Create blog posts pages.
         _.each(result.data.allMarkdownRemark.edges, edge => {
           if (edge.node.frontmatter.templateKey === 'blog') {
             blogSet.add(edge);
+          } else if (edge.node.frontmatter.templateKey === 'eventos') {
+            eventSet.add(edge);
           } else {
             createPage({
               path: edge.node.frontmatter.path,
@@ -54,12 +60,12 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         });
 
         const posts = Array.from(blogSet);
+        const events = Array.from(eventSet);
 
         _.each(posts, (post, index) => {
           const previous =
             index === posts.length - 1 ? false : posts[index + 1].node;
           const next = index === 0 ? false : posts[index - 1].node;
-
           createPage({
             path: `/blog/${post.node.frontmatter.path}`,
             component: path.resolve(
@@ -69,6 +75,28 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               slug: post.node.frontmatter.path,
               previous,
               next,
+              events: _.take(
+                _.sortBy(
+                  _.filter(
+                    events,
+                    o => new Date(o.node.frontmatter.date) > new Date()
+                  ),
+                  o => o.node.frontmatter.date
+                ),
+                3
+              ),
+            },
+          });
+        });
+
+        _.each(events, event => {
+          createPage({
+            path: `/eventos/${event.node.frontmatter.path}`,
+            component: path.resolve(
+              `src/templates/${String(event.node.frontmatter.templateKey)}.js`
+            ),
+            context: {
+              slug: event.node.frontmatter.path,
             },
           });
         });

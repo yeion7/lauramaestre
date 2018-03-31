@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-const FavIcon = ({ type }) => {
+const FavIcon = ({ type = 'all' }) => {
   const colors = {
     purple: '#93278F',
     blue: '#007EC0',

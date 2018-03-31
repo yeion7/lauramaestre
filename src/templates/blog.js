@@ -3,16 +3,28 @@ import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 import get from 'lodash/get';
 import graphql from 'graphql';
+import SEO from '../components/SEO';
+import FavIcon from '../components/FavIcon';
+import Laura from '../assets/images/laura1.jpg';
 
 class BlogPostTemplate extends React.Component {
   render() {
     console.log(this.props);
-    const post = this.props.data.markdownRemark;
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title');
+    const { next, events } = this.props.pathContext;
 
+    console.log(events);
+    const post = this.props.data.markdownRemark;
+    const { title, description, path, imagen } = post.frontmatter;
     return (
       <div>
-        <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
+        <SEO
+          title={title}
+          description={description}
+          url={path}
+          isPost
+          image={imagen || Laura}
+        />
+        <FavIcon />
         <div id="main" className="alt">
           <section id="one">
             <div className="inner">
@@ -24,48 +36,41 @@ class BlogPostTemplate extends React.Component {
                 className="blog"
                 dangerouslySetInnerHTML={{ __html: post.html }}
               />
+              {next && (
+                <div className="align-center">
+                  <Link
+                    className="button "
+                    to={`/blog/${next.frontmatter.path}`}
+                  >
+                    Leer más
+                  </Link>
+                </div>
+              )}
               <section id="two">
                 <div className="inner">
                   <header className="major">
                     <h2>Próximos eventos</h2>
                   </header>
                   <div className="events">
-                    <div className="box events-card">
-                      <i className="fa fa-3x fa-calendar" />
-                      <h4>Taller renacer</h4>
-                      <strong>4/12/12</strong>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Sequi, suscipit!
-                      </p>
-                      <Link to="/sobre-mi" className="button icon fa-check">
-                        Ver más
-                      </Link>
-                    </div>
-                    <div className="box events-card">
-                      <i className="fa fa-3x fa-calendar" />
-                      <h4>Taller renacer</h4>
-                      <strong>4/12/12</strong>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Sequi, suscipit!
-                      </p>
-                      <Link to="/sobre-mi" className="button icon fa-check">
-                        Ver más
-                      </Link>
-                    </div>
-                    <div className="box events-card">
-                      <i className="fa fa-3x fa-calendar" />
-                      <h4>Taller renacer</h4>
-                      <strong>4/12/12</strong>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Sequi, suscipit!
-                      </p>
-                      <Link to="/sobre-mi" className="button icon fa-check">
-                        Ver más
-                      </Link>
-                    </div>
+                    {events &&
+                      events.map(({ node: { frontmatter } }) => (
+                        <div className="box events-card" key={frontmatter.date}>
+                          <i className="fa fa-3x fa-calendar" />
+                          <h4>{frontmatter.title}</h4>
+                          <strong>
+                            {new Date(frontmatter.date).toLocaleDateString(
+                              'es-CO'
+                            )}
+                          </strong>
+                          <p>{frontmatter.description}</p>
+                          <Link
+                            to={`/eventos/${frontmatter.path}`}
+                            className="button icon fa-check"
+                          >
+                            Ver más
+                          </Link>
+                        </div>
+                      ))}
                   </div>
                 </div>
               </section>
@@ -81,18 +86,15 @@ export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostByPath($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        author
-      }
-    }
     markdownRemark(frontmatter: { path: { eq: $slug } }) {
       id
       html
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        description
+        imagen
+        path
       }
     }
   }
