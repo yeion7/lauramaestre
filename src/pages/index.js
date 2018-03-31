@@ -8,6 +8,9 @@ import Contact from '../components/Contact';
 import SEO from '../components/SEO';
 import graphql from 'graphql';
 
+import { takeThreeClosest, isBlog, isEvent, isLater } from '../lib';
+import filter from 'lodash/filter';
+
 import pic01 from '../assets/images/pic01.jpg';
 import pic02 from '../assets/images/pic02.jpg';
 import pic03 from '../assets/images/pic03.jpg';
@@ -18,6 +21,13 @@ import pic06 from '../assets/images/pic06.jpg';
 class HomeIndex extends React.Component {
   render() {
     const { title, description } = this.props.data.site.siteMetadata;
+    const { edges: pages } = this.props.data.allMarkdownRemark;
+
+    const posts = takeThreeClosest(filter(pages, isBlog), 3);
+
+    const events = takeThreeClosest(filter(filter(pages, isEvent), isLater));
+
+    console.log({ posts, events });
 
     return (
       <div>
@@ -82,51 +92,23 @@ class HomeIndex extends React.Component {
                 <h2>Próximos eventos</h2>
               </header>
               <div className="events">
-                <div className="box events-card">
-                  <i className="fa fa-3x fa-calendar" />
-                  <h4>Taller renacer</h4>
-                  <strong>4/12/12</strong>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Sequi, suscipit!
-                  </p>
-                  <Link
-                    to="/eventos/taller-renacer-cali"
-                    className="button icon fa-check"
-                  >
-                    Ver más
-                  </Link>
-                </div>
-                <div className="box events-card">
-                  <i className="fa fa-3x fa-calendar" />
-                  <h4>Taller renacer</h4>
-                  <strong>4/12/12</strong>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Sequi, suscipit!
-                  </p>
-                  <Link
-                    to="/eventos/taller-renacer-cali"
-                    className="button icon fa-check"
-                  >
-                    Ver más
-                  </Link>
-                </div>
-                <div className="box events-card">
-                  <i className="fa fa-3x fa-calendar" />
-                  <h4>Taller renacer</h4>
-                  <strong>4/12/12</strong>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Sequi, suscipit!
-                  </p>
-                  <Link
-                    to="/eventos/taller-renacer-cali"
-                    className="button icon fa-check"
-                  >
-                    Ver más
-                  </Link>
-                </div>
+                {events &&
+                  events.map(({ node: { frontmatter } }) => (
+                    <div className="box events-card" key={frontmatter.date}>
+                      <i className="fa fa-3x fa-calendar" />
+                      <h4>{frontmatter.title}</h4>
+                      <strong>
+                        {new Date(frontmatter.date).toLocaleDateString('es-CO')}
+                      </strong>
+                      <p>{frontmatter.description}</p>
+                      <Link
+                        to={`/eventos/${frontmatter.path}`}
+                        className="button icon fa-check"
+                      >
+                        Ver más
+                      </Link>
+                    </div>
+                  ))}
               </div>
             </div>
           </section>
@@ -136,96 +118,34 @@ class HomeIndex extends React.Component {
                 <h2>Blog</h2>
               </header>
             </div>
-            <section>
-              <Link to="/making-sense" className="image">
-                <img src={pic01} alt="" />
-              </Link>
-              <div className="content">
-                <div className="inner">
-                  <header className="major">
-                    <h3>5 Pasos para proyectar y manifestar tus sueños.</h3>
-                  </header>
-                  <p>
-                    ¿Qué sentirías si en el 2018 cada uno de los sueños que
-                    tienes se cumplen? Wow, creo que describir eso sería mágico;
-                    así que te invito a que te salgas del molde, se si has
-                    escuchado frases como: deja de soñar despierto o coloca los
-                    pies en la tierra; yo estoy convencida que el mundo es de
-                    los grandes soñadores, porque sólo aquellos que se atreven a
-                    salir al mundo, cumplir sus sueños, vencer cada reto y
-                    disfrutar cada aprendizaje, pueden tener la felicidad de su
-                    sueño cumplido.
-                  </p>
-                  <ul className="actions">
-                    <li>
-                      <Link to="/making-sense" className="button">
-                        Leer más
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </section>
-            <section>
-              <Link to="/making-sense" className="image">
-                <img src={pic01} alt="" />
-              </Link>
-              <div className="content">
-                <div className="inner">
-                  <header className="major">
-                    <h3>5 Pasos para proyectar y manifestar tus sueños.</h3>
-                  </header>
-                  <p>
-                    ¿Qué sentirías si en el 2018 cada uno de los sueños que
-                    tienes se cumplen? Wow, creo que describir eso sería mágico;
-                    así que te invito a que te salgas del molde, se si has
-                    escuchado frases como: deja de soñar despierto o coloca los
-                    pies en la tierra; yo estoy convencida que el mundo es de
-                    los grandes soñadores, porque sólo aquellos que se atreven a
-                    salir al mundo, cumplir sus sueños, vencer cada reto y
-                    disfrutar cada aprendizaje, pueden tener la felicidad de su
-                    sueño cumplido.
-                  </p>
-                  <ul className="actions">
-                    <li>
-                      <Link to="/making-sense" className="button">
-                        Leer más
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </section>
-            <section>
-              <Link to="/making-sense" className="image">
-                <img src={pic01} alt="" />
-              </Link>
-              <div className="content">
-                <div className="inner">
-                  <header className="major">
-                    <h3>5 Pasos para proyectar y manifestar tus sueños.</h3>
-                  </header>
-                  <p>
-                    ¿Qué sentirías si en el 2018 cada uno de los sueños que
-                    tienes se cumplen? Wow, creo que describir eso sería mágico;
-                    así que te invito a que te salgas del molde, se si has
-                    escuchado frases como: deja de soñar despierto o coloca los
-                    pies en la tierra; yo estoy convencida que el mundo es de
-                    los grandes soñadores, porque sólo aquellos que se atreven a
-                    salir al mundo, cumplir sus sueños, vencer cada reto y
-                    disfrutar cada aprendizaje, pueden tener la felicidad de su
-                    sueño cumplido.
-                  </p>
-                  <ul className="actions">
-                    <li>
-                      <Link to="/making-sense" className="button">
-                        Leer más
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </section>
+            {posts.map(
+              ({
+                node: {
+                  frontmatter: { title, description, date, path, imagen },
+                },
+              }) => (
+                <section key={date}>
+                  <Link to={`/blog/${path}`} className="image">
+                    <img src={imagen || pic01} alt="" />
+                  </Link>
+                  <div className="content">
+                    <div className="inner">
+                      <header className="major">
+                        <h3>{title}</h3>
+                      </header>
+                      <p>{description}</p>
+                      <ul className="actions">
+                        <li>
+                          <Link to={`/blog/${path}`} className="button">
+                            Leer más
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+              )
+            )}
           </section>
         </div>
       </div>
@@ -241,6 +161,20 @@ export const query = graphql`
       siteMetadata {
         title
         description
+      }
+    }
+    allMarkdownRemark(limit: 1000) {
+      edges {
+        node {
+          frontmatter {
+            path
+            templateKey
+            date
+            title
+            description
+            imagen
+          }
+        }
       }
     }
   }

@@ -5,110 +5,83 @@ import Banner from '../components/Banner';
 import FavIcon from '../components/FavIcon';
 import Self from '../components/Self';
 import SEO from '../components/SEO';
+import graphql from 'graphql';
 
 import pic01 from '../assets/images/pic01.jpg';
 
-class AboutMe extends React.Component {
+class BlogPage extends React.Component {
   render() {
+    const { title, description } = this.props.data.site.siteMetadata;
+
+    const { data } = this.props;
+    const { edges: posts } = data.allMarkdownRemark;
     return (
       <div>
-        <SEO title="Laura Maestre | Sobre mi" description="" />
+        <SEO title={`Blog | ${title}`} description={description} />
         <FavIcon type="all" />
 
         <Banner title="Blog" />
 
         <section id="two" className="spotlights">
-          <section>
-            <Link to="/making-sense" className="image">
-              <img src={pic01} alt="" />
-            </Link>
-            <div className="content">
-              <div className="inner">
-                <header className="major">
-                  <h3>5 Pasos para proyectar y manifestar tus sueños.</h3>
-                </header>
-                <p>
-                  ¿Qué sentirías si en el 2018 cada uno de los sueños que tienes
-                  se cumplen? Wow, creo que describir eso sería mágico; así que
-                  te invito a que te salgas del molde, se si has escuchado
-                  frases como: deja de soñar despierto o coloca los pies en la
-                  tierra; yo estoy convencida que el mundo es de los grandes
-                  soñadores, porque sólo aquellos que se atreven a salir al
-                  mundo, cumplir sus sueños, vencer cada reto y disfrutar cada
-                  aprendizaje, pueden tener la felicidad de su sueño cumplido.
-                </p>
-                <ul className="actions">
-                  <li>
-                    <Link to="/making-sense" className="button">
-                      Leer más
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-          <section>
-            <Link to="/making-sense" className="image">
-              <img src={pic01} alt="" />
-            </Link>
-            <div className="content">
-              <div className="inner">
-                <header className="major">
-                  <h3>5 Pasos para proyectar y manifestar tus sueños.</h3>
-                </header>
-                <p>
-                  ¿Qué sentirías si en el 2018 cada uno de los sueños que tienes
-                  se cumplen? Wow, creo que describir eso sería mágico; así que
-                  te invito a que te salgas del molde, se si has escuchado
-                  frases como: deja de soñar despierto o coloca los pies en la
-                  tierra; yo estoy convencida que el mundo es de los grandes
-                  soñadores, porque sólo aquellos que se atreven a salir al
-                  mundo, cumplir sus sueños, vencer cada reto y disfrutar cada
-                  aprendizaje, pueden tener la felicidad de su sueño cumplido.
-                </p>
-                <ul className="actions">
-                  <li>
-                    <Link to="/making-sense" className="button">
-                      Leer más
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-          <section>
-            <Link to="/making-sense" className="image">
-              <img src={pic01} alt="" />
-            </Link>
-            <div className="content">
-              <div className="inner">
-                <header className="major">
-                  <h3>5 Pasos para proyectar y manifestar tus sueños.</h3>
-                </header>
-                <p>
-                  ¿Qué sentirías si en el 2018 cada uno de los sueños que tienes
-                  se cumplen? Wow, creo que describir eso sería mágico; así que
-                  te invito a que te salgas del molde, se si has escuchado
-                  frases como: deja de soñar despierto o coloca los pies en la
-                  tierra; yo estoy convencida que el mundo es de los grandes
-                  soñadores, porque sólo aquellos que se atreven a salir al
-                  mundo, cumplir sus sueños, vencer cada reto y disfrutar cada
-                  aprendizaje, pueden tener la felicidad de su sueño cumplido.
-                </p>
-                <ul className="actions">
-                  <li>
-                    <Link to="/making-sense" className="button">
-                      Leer más
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
+          {posts.map(
+            ({
+              node: { frontmatter: { title, description, date, path, imagen } },
+            }) => (
+              <section key={date}>
+                <Link to={`/blog/${path}`} className="image">
+                  <img src={imagen || pic01} alt="" />
+                </Link>
+                <div className="content">
+                  <div className="inner">
+                    <header className="major">
+                      <h3>{title}</h3>
+                    </header>
+                    <p>{description}</p>
+                    <ul className="actions">
+                      <li>
+                        <Link to={`/blog/${path}`} className="button">
+                          Leer más
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            )
+          )}
         </section>
       </div>
     );
   }
 }
 
-export default AboutMe;
+export default BlogPage;
+
+export const query = graphql`
+  query IndexQuery {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+    allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { regex: "/blog/" } } }
+    ) {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            description
+            date
+            templateKey
+            path
+            imagen
+          }
+        }
+      }
+    }
+  }
+`;
