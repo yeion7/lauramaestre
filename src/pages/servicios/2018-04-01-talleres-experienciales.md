@@ -7,6 +7,9 @@ description: lajsdasldasd
 achievements:
   - icon: fa-glass
     text: Sanar
+includes:
+  - icon: fa-plane
+    text: asdasd
 situations:
   - question: asdasdasd
 testimonials:
