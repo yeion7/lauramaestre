@@ -10,7 +10,7 @@ const Included = ({ color, includes = [] }) => {
         <div className="row" style={{ display: 'flex' }}>
           {includes.map(include => {
             return (
-              <div className="feature">
+              <div className="feature" key={include.icon}>
                 <div className="card">
                   <i
                     className={`fa ${include.icon} fa-4x`}
