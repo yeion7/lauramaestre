@@ -8,7 +8,7 @@ import Contact from '../components/Contact';
 import SEO from '../components/SEO';
 import graphql from 'graphql';
 
-import { takeThreeClosest, isBlog, isEvent, isLater } from '../lib';
+import { takeThreeClosest, isBlog, isEvent, isService, isLater } from '../lib';
 import filter from 'lodash/filter';
 
 import pic01 from '../assets/images/pic01.jpg';
@@ -21,6 +21,10 @@ class HomeIndex extends React.Component {
     const posts = takeThreeClosest(filter(pages, isBlog), 3);
 
     const events = takeThreeClosest(filter(filter(pages, isEvent), isLater));
+
+    const services = filter(pages, isService);
+
+    console.log(services);
 
     return (
       <div>
@@ -38,46 +42,22 @@ class HomeIndex extends React.Component {
             </header>
           </div>
           <section id="one" className="tiles">
-            <article style={{ backgroundImage: `url(${pic01})` }}>
-              <header className="major">
-                <h3>Talleres experienciales</h3>
-                <p>
-                  “Transforma los pensamientos y emociones todos días para que
-                  crear la vida de tus sueños”. Ver más..
-                </p>
-              </header>
-              <Link to="/services" className="link primary" />
-            </article>
-            <article style={{ backgroundImage: `url(${pic01})` }}>
-              <header className="major">
-                <h3>Talleres experienciales</h3>
-                <p>
-                  “Transforma los pensamientos y emociones todos días para que
-                  crear la vida de tus sueños”. Ver más..
-                </p>
-              </header>
-              <Link to="/services" className="link primary" />
-            </article>
-            <article style={{ backgroundImage: `url(${pic01})` }}>
-              <header className="major">
-                <h3>Talleres experienciales</h3>
-                <p>
-                  “Transforma los pensamientos y emociones todos días para que
-                  crear la vida de tus sueños”. Ver más..
-                </p>
-              </header>
-              <Link to="/services" className="link primary" />
-            </article>
-            <article style={{ backgroundImage: `url(${pic01})` }}>
-              <header className="major">
-                <h3>Talleres experienciales</h3>
-                <p>
-                  “Transforma los pensamientos y emociones todos días para que
-                  crear la vida de tus sueños”. Ver más..
-                </p>
-              </header>
-              <Link to="/services" className="link primary" />
-            </article>
+            {services.map(service => (
+              <article
+                style={{
+                  backgroundImage: `url(${service.node.frontmatter.imagen})`,
+                }}
+              >
+                <header className="major">
+                  <h3>{service.node.frontmatter.title}</h3>
+                  <p>{service.node.frontmatter.description}</p>
+                </header>
+                <Link
+                  to={`/servicios/${service.node.frontmatter.path}`}
+                  className="link primary"
+                />
+              </article>
+            ))}
           </section>
           <section id="two">
             <div className="inner">

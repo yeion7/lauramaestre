@@ -68,4 +68,5 @@ theme:
   showSituations: true
   showTestimonials: true
   showFreeContent: true
+  useImage: true
 ---

@@ -37,6 +37,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
         const blogSet = new Set();
         const eventSet = new Set();
+        const servicesSet = new Set();
 
         // Create blog posts pages.
         _.each(result.data.allMarkdownRemark.edges, edge => {
@@ -44,6 +45,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             blogSet.add(edge);
           } else if (edge.node.frontmatter.templateKey === 'eventos') {
             eventSet.add(edge);
+          } else if (edge.node.frontmatter.templateKey === 'servicios') {
+            servicesSet.add(edge);
           } else {
             createPage({
               path: edge.node.frontmatter.path,
@@ -59,6 +62,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
         const posts = Array.from(blogSet);
         const events = Array.from(eventSet);
+        const services = Array.from(servicesSet);
 
         _.each(posts, (post, index) => {
           const previous =
@@ -95,6 +99,18 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             ),
             context: {
               slug: event.node.frontmatter.path,
+            },
+          });
+        });
+
+        _.each(services, service => {
+          createPage({
+            path: `/servicios/${service.node.frontmatter.path}`,
+            component: path.resolve(
+              `src/templates/${String(service.node.frontmatter.templateKey)}.js`
+            ),
+            context: {
+              slug: service.node.frontmatter.path,
             },
           });
         });

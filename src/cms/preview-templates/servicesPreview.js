@@ -1,7 +1,7 @@
 import React from 'react';
-import { LandingTemplate } from '../../templates/eventos';
+import { LandingTemplate } from '../../templates/servicios';
 
-const landingPreview = props => {
+const servicesPreview = props => {
   const { entry, getAsset } = props;
   const entryTestimonials = entry.getIn(['data', 'testimonials']);
   const testimonials = entryTestimonials ? entryTestimonials.toJS() : [];
@@ -12,11 +12,8 @@ const landingPreview = props => {
   const entrySituations = entry.getIn(['data', 'situations']);
   const situations = entrySituations ? entrySituations.toJS() : [];
 
-  const entryFaq = entry.getIn(['data', 'faqs']);
-  const faqs = entryFaq ? entryFaq.toJS() : [];
-
-  const entryDetails = entry.getIn(['data', 'details']);
-  const details = entryDetails ? entryDetails.toJS() : {};
+  const entryIncludes = entry.getIn(['data', 'includes']);
+  const includes = entryIncludes ? entryIncludes.toJS() : [];
 
   const entryTheme = entry.getIn(['data', 'theme']);
   const theme = entryTheme ? entryTheme.toJS() : {};
@@ -32,9 +29,8 @@ const landingPreview = props => {
       date={entry.getIn(['data', 'date'])}
       cta={entry.getIn(['data', 'cta'])}
       theme={theme}
-      details={details}
+      includes={includes}
       situations={situations}
-      faqs={faqs}
       form={form}
       testimonials={[]}
       achievements={achievements}
@@ -43,4 +39,4 @@ const landingPreview = props => {
   );
 };
 
-export default landingPreview;
+export default servicesPreview;

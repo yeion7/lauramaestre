@@ -7,6 +7,9 @@ export const isEvent = event =>
 
 export const isBlog = page => page.node.frontmatter.templateKey === 'blog';
 
+export const isService = page =>
+  page.node.frontmatter.templateKey === 'servicios';
+
 export const isLater = o => new Date(o.node.frontmatter.date) > new Date();
 
 export const takeThreeClosest = arr =>

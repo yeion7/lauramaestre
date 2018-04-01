@@ -3,14 +3,11 @@ import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import BannerLanding from '../components/BannerLanding';
 import FavIcon from '../components/FavIcon';
-import Details from '../components/Details';
-import Faq from '../components/Faq';
 import Feautures from '../components/Feautures';
-import FreeContent from '../components/FreeContent';
 import Testimonial from '../components/Testimonial';
 import Questions from '../components/Questions';
-import Self from '../components/Self';
 import Contact from '../components/Contact';
+import Included from '../components/Included';
 import SEO from '../components/SEO';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -30,17 +27,16 @@ export const LandingTemplate = ({
   faqs = [],
   situations = [],
   testimonials = [],
+  includes = [],
   form = {},
 }) => {
   const {
     showAchievements,
-    showDetails,
-    showFaqs,
     showForm,
-    showSelf,
     showSituations,
     showTestimonials,
     showFreeContent,
+    showIncludes,
     useImage,
   } = theme;
 
@@ -68,23 +64,15 @@ export const LandingTemplate = ({
         {showAchievements && (
           <Feautures color={theme.color} achievements={achievements} />
         )}
-        {showDetails && (
-          <Details
-            color={theme.color}
-            place={details.city}
-            date={details.date}
-            price={details.price}
-          />
-        )}
         {showSituations && (
           <Questions questions={situations} color={theme.color} />
         )}
-        {showFreeContent && <FreeContent color={theme.color} />}
-        {showSelf && <Self color={theme.color} />}
-        {showFaqs && <Faq questions={faqs} color={theme.color} />}
+
+        {showIncludes && <Included includes={includes} />}
         {showTestimonials && (
           <Testimonial testimonials={testimonials} color={theme.color} />
         )}
+
         {showForm && (
           <Contact
             title={form.title}
@@ -110,7 +98,7 @@ class EventPageTemplate extends React.Component {
 export default EventPageTemplate;
 
 export const pageQuery = graphql`
-  query EventByPath($slug: String!) {
+  query ServicesByPath($slug: String!) {
     site {
       siteMetadata {
         siteUrl
@@ -124,24 +112,19 @@ export const pageQuery = graphql`
         templateKey
         title
         subtitle
+        subtitle
         description
         cta
-        date(formatString: "DD MMMM, YYYY")
         imagen
         achievements {
           icon
           text
         }
+        includes {
+          icon
+          text
+        }
         situations {
-          question
-        }
-        details {
-          city
-          date
-          price
-        }
-        faqs {
-          answer
           question
         }
         testimonials {
@@ -158,13 +141,10 @@ export const pageQuery = graphql`
           color
           favicon
           showAchievements
-          showDetails
-          showFaqs
           showForm
-          showSelf
+          showIncludes
           showSituations
           showTestimonials
-          showFreeContent
           useImage
         }
       }

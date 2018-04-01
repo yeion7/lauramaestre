@@ -24,7 +24,7 @@ export const About = ({
     <div>
       <SEO
         title={`${title} | Sobre mi`}
-        description=""
+        description={description}
         isAbout
         url={path}
         image={imagen}

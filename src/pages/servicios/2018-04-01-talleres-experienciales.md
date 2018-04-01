@@ -4,6 +4,7 @@ path: talleres-experienciales
 imagen: /img/laura_aventura.jpg
 title: Talleres experienciales
 description: lajsdasldasd
+cta: más información
 achievements:
   - icon: fa-glass
     text: Sanar
@@ -28,4 +29,3 @@ theme:
   showSituations: true
   showTestimonials: true
 ---
-
