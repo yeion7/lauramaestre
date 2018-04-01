@@ -36,7 +36,7 @@ class HomeIndex extends React.Component {
         <Self color="blue" />
 
         <div id="main">
-          <div className="inner">
+          <div className="inner" id="services">
             <header className="major">
               <h2>Servicios</h2>
             </header>
@@ -60,7 +60,7 @@ class HomeIndex extends React.Component {
             ))}
           </section>
           <section id="two">
-            <div className="inner">
+            <div className="inner" id="events">
               <header className="major">
                 <h2>Próximos eventos</h2>
               </header>
