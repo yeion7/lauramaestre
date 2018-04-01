@@ -4,11 +4,12 @@ import LauraImage from '../assets/images/laura4.jpg';
 const Banner = ({
   title = 'Diseña tu vida',
   description = 'Sueña - Sana - Transforma - Actua',
+  image,
 }) => (
   <section
     id="banner"
     className="major"
-    style={{ backgroundImage: `url(${LauraImage})` }}
+    style={{ backgroundImage: `url(${image || LauraImage})` }}
   >
     <div className="inner">
       <header>

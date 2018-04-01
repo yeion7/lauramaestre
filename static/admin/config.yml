@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: beta
 
 media_folder: static/img
 public_folder: /img
@@ -17,7 +17,6 @@ collections:
       - {label: "URL", name: "path", widget: "string"}
       - {label: "Imagen", name: "imagen", widget: "image"}
       - {label: "Titulo", name: "title", widget: "string"}
-
       - {label: "Fecha de publicación", name: "date", widget: "datetime"}
       - {label: "Descripción", name: "description", widget: "text"}
       - {label: "Post", name: "body", widget: "markdown"}
@@ -159,3 +158,16 @@ collections:
         {label: "Ver Formulario", name: "showForm", widget: "boolean", default: true},
         {label: "Ver Contenido gratis", name: "showFreeContent", widget: "boolean", default: true},
       ]}
+  - name: "pages"
+    label: "Páginas"
+    files:
+      - file: "src/pages/sobre-mi/index.md"
+        label: "About"
+        name: "about"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about"}
+          - {label: "URL", name: "path", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Imagen", name: "imagen", widget: "image"}
+          - {label: "Titulo", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}

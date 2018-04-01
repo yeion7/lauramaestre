@@ -41,6 +41,7 @@ export const LandingTemplate = ({
     showTestimonials,
     showFreeContent,
   } = theme;
+
   return (
     <div>
       <FavIcon type={theme.favicon} />
@@ -84,8 +85,8 @@ export const LandingTemplate = ({
         {showForm && (
           <Contact
             title={form.title}
-            expanded={form.showMessage}
             listID={form.listID}
+            expanded={form.showMessage}
           />
         )}
       </div>
