@@ -16,11 +16,10 @@ export const About = ({
   path,
   imagen,
   description,
-  titleForm,
-  listID,
-  showMessage,
+  form,
 }) => {
   const AboutComponent = contentComponent || Content;
+  const { listID, title: titleForm, showMessage } = form;
   return (
     <div>
       <SEO
@@ -63,9 +62,7 @@ class AboutMe extends React.Component {
         post={post}
         contentComponent={HTMLContent}
         content={post.html}
-        titleForm={post.frontmatter.form.title}
-        listID={post.frontmatter.form.listID}
-        showMessage={post.frontmatter.form.showMessage}
+        form={post.frontmatter.form}
         path={`${siteUrl}/sobre-mi`}
       />
     );

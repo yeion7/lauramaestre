@@ -167,7 +167,11 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about"}
           - {label: "URL", name: "path", widget: "string"}
-          - {label: "Title", name: "title", widget: "string"}
           - {label: "Imagen", name: "imagen", widget: "image"}
           - {label: "Titulo", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Formulario", name: "form", widget: object, fields: [
+              {label: "Titulo", name: "title", widget: string, default: "Agenda una llamada"},
+              {label: "ID Lista", name: "listID", widget: string},
+              {label: "Con mensaje", name: "showMessage", widget: "boolean", default: false}]
+            }

@@ -15,18 +15,16 @@ import pic01 from '../assets/images/pic01.jpg';
 
 class HomeIndex extends React.Component {
   render() {
-    const { title, description } = this.props.data.site.siteMetadata;
+    const { title, description, siteUrl } = this.props.data.site.siteMetadata;
     const { edges: pages } = this.props.data.allMarkdownRemark;
 
     const posts = takeThreeClosest(filter(pages, isBlog), 3);
 
     const events = takeThreeClosest(filter(filter(pages, isEvent), isLater));
 
-    console.log({ posts, events });
-
     return (
       <div>
-        <SEO title={title} description={description} />
+        <SEO title={title} description={description} url={siteUrl} />
         <FavIcon type="all" />
 
         <Banner />
@@ -156,6 +154,7 @@ export const query = graphql`
       siteMetadata {
         title
         description
+        siteUrl
       }
     }
     allMarkdownRemark(limit: 1000) {

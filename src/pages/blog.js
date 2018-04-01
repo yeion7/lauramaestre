@@ -11,13 +11,17 @@ import pic01 from '../assets/images/pic01.jpg';
 
 class BlogPage extends React.Component {
   render() {
-    const { title, description } = this.props.data.site.siteMetadata;
+    const { title, description, siteUrl } = this.props.data.site.siteMetadata;
 
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
     return (
       <div>
-        <SEO title={`Blog | ${title}`} description={description} />
+        <SEO
+          title={`Blog | ${title}`}
+          description={description}
+          url={`${siteUrl}/blog`}
+        />
         <FavIcon type="all" />
 
         <Banner title="Blog" />
@@ -63,6 +67,7 @@ export const query = graphql`
       siteMetadata {
         title
         description
+        siteUrl
       }
     }
     allMarkdownRemark(
