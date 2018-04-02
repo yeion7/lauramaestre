@@ -19,7 +19,10 @@ const FreeContent = ({ color, questions = [] }) => {
         <div className="12u$(small) box align-center ">
           <i className="fa fa-3x fa-child" />
           <h3>Asiste a nuestra conferencia gratuita</h3>
-          <Link to="/conferencia-gratis" className="button icon fa-check">
+          <Link
+            to="/eventos/conferencia-gratis"
+            className="button icon fa-check"
+          >
             Asistir
           </Link>
         </div>

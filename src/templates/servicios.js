@@ -90,7 +90,7 @@ class EventPageTemplate extends React.Component {
     const { siteUrl } = this.props.data.site.siteMetadata;
 
     return (
-      <LandingTemplate {...data} path={`${siteUrl}/eventos/${data.path}`} />
+      <LandingTemplate {...data} path={`${siteUrl}/servicios/${data.path}`} />
     );
   }
 }

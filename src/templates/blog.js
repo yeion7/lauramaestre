@@ -113,7 +113,7 @@ class BlogPostTemplate extends React.Component {
         titleForm={post.frontmatter.form.title}
         listID={post.frontmatter.form.listID}
         showMessage={post.frontmatter.form.showMessage}
-        path={`${siteUrl}/eventos/${post.frontmatter.path}`}
+        path={`${siteUrl}/blog/${post.frontmatter.path}`}
       />
     );
   }

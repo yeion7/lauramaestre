@@ -215,7 +215,7 @@ collections:
           {label: "fa-battery-empty", value: "fa-battery-empty"},
           ]}]}
       - {label: "situaciones en tu vida", name: situations, widget: list, fields: [{label: Pregunta, name: question, widget: string}]}
-      - {label: "Testimoniales", name: testimonials, widget: list, fields: [{label: Testimonio, name: testimony, widget: string}, {label: Nombre, name: name, widget: string}, {label: Imagen, name: imagen, widget: image}]}
+      - {label: "Testimoniales", name: testimonials, widget: list, fields: [{label: Testimonio, name: testimony, widget: text}, {label: Nombre, name: name, widget: string}, {label: Imagen, name: imagen, widget: image}]}
       - {label: "Formulario", name: "form", widget: object, fields: [
           {label: "Titulo", name: "title", widget: string, default: "Agenda una llamada"},
           {label: "ID Lista", name: "listID", widget: string},
@@ -229,7 +229,7 @@ collections:
           { label: "Amarilla", value: "yellow" },
           { label: "Todas", value: "all" }]},
         {label: "Color", name: "color", widget: "select",options: [
-          { label: "Morado", value: "purple" },
+          { label: "Morado", value: "violet" },
           { label: "Verde", value: "green" },
           { label: "Naranja", value: "orange" },
           { label: "Azul", value: "blue" }]},
@@ -345,7 +345,7 @@ collections:
       - {label: "situaciones en tu vida", name: situations, widget: list, fields: [{label: Pregunta, name: question, widget: string}]}
       - {label: "Cuando", name: details, widget: object, allow_add: "false", fields: [{label: Ciudad, name: city, widget: string}, {label: Fecha, name: date, widget: string}, {label: Valor, name: price, widget: string}]}
       - {label: "preguntas frecuentes", name: faqs, widget: list, fields: [{label: Pregunta, name: question, widget: string}, {label: Respuesta, name: answer, widget: string}]}
-      - {label: "Testimoniales", name: testimonials, widget: list, fields: [{label: Testimonio, name: testimony, widget: string}, {label: Nombre, name: name, widget: string}, {label: Imagen, name: imagen, widget: image}]}
+      - {label: "Testimoniales", name: testimonials, widget: list, fields: [{label: Testimonio, name: testimony, widget: text}, {label: Nombre, name: name, widget: string}, {label: Imagen, name: imagen, widget: image}]}
       - {label: "Formulario", name: "form", widget: object, fields: [
           {label: "Titulo", name: "title", widget: string, default: "Agenda una llamada"},
           {label: "ID Lista", name: "listID", widget: string},
@@ -360,7 +360,7 @@ collections:
           { label: "Amarilla", value: "yellow" },
           { label: "Todas", value: "all" }]},
         {label: "Color", name: "color", widget: "select",options: [
-          { label: "Morado", value: "purple" },
+          { label: "Morado", value: "violet" },
           { label: "Verde", value: "green" },
           { label: "Naranja", value: "orange" },
           { label: "Azul", value: "blue" }]},
