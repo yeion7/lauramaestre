@@ -11,10 +11,9 @@ description: >-
   nuevas  rutas, correr riesgos
 form:
   listID: e0650c513d
-  title: Agenda una sesión gratis
   showMessage: false
+  title: Agenda una sesión gratis
 ---
-
 ![Laura en una aventura](/img/laura_aventura.jpg)
 
 La vida constantemente nos presenta diferentes aventuras extremas, donde nos emocionamos, nos trazamos objetivos y a pesar de que exista el miedo, estamos dispuesto a enfrentarlo. Muchas veces tenemos que vencer obstáculos, diseñar nuevas rutas, correr riesgos; sin embargo no todos tienen los mismos miedos, no todos están dispuestos a caerse y algunos no les gusta correr riesgos; y esta es la razón por la que cada persona empieza a vivir la aventura de la vida de manera diferente.
@@ -42,5 +41,3 @@ Las principales aventuras de nuestra vida donde se grabaron recuerdos más impor
 La invitación es que te conviertas en un aventurero sembrador, aquél que todos los días sueña-sana-transforma y actúa, de esta forma podrás vivir una vida mágica, donde sí se pueden cumplir sus sueños, sintiendo la adrenalina de cada reto y disfrutando la aventura de la vida.
 
 Recuerda que Dios y el Universo te han entregado para lograr tus sueños, tú eres el único responsable diseñar la vida que quieres.
-
-En el siguiente link encontrarás un regalo para diseñar la ruta de tus sueños y ayudarte a convertirte en un Aventurero Sembrador.
