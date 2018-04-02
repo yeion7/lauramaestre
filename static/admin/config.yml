@@ -222,12 +222,12 @@ collections:
           {label: "Con mensaje", name: "showMessage", widget: "boolean", default: false}]
         }
       - {label: "Apariencia", name: "theme", widget: "object", fields: [
-        {label: "FavIcon", name: "favicon", widget: "select", default:  "orange", options: [
-          { label: "purple", value: "purple"},
-          { label: "blue", value: "blue" },
-          { label: "orange", value: "orange" },
-          { label: "yellow", value: "yellow" },
-          { label: "all", value: "all" }]},
+        {label: "Mariposa", name: "favicon", widget: "select", default:  "orange", options: [
+          { label: "Morada", value: "purple"},
+          { label: "Azul", value: "blue" },
+          { label: "Naranja", value: "orange" },
+          { label: "Amarilla", value: "yellow" },
+          { label: "Todas", value: "all" }]},
         {label: "Color", name: "color", widget: "select",options: [
           { label: "Morado", value: "purple" },
           { label: "Verde", value: "green" },
@@ -353,12 +353,12 @@ collections:
           ]
         }
       - {label: "Apariencia", name: "theme", widget: "object", fields: [
-        {label: "FavIcon", name: "favicon", widget: "select", default:  "orange", options: [
-          { label: "purple", value: "purple"},
-          { label: "blue", value: "blue" },
-          { label: "orange", value: "orange" },
-          { label: "yellow", value: "yellow" },
-          { label: "all", value: "all" }]},
+        {label: "Mariposa", name: "favicon", widget: "select", default:  "orange", options: [
+          { label: "Morada", value: "purple"},
+          { label: "Azul", value: "blue" },
+          { label: "Naranja", value: "orange" },
+          { label: "Amarilla", value: "yellow" },
+          { label: "Todas", value: "all" }]},
         {label: "Color", name: "color", widget: "select",options: [
           { label: "Morado", value: "purple" },
           { label: "Verde", value: "green" },
