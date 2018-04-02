@@ -4,7 +4,7 @@ const FreeContent = ({ color, questions = [] }) => {
   return (
     <div className="inner">
       <h2>También tenemos recursos GRATIS para ti</h2>
-      <div className="row">
+      <div className="row freecontent">
         <div className="12u$(small) box align-center ">
           <i className="fa fa-3x fa-calendar" />
           <h3>Agenda un sesión gratuita de 30 minutos</h3>

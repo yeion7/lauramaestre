@@ -37,44 +37,6 @@
   }
 }
 
-#features.blue {
-  background: darken(_palette(accent5), 5%);
-}
-
-#testimonial.blue {
-  background: darken(_palette(accent5), 1%);
-}
-
-#faq.blue {
-  background: darken(_palette(accent5), 10%);
-}
-
-#questions.blue {
-  background: darken(_palette(accent5), 10%);
-}
-#self.blue {
-  background: darken(_palette(accent5), 10%);
-}
-
-#questions.violet {
-  background: lighten(_palette(accent3), 20%);
-}
-#features.violet {
-  background: lighten(_palette(accent3), 0%);
-}
-
-#testimonial.violet {
-  background: lighten(_palette(accent3), 3%);
-}
-
-#faq.violet {
-  background: darken(_palette(accent3), 5%);
-}
-
-#self.violet {
-  background: darken(_palette(accent3), 5%);
-}
-
 #faq,
 #questions {
   & ul {
@@ -168,4 +130,86 @@
       width: 100%;
     }
   }
+}
+
+.freecontent {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#features.green {
+  background: darken(_palette(accent5), 5%);
+}
+
+#testimonial.green {
+  background: darken(_palette(accent5), 1%);
+}
+
+#faq.green {
+  background: darken(_palette(accent5), 10%);
+}
+
+#questions.green {
+  background: darken(_palette(accent5), 10%);
+}
+#self.green {
+  background: darken(_palette(accent5), 10%);
+}
+
+#questions.violet {
+  background: lighten(_palette(accent3), 20%);
+}
+#features.violet {
+  background: lighten(_palette(accent3), 0%);
+}
+
+#testimonial.violet {
+  background: lighten(_palette(accent3), 3%);
+}
+
+#faq.violet {
+  background: darken(_palette(accent3), 5%);
+}
+
+#self.violet {
+  background: darken(_palette(accent3), 5%);
+}
+
+#questions.orange {
+  background: lighten(_palette(accent1), 8%);
+}
+#features.orange {
+  background: lighten(_palette(accent1), 0%);
+}
+
+#testimonial.orange {
+  background: lighten(_palette(accent1), 3%);
+}
+
+#faq.orange {
+  background: darken(_palette(accent1), 12%);
+}
+
+#self.orange {
+  background: darken(_palette(accent1), 5%);
+}
+
+#questions.blue {
+  background: lighten(_palette(accent6), 8%);
+}
+#features.blue {
+  background: lighten(_palette(accent6), 0%);
+}
+
+#testimonial.blue {
+  background: lighten(_palette(accent6), 3%);
+}
+
+#faq.blue {
+  background: darken(_palette(accent6), 12%);
+}
+
+#self.blue {
+  background: darken(_palette(accent6), 5%);
 }
