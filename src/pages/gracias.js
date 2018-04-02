@@ -22,10 +22,19 @@ class ThanksPage extends React.Component {
               <header className="major">
                 <h2>Gracias por registrarte</h2>
               </header>
+              <p>En unos minutos recibirás un correo con todos los detalles.</p>
+
               <p>
-                En unos minutos estare comunicandome contigo para darte más
-                detalles
+                Ahora haces parte de está comunidad, únete a nuestro grupo en
+                Facebook
               </p>
+
+              <a
+                href="https://www.facebook.com/terapeutalauramaestre/"
+                className="button special icon fa-facebook big"
+              >
+                Unirse
+              </a>
             </div>
           </section>
         </div>
