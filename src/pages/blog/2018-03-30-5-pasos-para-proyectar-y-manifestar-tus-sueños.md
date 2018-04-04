@@ -10,9 +10,9 @@ description: >-
   del molde,  se si has escuchado frases como: deja de soñar despierto o coloca
   los pies en la tierra...
 form:
-  listID: e0650c513d
+  listID: 9c4c6bbfcf
   showMessage: false
-  title: Agenda una sesión gratis
+  title: Suscribiste al blog
 ---
 ![Laura Maestre](/img/laura-princesa.jpg)
 
