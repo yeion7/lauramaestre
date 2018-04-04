@@ -1,8 +1,13 @@
 ---
 templateKey: sobre-mi
 path: sobre-mi
-imagen: /img/laura-princesa.jpg
+imagen: /img/laura-big.jpg
 title: Laura Maestre
+description: >-
+  Laura Maestre es una mujer apasionada, una buscadora incansable que siempre se
+  preguntó cuál era el sentido de vivir. Sólo cuando sané por fin las heridas de
+  mi niña interior y conecté con mi verdadera esencia, comencé por primera vez a
+  crear la vida que realmente siempre había querido.
 form:
   listID: e0650c513d
   showMessage: false
