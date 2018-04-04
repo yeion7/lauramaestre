@@ -23,16 +23,17 @@ testimonials:
     name: aa
     testimony: aa
 form:
-  listID: '123123'
-  title: adasd
+  listID: 9c4c6bbfcf
   showMessage: true
+  title: adasd
 theme:
   color: violet
   favicon: all
-  useImage: true
   showAchievements: false
-  showForm: false
+  showForm: true
   showIncludes: false
   showSituations: false
   showTestimonials: false
+  useImage: true
 ---
+
