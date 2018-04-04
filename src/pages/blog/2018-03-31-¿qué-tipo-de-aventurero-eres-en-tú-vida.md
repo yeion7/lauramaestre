@@ -10,9 +10,9 @@ description: >-
   dispuesto a enfrentarlo. Muchas veces tenemos que vencer obstáculos, diseñar
   nuevas  rutas, correr riesgos
 form:
-  listID: e0650c513d
+  listID: 9c4c6bbfcf
   showMessage: false
-  title: Agenda una sesión gratis
+  title: Suscribete al blog
 ---
 ![Laura en una aventura](/img/laura_aventura.jpg)
 
