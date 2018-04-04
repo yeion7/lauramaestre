@@ -28,7 +28,12 @@ class HomeIndex extends React.Component {
 
     return (
       <div>
-        <SEO title={title} description={description} url={siteUrl} />
+        <SEO
+          title={title}
+          description={description}
+          url={siteUrl}
+          image="/img/laura-big.jpg"
+        />
         <FavIcon type="all" />
 
         <Banner />

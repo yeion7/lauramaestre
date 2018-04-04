@@ -21,6 +21,7 @@ class BlogPage extends React.Component {
           title={`Blog | ${title}`}
           description={description}
           url={siteUrl}
+          image="/img/laura-big.jpg"
           path="blog"
         />
         <FavIcon type="all" />
