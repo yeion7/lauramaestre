@@ -20,6 +20,7 @@ export const LandingTemplate = ({
   imagen,
   date = '',
   path = '',
+  url = '',
   theme = {},
   achievements = [],
   details = [],
@@ -48,7 +49,8 @@ export const LandingTemplate = ({
         image={imagen}
         title={`Laura Maestre | ${title}`}
         description={description}
-        url={path}
+        path={`servicios/${path}`}
+        url={url}
       />
 
       <BannerLanding
@@ -90,7 +92,7 @@ class EventPageTemplate extends React.Component {
     const { siteUrl } = this.props.data.site.siteMetadata;
 
     return (
-      <LandingTemplate {...data} path={`${siteUrl}/servicios/${data.path}`} />
+      <LandingTemplate {...data} path={post.frontmatter.path} url={siteUrl} />
     );
   }
 }

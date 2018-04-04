@@ -14,6 +14,7 @@ export const About = ({
   content,
   title,
   path,
+  url,
   imagen,
   description,
   form,
@@ -26,7 +27,8 @@ export const About = ({
         title={`${title} | Sobre mi`}
         description={description}
         isAbout
-        url={path}
+        path={path}
+        url={url}
         image={imagen}
         description={description}
       />
@@ -63,7 +65,8 @@ class AboutMe extends React.Component {
         contentComponent={HTMLContent}
         content={post.html}
         form={post.frontmatter.form}
-        path={`${siteUrl}/sobre-mi`}
+        path={post.frontmatter.path}
+        url={siteUrl}
       />
     );
   }

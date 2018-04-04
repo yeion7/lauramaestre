@@ -13,6 +13,7 @@ export const Post = ({
   title = '',
   description = '',
   path = '',
+  url = '',
   date = '',
   imagen = '',
   next = {},
@@ -31,7 +32,8 @@ export const Post = ({
       <SEO
         title={title}
         description={description}
-        url={path}
+        path={`blog/${path}`}
+        url={url}
         isPost
         image={imagen || Laura}
       />
@@ -113,7 +115,8 @@ class BlogPostTemplate extends React.Component {
         titleForm={post.frontmatter.form.title}
         listID={post.frontmatter.form.listID}
         showMessage={post.frontmatter.form.showMessage}
-        path={`${siteUrl}/blog/${post.frontmatter.path}`}
+        path={post.frontmatter.path}
+        url={siteUrl}
       />
     );
   }

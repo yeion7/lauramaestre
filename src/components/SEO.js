@@ -2,13 +2,12 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import Laura from '../assets/images/laura1.jpg';
 
-const FavIcon = ({ title, description, url, isPost, image, isAbout }) => {
-  const URL = new window.URL(url);
+const FavIcon = ({ title, description, url, path, isPost, image, isAbout }) => {
   const schemaOrgJSONLD = [
     {
       '@context': 'http://schema.org',
       '@type': 'WebSite',
-      url: url,
+      url: `${url}${path}`,
       name: title,
       alternateName: description,
     },
@@ -23,9 +22,9 @@ const FavIcon = ({ title, description, url, isPost, image, isAbout }) => {
             '@type': 'ListItem',
             position: 1,
             item: {
-              '@id': url,
+              '@id': `${url}${path}`,
               name: title,
-              image: `${URL.origin}${image}`,
+              image: `${url.slice(0, -1)}${image}`,
             },
           },
         ],
@@ -33,13 +32,13 @@ const FavIcon = ({ title, description, url, isPost, image, isAbout }) => {
       {
         '@context': 'http://schema.org',
         '@type': 'BlogPosting',
-        url: url,
+        url: `${url}${path}`,
         name: title,
         alternateName: `Laura Maestre | ${url}`,
         headline: title,
         image: {
           '@type': 'ImageObject',
-          url: `${URL.origin}${image}`,
+          url: `${url.slice(0, -1)}${image}`,
         },
         description,
       },
@@ -52,11 +51,11 @@ const FavIcon = ({ title, description, url, isPost, image, isAbout }) => {
         '@context': 'http://schema.org',
         '@type': 'Person',
         name: 'Laura Maestre',
-        url,
+        url: `${url}${path}`,
         jobTitle: 'Renacedora en Bioreprogramación.',
         alumniOf: 'Organización Mundial de Terapia Regresiva Reconstructiva',
         gender: 'female',
-        image: `${URL.origin}${image}`,
+        image: `${url.slice(0, -1)}${image}`,
         sameAs: ['https://www.facebook.com/terapeutalauramaestre/'],
       },
     ]);
@@ -69,25 +68,25 @@ const FavIcon = ({ title, description, url, isPost, image, isAbout }) => {
 
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="image" content={`${URL.origin}${image}`} />
+      <meta name="image" content={`${url.slice(0, -1)}${image}`} />
 
       {/* Schema.org tags */}
       <script type="application/ld+json">
         {JSON.stringify(schemaOrgJSONLD)}
       </script>
 
-      <meta property="og:url" content={url} />
+      <meta property="og:url" content={`${url}${path}`} />
       {isPost && <meta property="og:type" content="article" />}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={`${URL.origin}${image}`} />
+      <meta property="og:image" content={`${url.slice(0, -1)}${image}`} />
       <meta property="fb:app_id" content={204324066814610} />
 
       {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`${URL.origin}${image}`} />
+      <meta name="twitter:image" content={`${url.slice(0, -1)}${image}`} />
     </Helmet>
   );
 };

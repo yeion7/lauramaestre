@@ -20,7 +20,8 @@ class BlogPage extends React.Component {
         <SEO
           title={`Blog | ${title}`}
           description={description}
-          url={`${siteUrl}/blog`}
+          url={siteUrl}
+          path="blog"
         />
         <FavIcon type="all" />
 
