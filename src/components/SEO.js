@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import Laura from '../assets/images/laura1.jpg';
 
 const FavIcon = ({ title, description, url, isPost, image, isAbout }) => {
+  const URL = new window.URL(url);
   const schemaOrgJSONLD = [
     {
       '@context': 'http://schema.org',
@@ -24,7 +25,7 @@ const FavIcon = ({ title, description, url, isPost, image, isAbout }) => {
             item: {
               '@id': url,
               name: title,
-              image,
+              image: `${URL.origin}${image}`,
             },
           },
         ],
@@ -38,7 +39,7 @@ const FavIcon = ({ title, description, url, isPost, image, isAbout }) => {
         headline: title,
         image: {
           '@type': 'ImageObject',
-          url: image,
+          url: `${URL.origin}${image}`,
         },
         description,
       },
@@ -55,7 +56,7 @@ const FavIcon = ({ title, description, url, isPost, image, isAbout }) => {
         jobTitle: 'Renacedora en Bioreprogramación.',
         alumniOf: 'Organización Mundial de Terapia Regresiva Reconstructiva',
         gender: 'female',
-        image: Laura,
+        image: `${URL.origin}${image}`,
         sameAs: ['https://www.facebook.com/terapeutalauramaestre/'],
       },
     ]);
@@ -68,7 +69,7 @@ const FavIcon = ({ title, description, url, isPost, image, isAbout }) => {
 
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="image" content={image || '/laura4.jpg'} />
+      <meta name="image" content={`${URL.origin}${image}`} />
 
       {/* Schema.org tags */}
       <script type="application/ld+json">
@@ -79,14 +80,14 @@ const FavIcon = ({ title, description, url, isPost, image, isAbout }) => {
       {isPost && <meta property="og:type" content="article" />}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image || Laura} />
+      <meta property="og:image" content={`${URL.origin}${image}`} />
       <meta property="fb:app_id" content={204324066814610} />
 
       {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image || '/laura4.jpg'} />
+      <meta name="twitter:image" content={`${URL.origin}${image}`} />
     </Helmet>
   );
 };
