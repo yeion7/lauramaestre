@@ -30,7 +30,7 @@ class ThanksPage extends React.Component {
               </p>
 
               <a
-                href="https://www.facebook.com/terapeutalauramaestre/"
+                href="https://www.facebook.com/groups/421070354988066/"
                 className="button special icon fa-facebook big"
               >
                 Unirse

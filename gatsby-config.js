@@ -4,7 +4,7 @@ module.exports = {
     author: 'Yeison Daza',
     description:
       '¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?',
-    siteUrl: `https://lauramaestre.com`,
+    siteUrl: `https://lauramaestre.netlify.com/`,
   },
   pathPrefix: '/',
   plugins: [
@@ -83,7 +83,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-facebook-analytics`,
       options: {
-        appId: 'YOUR_APP_ID',
+        appId: '204324066814610',
       },
     },
   ],
