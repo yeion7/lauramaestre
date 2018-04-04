@@ -91,9 +91,7 @@ class EventPageTemplate extends React.Component {
     const data = this.props.data.markdownRemark.frontmatter;
     const { siteUrl } = this.props.data.site.siteMetadata;
 
-    return (
-      <LandingTemplate {...data} path={post.frontmatter.path} url={siteUrl} />
-    );
+    return <LandingTemplate {...data} path={data.path} url={siteUrl} />;
   }
 }
 
