@@ -1,11 +1,13 @@
 import CMS from 'netlify-cms';
 import 'netlify-cms/dist/cms.css';
 
-// import AboutPagePreview from './preview-templates/AboutPagePreview';
-// import BlogPostPreview from './preview-templates/BlogPostPreview';
-// import ProductPagePreview from './preview-templates/ProductPagePreview';
+import landingPreview from './preview-templates/landingPreview';
+import servicesPreview from './preview-templates/servicesPreview';
+import PostPreview from './preview-templates/blogPreview';
+import AboutPagePreview from './preview-templates/aboutPreview';
 
 CMS.registerPreviewStyle('/styles.css');
-// CMS.registerPreviewTemplate('about', AboutPagePreview);
-// CMS.registerPreviewTemplate('products', ProductPagePreview);
-// CMS.registerPreviewTemplate('blog', BlogPostPreview);
+CMS.registerPreviewTemplate('blog', PostPreview);
+CMS.registerPreviewTemplate('eventos', landingPreview);
+CMS.registerPreviewTemplate('services', servicesPreview);
+CMS.registerPreviewTemplate('about', AboutPagePreview);

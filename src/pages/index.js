@@ -3,98 +3,122 @@ import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import Banner from '../components/Banner';
 import FavIcon from '../components/FavIcon';
-import graphql from "graphql";
+import Self from '../components/Self';
+import Contact from '../components/Contact';
+import SEO from '../components/SEO';
+import graphql from 'graphql';
+
+import { takeThreeClosest, isBlog, isEvent, isService, isLater } from '../lib';
+import filter from 'lodash/filter';
 
 import pic01 from '../assets/images/pic01.jpg';
-import pic02 from '../assets/images/pic02.jpg';
-import pic03 from '../assets/images/pic03.jpg';
-import pic04 from '../assets/images/pic04.jpg';
-import pic05 from '../assets/images/pic05.jpg';
-import pic06 from '../assets/images/pic06.jpg';
 
 class HomeIndex extends React.Component {
   render() {
-    console.log(this.props);
-    const siteTitle = this.props.data.site.siteMetadata.title;
-    const siteDescription = this.props.data.site.siteMetadata.description;
+    const { title, description, siteUrl } = this.props.data.site.siteMetadata;
+    const { edges: pages } = this.props.data.allMarkdownRemark;
+
+    const posts = takeThreeClosest(filter(pages, isBlog), 3);
+
+    const events = takeThreeClosest(filter(filter(pages, isEvent), isLater));
+
+    const services = filter(pages, isService);
+
+    console.log(services);
 
     return (
       <div>
-        <Helmet>
-          <title>{siteTitle}</title>
-          <meta name="description" content={siteDescription} />
-        </Helmet>
+        <SEO title={title} description={description} url={siteUrl} />
         <FavIcon type="all" />
 
         <Banner />
 
+        <Self color="blue" />
+
         <div id="main">
+          <div className="inner" id="services">
+            <header className="major">
+              <h2>Servicios</h2>
+            </header>
+          </div>
           <section id="one" className="tiles">
-            <article style={{ backgroundImage: `url(${pic01})` }}>
-              <header className="major">
-                <h3>Aliquam</h3>
-                <p>Ipsum dolor sit amet</p>
-              </header>
-              <Link to="/landing" className="link primary" />
-            </article>
-            <article style={{ backgroundImage: `url(${pic02})` }}>
-              <header className="major">
-                <h3>Tempus</h3>
-                <p>feugiat amet tempus</p>
-              </header>
-              <Link to="/landing" className="link primary" />
-            </article>
-            <article style={{ backgroundImage: `url(${pic03})` }}>
-              <header className="major">
-                <h3>Magna</h3>
-                <p>Lorem etiam nullam</p>
-              </header>
-              <Link to="/landing" className="link primary" />
-            </article>
-            <article style={{ backgroundImage: `url(${pic04})` }}>
-              <header className="major">
-                <h3>Ipsum</h3>
-                <p>Nisl sed aliquam</p>
-              </header>
-              <Link to="/landing" className="link primary" />
-            </article>
-            <article style={{ backgroundImage: `url(${pic05})` }}>
-              <header className="major">
-                <h3>Consequat</h3>
-                <p>Ipsum dolor sit amet</p>
-              </header>
-              <Link to="/landing" className="link primary" />
-            </article>
-            <article style={{ backgroundImage: `url(${pic06})` }}>
-              <header className="major">
-                <h3>Etiam</h3>
-                <p>Feugiat amet tempus</p>
-              </header>
-              <Link to="/landing" className="link primary" />
-            </article>
+            {services.map(service => (
+              <article
+                style={{
+                  backgroundImage: `url(${service.node.frontmatter.imagen})`,
+                }}
+              >
+                <header className="major">
+                  <h3>{service.node.frontmatter.title}</h3>
+                  <p>{service.node.frontmatter.description}</p>
+                </header>
+                <Link
+                  to={`/servicios/${service.node.frontmatter.path}`}
+                  className="link primary"
+                />
+              </article>
+            ))}
           </section>
           <section id="two">
+            <div className="inner" id="events">
+              <header className="major">
+                <h2>Próximos eventos</h2>
+              </header>
+              <div className="events">
+                {events &&
+                  events.map(({ node: { frontmatter } }) => (
+                    <div className="box events-card" key={frontmatter.date}>
+                      <i className="fa fa-3x fa-calendar" />
+                      <h4>{frontmatter.title}</h4>
+                      <strong>
+                        {new Date(frontmatter.date).toLocaleDateString('es-CO')}
+                      </strong>
+                      <p>{frontmatter.description}</p>
+                      <Link
+                        to={`/eventos/${frontmatter.path}`}
+                        className="button icon fa-check"
+                      >
+                        Ver más
+                      </Link>
+                    </div>
+                  ))}
+              </div>
+            </div>
+          </section>
+          <section id="two" className="spotlights">
             <div className="inner">
               <header className="major">
-                <h2>Massa libero</h2>
+                <h2>Blog</h2>
               </header>
-              <p>
-                Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-                libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
-                Pellentesque condimentum sem. In efficitur ligula tate urna.
-                Maecenas laoreet massa vel lacinia pellentesque lorem ipsum
-                dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et
-                sagittis libero. Mauris aliquet magna magna sed nunc rhoncus
-                amet pharetra et feugiat tempus.
-              </p>
-              <ul className="actions">
-                <li>
-                  <Link to="/landing" className="button next">
-                    Get Started
-                  </Link>
-                </li>
-              </ul>
             </div>
+            {posts.map(
+              ({
+                node: {
+                  frontmatter: { title, description, date, path, imagen },
+                },
+              }) => (
+                <section key={date}>
+                  <Link to={`/blog/${path}`} className="image">
+                    <img src={imagen || pic01} alt="" />
+                  </Link>
+                  <div className="content">
+                    <div className="inner">
+                      <header className="major">
+                        <h3>{title}</h3>
+                      </header>
+                      <p>{description}</p>
+                      <ul className="actions">
+                        <li>
+                          <Link to={`/blog/${path}`} className="button">
+                            Leer más
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+              )
+            )}
           </section>
         </div>
       </div>
@@ -110,6 +134,21 @@ export const query = graphql`
       siteMetadata {
         title
         description
+        siteUrl
+      }
+    }
+    allMarkdownRemark(limit: 1000) {
+      edges {
+        node {
+          frontmatter {
+            path
+            templateKey
+            date
+            title
+            description
+            imagen
+          }
+        }
       }
     }
   }

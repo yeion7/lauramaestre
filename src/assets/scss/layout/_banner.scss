@@ -47,12 +47,15 @@
   }
 
   > .inner {
-    @include vendor('transition', (
-				'opacity 1.5s ease',
-				'transform 0.5s ease-out',
-				'filter 0.5s ease',
-				'-webkit-filter 0.5s ease'
-			));
+    @include vendor(
+      'transition',
+      (
+        'opacity 1.5s ease',
+        'transform 0.5s ease-out',
+        'filter 0.5s ease',
+        '-webkit-filter 0.5s ease'
+      )
+    );
     text-align: right;
     padding: 0 !important;
     position: relative;
@@ -260,7 +263,15 @@
     }
 
     &.blue {
+      background: _palette(accent6);
+    }
+
+    &.green {
       background: _palette(accent5);
+    }
+
+    &.orange {
+      background: _palette(accent1);
     }
   }
 }

@@ -8,7 +8,7 @@ const Details = ({ color, place, date, price }) => {
         <header>
           <h2>Cuándo</h2>
         </header>
-        <div className="row">
+        <div className="row" style={{ display: 'flex' }}>
           <div className="feature">
             <div className="card">
               <i

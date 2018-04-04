@@ -10,7 +10,7 @@ class BannerLanding extends Component {
       time,
       image,
       color = 'violet',
-      cta = 'Más información',
+      cta = 'Registrar',
     } = this.props;
     return (
       <section

@@ -1,0 +1,113 @@
+---
+templateKey: eventos
+path: taller-renacer-cali
+imagen: /img/laura-big.jpg
+title: TALLER RENACER
+subtitle: ¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?
+cta: más información
+date: 2018-04-07T08:00:57-05:00
+description: ¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?
+achievements:
+  - icon: fa-star
+    text: Recordaras y sanarás las emociones que viviste durante tu gestación.
+  - icon: fa-medkit
+    text: >-
+      Sanarás la forma como naciste ya que ella marca como te presentas y te
+      desenvuelves en la vida.
+  - icon: fa-plane
+    text: Crearás nuevos permisos y proyectos para crear la vida que deseas.
+situations:
+  - question: ¿Tienes miedos que no te dejan avanzar en el camino de cumplir tus sueños?
+  - question: >-
+      ¿Pierdes el control muy fácil de tus emociones y actúas bajo el miedo,
+      rabia o tristeza?
+  - question: ¿Has tenido dificultad en tener una  relación de pareja que quieres?
+  - question: ¿Sientes que tu vida no tiene sentido?
+  - question: >-
+      ¿No te dedicas a lo que te gusta o en lo que te dedicas no generas los
+      resultados económicos que quieres?
+  - question: ¿Actualmente no tienes las condiciones ideales de salud?
+  - question: >-
+      Si alguna de las preguntas contestaste que sí…entonces en el Taller
+      Renacer encontrarás aquello que te ha limitado para lograr lo que quieres
+details:
+  city: Cali
+  date: 7 de Abril
+  price: $350.000
+faqs:
+  - answer: >-
+      El taller es terapeútico y casi personalizado. Sólo tiene 6 cupos. Cada
+      persona recibe terapia y se hace el correspondiente nacimiento a cada uno.
+    question: ¿Cuál es la metodología utilizada en el taller?
+  - answer: >-
+      Una terapia es un proceso que utiliza la relajación y las emociones para
+      ir a momentos de etapas tempranas como concepción, gestación y nacimiento;
+      resentir la emoción, colocar una nueva y reconstruir una nueva historia.
+    question: ¿Qué es una terapia?
+  - answer: El taller dura un día de 8am-6pm.
+    question: ¿Qué duración tiene el taller?
+  - answer: El taller incluye refrigerio mañana y tarde y almuerzo.
+    question: ¿Debo llevar comidas?
+  - answer: 'Incluye refrigerios, almuerzo, certificado de nacimiento.'
+    question: ¿Qué Incluye la inversión del taller?
+  - answer: >-
+      Ropa cómoda. Al final de taller se pide una prenda blanca puede ser
+      completa (vestido) o camisa o pantalón; pero esta es al final.
+    question: ¿En qué ropa debo llevar al taller?
+  - answer: >-
+      La única preparación es que una semana antes, se envían una ficha para
+      llenar respecto a tu nacimiento y así empezar a abrir el inconsciente.
+    question: ¿Debo tener una preparación anterior al taller?
+  - answer: >-
+      Se recomienda mayor de 8 años, porque antes de esta edad se debe hacer la
+      terapia a los papás
+    question: ¿Debe ser mayor de edad para hacer el taller?
+  - answer: El evento es presencial
+    question: ¿El taller es presencial o virtual?
+  - answer: Por PayU o consignación directa
+    question: ¿Qué métodos de pago existen?
+testimonials:
+  - imagen: /img/user1.7d7500fc.jpg
+    name: '  '
+    testimony: >-
+      "Realmente mi experiencia con el seminario Renacer de Laura Maestre fue
+      maravillosa. Tener la oportunidad de ir al momento de mi concepción y
+      nacimiento y también con su guía aceptar o descartar cada proyecto que
+      tanto mi madre como mi padre me entregaron al momento de llegar a esta
+      tierra fue primero que todo liberador."
+  - imagen: /img/user2.fab0c0c5.jpg
+    name: '  '
+    testimony: >-
+      "Gracias al taller Renacer aprendí a entender las historias de mis padres,
+      para sanar las heridas y Rencores. Hoy tengo conocimiento del ¿Por qué? de
+      las experiencias de mi vida. Doy Gracias a Dios y a las personas como tú,
+      Laura Maestre, que han llegado a mi vida para transformar mi proceso
+      terrenal"
+  - imagen: /img/user3.d59f73e5.jpg
+    name: '  '
+    testimony: >-
+      "Hace un buen tiempo venían pasando situaciones en mi vida, que no lograba
+      explicarme el porque de ello, gracias al Taller Renacer, me dio las pautas
+      para reconocer los Proyectos inconscientes que me delegaron mis padres,
+      para reconocer mi misión de Vida y una vez hago conciencia de estos temas,
+      me es más fácil poder soltar, lo que debo soltar desde el amor y lo más
+      apasionante es poder centrarme en mis propios proyectos, en mis propios
+      objetivos de vida"
+form:
+  listID: 6695601e5a
+  showMessage: true
+  title: Dejanos tu duda
+theme:
+  color: violet
+  favicon: purple
+  showAchievements: true
+  showDetails: true
+  showFaqs: true
+  showForm: true
+  showFreeContent: true
+  showSelf: true
+  showSituations: true
+  showTestimonials: true
+  useImage: true
+---
+

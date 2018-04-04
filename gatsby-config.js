@@ -4,7 +4,7 @@ module.exports = {
     author: 'Yeison Daza',
     description:
       '¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?',
-    siteUrl: `https://lauramaestre.netlify.com`,
+    siteUrl: `https://lauramaestre.com`,
   },
   pathPrefix: '/',
   plugins: [
@@ -26,13 +26,13 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          'gatsby-remark-copy-linked-files',
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 630,
+              maxWidth: 740,
             },
           },
-          'gatsby-remark-copy-linked-files',
         ],
       },
     },
@@ -53,13 +53,8 @@ module.exports = {
         display: 'minimal-ui',
         icons: [
           {
-            src: `/favicons/android-chrome-192x192.png`,
+            src: `/all-favicon-196x196.png`,
             sizes: `192x192`,
-            type: `image/png`,
-          },
-          {
-            src: `/favicons/android-chrome-512x512.png`,
-            sizes: `512x512`,
             type: `image/png`,
           },
         ],
@@ -78,5 +73,18 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-offline',
     `gatsby-plugin-sass`,
+    `gatsby-plugin-netlify`,
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: 'pixel id here',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-facebook-analytics`,
+      options: {
+        appId: 'YOUR_APP_ID',
+      },
+    },
   ],
 };

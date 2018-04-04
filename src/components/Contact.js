@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { navigateTo } from 'gatsby-link';
+import jsonp from 'jsonp';
+
+const URL = 'https://lauramaestre.us16.list-manage.com/subscribe/post-json';
+const U = 'ffd8f074d02b589b5c25cb05c';
 
 function encode(data) {
   return Object.keys(data)
@@ -10,6 +14,7 @@ function encode(data) {
 class Contact extends Component {
   state = {
     disabled: false,
+    error: false,
   };
 
   handleChange = e => {
@@ -20,45 +25,41 @@ class Contact extends Component {
     e.preventDefault();
 
     this.setState({ disabled: true });
-    const { pathname } = this.props;
+    const { listID } = this.props;
     const { disabled, ...fields } = this.state;
 
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': pathname, ...fields }),
-    }).then(({ status, ...rest }) => {
-      if (status === 200) {
-        this.setState({
-          name: '',
-          email: '',
-        });
-
-        console.log(rest);
-
-        navigateTo('/gracias');
+    jsonp(
+      `${URL}?u=${U}&amp;id=${listID}&${encode(fields)}`,
+      { param: 'c' },
+      (error, { result }) => {
+        if (error) {
+          return;
+        }
+        switch (result) {
+          case 'error':
+            this.setState({ disabled: false, error: true });
+            break;
+          case 'success':
+            navigateTo('/gracias');
+            break;
+          default:
+            this.setState({ disabled: false });
+        }
       }
-    });
+    );
   };
 
   render() {
-    const { pathname } = this.props;
+    const { title = 'Dejanos tu duda', expanded = false } = this.props;
 
     return (
       <section id="contact">
         <div className="inner">
           <section style={{ width: '100%', border: 'none' }}>
             <header className="major">
-              <h3>Dejanos tu duda</h3>
+              <h3>{title}</h3>
             </header>
-            <form
-              name={pathname}
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-              method="post"
-              action="/gracias/"
-              onSubmit={this.handleSubmit}
-            >
+            <form method="post" action="/gracias/" onSubmit={this.handleSubmit}>
               <div style={{ display: 'none' }}>
                 <label>
                   Don’t fill this out: <input name="bot-field" />
@@ -68,7 +69,7 @@ class Contact extends Component {
                 <label htmlFor="name">Nombre</label>
                 <input
                   type="text"
-                  name="name"
+                  name="LNAME"
                   id="name"
                   autoComplete="name"
                   required
@@ -80,7 +81,7 @@ class Contact extends Component {
                 <label htmlFor="email">Correo</label>
                 <input
                   type="email"
-                  name="email"
+                  name="EMAIL"
                   id="email"
                   autoComplete="email"
                   required
@@ -88,15 +89,22 @@ class Contact extends Component {
                   onChange={this.handleChange}
                 />
               </div>
-              <div className="12u">
-                <label htmlFor="message">Mensaje</label>
-                <textarea
-                  name="message"
-                  id="message"
-                  placeholder="Tu duda"
-                  rows="6"
-                />
-              </div>
+              {expanded && (
+                <div className="12u">
+                  <label htmlFor="message">Mensaje</label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Tu duda"
+                    rows="6"
+                  />
+                </div>
+              )}
+              {this.state.error && (
+                <small style={{ color: 'red' }}>
+                  Ha ocurrido un error, intentalo nuevamente o contactame
+                </small>
+              )}
               <ul className="actions">
                 <li>
                   <input
