@@ -25,7 +25,7 @@ testimonials:
 form:
   listID: 9c4c6bbfcf
   showMessage: true
-  title: adasd
+  title: más información
 theme:
   color: violet
   favicon: all
@@ -36,4 +36,3 @@ theme:
   showTestimonials: false
   useImage: true
 ---
-
