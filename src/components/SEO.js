@@ -75,9 +75,6 @@ const FavIcon = ({ title, description, url, isPost, image, isAbout }) => {
         {JSON.stringify(schemaOrgJSONLD)}
       </script>
 
-      {/* OpenGraph tags */}
-      <meta property="og:locale" content="es_CO" />
-
       <meta property="og:url" content={url} />
       {isPost && <meta property="og:type" content="article" />}
       <meta property="og:title" content={title} />
