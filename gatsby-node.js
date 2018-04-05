@@ -3,6 +3,8 @@ const Promise = require('bluebird');
 const path = require('path');
 const select = require(`unist-util-select`);
 const fs = require(`fs-extra`);
+const zlib = require('zlib');
+const glob = require('glob');
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
@@ -28,8 +30,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           }
         `
       ).then(result => {
-        console.log(JSON.stringify(result.data, undefined, 2));
-
         if (result.errors) {
           console.log(result.errors);
           reject(result.errors);
@@ -117,4 +117,18 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       })
     );
   });
+};
+
+exports.onPostBuild = (pages, callback) => {
+  const publicPath = path.join(__dirname, 'static');
+  const gzippable = glob.sync(`${publicPath}/**/?(*.png|*.jpg|*.jpeg)`);
+
+  console.log(gzippable);
+  gzippable.forEach(file => {
+    const content = fs.readFileSync(file);
+    const zipped = zlib.gzipSync(content);
+    fs.writeFileSync(`${file}.gz`, zipped);
+  });
+
+  callback();
 };

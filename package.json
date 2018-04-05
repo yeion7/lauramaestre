@@ -1,7 +1,6 @@
 {
   "name": "lauramaestre",
-  "description":
-    "¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?",
+  "description": "¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?",
   "version": "1.0.0",
   "author": "Yeison Daza",
   "dependencies": {
@@ -27,6 +26,7 @@
     "gatsby-source-filesystem": "1.5.27",
     "gatsby-transformer-remark": "1.7.39",
     "gatsby-transformer-sharp": "1.6.22",
+    "glob": "^7.1.2",
     "jsonp": "^0.2.1",
     "lodash": "4.17.5",
     "react": "16.3.0",
@@ -36,7 +36,10 @@
     "react-responsive-carousel": "3.1.35"
   },
   "homepage": "https://www.lauramaestre.com",
-  "keywords": ["superación", "Ayuda"],
+  "keywords": [
+    "superación",
+    "Ayuda"
+  ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
@@ -56,7 +59,9 @@
     "remark-preset-lint-recommended": "3.0.1"
   },
   "remarkConfig": {
-    "plugins": ["remark-preset-lint-recommended"]
+    "plugins": [
+      "remark-preset-lint-recommended"
+    ]
   },
   "resolutions": {
     "gatsby/graphql": "0.11.7"
