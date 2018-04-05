@@ -119,9 +119,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   });
 };
 
-exports.onPostBuild = (pages, callback) => {
-  const publicPath = path.join(__dirname, 'static');
-  const gzippable = glob.sync(`${publicPath}/**/?(*.png|*.jpg|*.jpeg)`);
+exports.onPostBuild = () => {
+  const gzippable = glob.sync(`./**/?(*.png|*.jpg|*.jpeg)`);
 
   console.log(gzippable);
   gzippable.forEach(file => {
@@ -129,6 +128,4 @@ exports.onPostBuild = (pages, callback) => {
     const zipped = zlib.gzipSync(content);
     fs.writeFileSync(`${file}.gz`, zipped);
   });
-
-  callback();
 };

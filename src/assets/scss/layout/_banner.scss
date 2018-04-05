@@ -49,12 +49,7 @@
   > .inner {
     @include vendor(
       'transition',
-      (
-        'opacity 1.5s ease',
-        'transform 0.5s ease-out',
-        'filter 0.5s ease',
-        '-webkit-filter 0.5s ease'
-      )
+      ('opacity 1.5s ease', 'transform 0.5s ease-out', 'filter 0.5s ease')
     );
     text-align: right;
     padding: 0 !important;

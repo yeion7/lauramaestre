@@ -73,7 +73,15 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-offline',
     `gatsby-plugin-sass`,
-    `gatsby-plugin-netlify`,
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        mergeSecurityHeaders: true,
+        mergeLinkHeaders: true,
+        mergeCachingHeaders: true,
+        generateMatchPathRewrites: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-facebook-pixel`,
       options: {
