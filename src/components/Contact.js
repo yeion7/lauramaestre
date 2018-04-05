@@ -69,7 +69,7 @@ class Contact extends Component {
                 <label htmlFor="name">Nombre</label>
                 <input
                   type="text"
-                  name="LNAME"
+                  name="FNAME"
                   id="name"
                   autoComplete="name"
                   required
