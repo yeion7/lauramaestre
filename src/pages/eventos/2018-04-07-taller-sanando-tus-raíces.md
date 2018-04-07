@@ -1,7 +1,7 @@
 ---
 templateKey: eventos
 path: sanando-raices-villavicencio
-imagen: /img/laura-big.jpg
+imagen: /img/landing.5df71734.jpg
 title: Taller Sanando Tus Raíces
 subtitle: >-
   ¿Te has preguntado porqué no tienes los resultados que quieres en tu vida?
