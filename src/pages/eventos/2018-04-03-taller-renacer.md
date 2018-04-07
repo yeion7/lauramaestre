@@ -1,11 +1,11 @@
 ---
 templateKey: eventos
-path: taller-renacer-cali
+path: taller-renacer-villavicencio
 imagen: /img/laura-big.jpg
 title: TALLER RENACER
 subtitle: ¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?
 cta: más información
-date: 2018-04-07T08:00:57-05:00
+date: '2018-04-21T08:00:57-05:00'
 description: ¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?
 achievements:
   - icon: fa-star
@@ -31,8 +31,8 @@ situations:
       Si alguna de las preguntas contestaste que sí…entonces en el Taller
       Renacer encontrarás aquello que te ha limitado para lograr lo que quieres
 details:
-  city: Cali
-  date: 7 de Abril
+  city: 'Villavicencio '
+  date: 21 de Abril
   price: $350.000
 faqs:
   - answer: >-
