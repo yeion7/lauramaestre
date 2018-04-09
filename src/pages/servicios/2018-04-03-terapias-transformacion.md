@@ -3,16 +3,21 @@ templateKey: servicios
 path: terapias-transformacion
 imagen: /img/laura-big.jpg
 title: Terapias de transformación
-subtitle: >-
-  Sana tus raíces para sembrar tus sueños en tierra fértil
+subtitle: Sana tus raíces para sembrar tus sueños en tierra fértil
 cta: más información
 description: >-
   En estas terapias de Transformación con técnicas de bioreprogramación y
   regresiva reconstructiva encontrarás la respuestas al porqué no has logrado
   los resultados que quieres en tu vida.
 achievements:
-  - icon: fa-glass
-    text: aa
+  - icon: fa-heart
+    text: >-
+      Encontrar el origen de las enfermedades y conflictos para tener las
+      herramientas y comenzar una sanación del raíz
+  - icon: fa-eye
+    text: >-
+      -Sanar las heridas del niño interior que habita en ti para crear nuevos
+      pensamientos y emociones sanos en tu vida.
 includes:
   - icon: fa-plane
     text: aa
@@ -36,3 +41,4 @@ theme:
   showTestimonials: false
   useImage: true
 ---
+
