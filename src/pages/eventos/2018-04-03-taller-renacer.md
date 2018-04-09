@@ -33,7 +33,7 @@ situations:
 details:
   city: 'Villavicencio '
   date: 21 de Abril
-  price: $350.000
+  price: $300.000
 faqs:
   - answer: >-
       El taller es terapeútico y casi personalizado. Sólo tiene 6 cupos. Cada
@@ -104,7 +104,7 @@ theme:
   showDetails: true
   showFaqs: true
   showForm: true
-  showFreeContent: true
+  showFreeContent: false
   showSelf: true
   showSituations: true
   showTestimonials: true
