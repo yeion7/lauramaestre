@@ -31,6 +31,7 @@ export const LandingTemplate = ({
   faqs = [],
   situations = [],
   testimonials = [],
+  content = [],
   form = {},
 }) => {
   const {
@@ -81,7 +82,9 @@ export const LandingTemplate = ({
         {showSituations && (
           <Questions questions={situations} color={theme.color} />
         )}
-        {showFreeContent && <FreeContent color={theme.color} />}
+        {showFreeContent && (
+          <FreeContent color={theme.color} content={content} />
+        )}
         {showSelf && <Self color={theme.color} />}
         {showFaqs && <Faq questions={faqs} color={theme.color} />}
         {showTestimonials && (
@@ -143,6 +146,12 @@ export const pageQuery = graphql`
         faqs {
           answer
           question
+        }
+        content {
+          icon
+          copy
+          url
+          cta
         }
         testimonials {
           imagen

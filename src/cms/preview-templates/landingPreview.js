@@ -15,6 +15,9 @@ const landingPreview = props => {
   const entryFaq = entry.getIn(['data', 'faqs']);
   const faqs = entryFaq ? entryFaq.toJS() : [];
 
+  const contentFaq = entry.getIn(['data', 'content']);
+  const content = contentFaq ? contentFaq.toJS() : [];
+
   const entryDetails = entry.getIn(['data', 'details']);
   const details = entryDetails ? entryDetails.toJS() : {};
 
@@ -39,6 +42,7 @@ const landingPreview = props => {
       testimonials={[]}
       achievements={achievements}
       imagen={getAsset(entry.getIn(['data', 'imagen']))}
+      content={content}
     />
   );
 };

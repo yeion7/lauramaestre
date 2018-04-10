@@ -7,6 +7,15 @@ subtitle: ¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?
 cta: más información
 date: '2018-04-21T08:00:57-05:00'
 description: ¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?
+content:
+  - icon: fa-calendar
+    copy: Agenda una sesión gratuita de 30 minutos
+    url: https://calendly.com/hablame
+    cta: Inscribirme
+  - icon: fa-heart
+    copy: Entrenamiento gratuito
+    url: https://lauramaestre.com/eventos/atraviesa-miedos
+    cta: Inscribirme
 achievements:
   - icon: fa-star
     text: Recordaras y sanarás las emociones que viviste durante tu gestación.
@@ -34,6 +43,7 @@ details:
   city: 'Villavicencio '
   date: 21 de Abril
   price: $300.000
+
 faqs:
   - answer: >-
       El taller es terapeútico y casi personalizado. Sólo tiene 6 cupos. Cada
@@ -104,10 +114,9 @@ theme:
   showDetails: true
   showFaqs: true
   showForm: true
-  showFreeContent: false
+  showFreeContent: true
   showSelf: true
   showSituations: true
   showTestimonials: true
   useImage: true
 ---
-

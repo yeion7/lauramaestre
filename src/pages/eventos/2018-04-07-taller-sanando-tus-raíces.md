@@ -73,6 +73,11 @@ faqs:
 testimonials:
   - name: a
     testimony: a
+content:
+  - icon: fa-heart
+    copy: Entrenamiento virtual gratuito
+    url: https://lauramaestre.com/eventos/regalo-liberate-historias
+    cta: Inscribirme
 form:
   listID: 35d95d8178
   showMessage: true
@@ -85,6 +90,6 @@ theme:
   showFaqs: true
   showForm: true
   showSituations: true
+  showFreeContent: true
   useImage: true
 ---
-
