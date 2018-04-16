@@ -85,13 +85,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-facebook-pixel`,
       options: {
-        pixelId: 'pixel id here',
+        pixelId: '1447685745330001',
       },
     },
     {
       resolve: `gatsby-plugin-facebook-analytics`,
       options: {
-        appId: '204324066814610',
+        appId: '1447685745330001',
       },
     },
   ],
