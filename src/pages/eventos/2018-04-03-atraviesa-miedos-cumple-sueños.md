@@ -1,7 +1,7 @@
 ---
 templateKey: eventos
 path: atraviesa-miedos
-imagen: /img/laura-big.jpg
+imagen: /img/img_4026-editar.jpg
 title: 'Atraviesa miedos, cumple sueños'
 subtitle: 'Reto gratis, 7 días '
 cta: Registrarme
@@ -26,9 +26,11 @@ testimonials:
 form:
   listID: 48315a3d8b
   title: Registrarme
+content: []
 theme:
   color: violet
   favicon: all
   showForm: true
+  showFreeContent: false
 ---
 
