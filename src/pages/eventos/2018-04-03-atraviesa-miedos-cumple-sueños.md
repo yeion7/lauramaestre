@@ -1,7 +1,7 @@
 ---
 templateKey: eventos
 path: atraviesa-miedos
-imagen: /img/img_3945.jpg
+imagen: /img/img_4026-editar.jpg
 title: 'Atraviesa miedos, cumple sueños'
 subtitle: 'Reto gratis, 7 días '
 cta: Registrarme
