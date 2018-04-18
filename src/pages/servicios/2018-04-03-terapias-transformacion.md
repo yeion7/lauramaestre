@@ -52,6 +52,6 @@ theme:
   showIncludes: false
   showSituations: true
   showTestimonials: false
-  useImage: false
+  useImage: true
 ---
 
