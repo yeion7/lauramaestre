@@ -32,5 +32,6 @@ theme:
   favicon: all
   showForm: true
   showFreeContent: false
+  useImage: true
 ---
 
