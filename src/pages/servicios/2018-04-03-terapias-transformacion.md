@@ -1,7 +1,7 @@
 ---
 templateKey: servicios
 path: terapias-transformacion
-imagen: /img/laura-big.jpg
+imagen: /img/pink-tulips-independence-day-email-header-2-.png
 title: Terapias de transformación
 subtitle: Sana tus raíces para sembrar tus sueños en tierra fértil
 cta: más información
