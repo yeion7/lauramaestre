@@ -14,15 +14,28 @@ achievements:
     text: >-
       Encontrar el origen de las enfermedades y conflictos para tener las
       herramientas y comenzar una sanación del raíz
-  - icon: fa-eye
+  - icon: fa-battery-full
     text: >-
-      -Sanar las heridas del niño interior que habita en ti para crear nuevos
+      Sanar las heridas del niño interior que habita en ti para crear nuevos
       pensamientos y emociones sanos en tu vida.
+  - text: >-
+      Hacer una nueva programación y una reconstrucción para tener los
+      resultados que si quieres. 
 includes:
   - icon: fa-plane
     text: aa
 situations:
-  - question: aa
+  - question: >-
+      Si tienes algún síntoma física “enfermedad” que está afectando tu vida y
+      no le has encontrado solución 
+  - question: Si actualmente no tienes la relación de pareja o la pareja que quisiera.
+  - question: >-
+      Si tienes un conflicto con tu relación de dinero y no logras multiplicarlo
+      o que se quede contigo
+  - question: >-
+      Si emocionalmente no logras un equilibrio para sentirte tranquila en tu
+      vida
+  - question: Si no te sientes conforme en lo que actualmente te dedicas en tu vida.
 testimonials:
   - imagen: /img/laura-princesa.jpg
     name: aa
@@ -34,11 +47,11 @@ form:
 theme:
   color: violet
   favicon: all
-  showAchievements: false
+  showAchievements: true
   showForm: true
   showIncludes: false
-  showSituations: false
+  showSituations: true
   showTestimonials: false
-  useImage: true
+  useImage: false
 ---
 
