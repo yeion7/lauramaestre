@@ -30,7 +30,7 @@ const Self = ({ color }) => {
               historias de concepción, gestación, nacimiento y literalmente
               volverán a nacer para crear los permisos que quieren en su vida.
             </p>
-            <Link to="/sobre-mi" className="button icon fa-check">
+            <Link to="/sobre-mi" className="button white icon fa-check">
               Ver más
             </Link>
           </div>

@@ -12,7 +12,7 @@ description: >-
   tus sueños
 achievements:
   - icon: fa-glass
-    text: aa
+    text: a
 includes:
   - icon: fa-plane
     text: aa

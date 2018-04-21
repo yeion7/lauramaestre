@@ -11,10 +11,10 @@ description: >-
   en el interior y puedan proyectarlo en el exterior;  en temas como transformación de pensamientos negativos, trabajar desde el ser proyectado a un bien común, valorar acciones y funciones en el trabajo.
 achievements:
   - icon: fa-glass
-    text: aa
+    text: a
 includes:
   - icon: fa-plane
-    text: aa
+    text: a
 situations:
   - question: aa
 testimonials:
@@ -26,7 +26,7 @@ form:
   showMessage: true
   title: más información
 theme:
-  color: violet
+  color: yellow
   favicon: all
   showAchievements: false
   showForm: true

@@ -13,6 +13,13 @@ import filter from 'lodash/filter';
 
 import pic01 from '../assets/images/pic01.jpg';
 
+const BUTTERFLYS = {
+  blue: 'terapias-transformacion',
+  purple: 'talleres-experienciales',
+  orange: 'programa-vida',
+  yellow: 'entrenamientos-empresariales',
+};
+
 class HomeIndex extends React.Component {
   render() {
     const { title, description, siteUrl } = this.props.data.site.siteMetadata;
@@ -24,7 +31,7 @@ class HomeIndex extends React.Component {
 
     const services = filter(pages, isService);
 
-    console.log(services);
+    console.log(events);
 
     return (
       <div>
@@ -38,7 +45,7 @@ class HomeIndex extends React.Component {
 
         <Banner />
 
-        <Self color="blue" />
+        <Self color="violet" />
 
         <div id="main">
           <div className="inner" id="services">
@@ -49,8 +56,10 @@ class HomeIndex extends React.Component {
           <section id="one" className="tiles">
             {services.map(service => (
               <article
+                className={service.node.frontmatter.theme.color}
+                key={service.node.frontmatter.path}
                 style={{
-                  backgroundImage: `url(${service.node.frontmatter.imagen})`,
+                  backgroundImage: `url(${service.node.frontmatter.path}.svg)`,
                 }}
               >
                 <header className="major">
@@ -73,7 +82,12 @@ class HomeIndex extends React.Component {
                 {events &&
                   events.map(({ node: { frontmatter } }) => (
                     <div className="box events-card" key={frontmatter.date}>
-                      <i className="fa fa-3x fa-calendar" />
+                      <img
+                        src={`${BUTTERFLYS[frontmatter.theme.favicon]}.svg`}
+                        style={{ margin: '0 auto' }}
+                        alt="imagen mariposa"
+                        width="120px"
+                      />
                       <h4>{frontmatter.title}</h4>
                       <strong>
                         {new Date(frontmatter.date).toLocaleDateString('es-CO')}
@@ -152,6 +166,10 @@ export const query = graphql`
             title
             description
             imagen
+            theme {
+              favicon
+              color
+            }
           }
         }
       }

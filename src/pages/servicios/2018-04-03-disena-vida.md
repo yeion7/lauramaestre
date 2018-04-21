@@ -2,7 +2,7 @@
 templateKey: servicios
 path: programa-vida
 imagen: /img/laura-big.jpg
-title: programa diseña tu vida
+title: Programa diseña tu vida
 subtitle: >-
   Soñar te permite desplegar tus hermosas alas y volar hacia donde tu
   corazón te guíe
@@ -13,7 +13,7 @@ description: >-
   vida.
 achievements:
   - icon: fa-glass
-    text: aa
+    text: a
 includes:
   - icon: fa-plane
     text: aa
@@ -28,7 +28,7 @@ form:
   showMessage: true
   title: más información
 theme:
-  color: violet
+  color: orange
   favicon: all
   showAchievements: false
   showForm: true

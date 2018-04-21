@@ -21,14 +21,14 @@ achievements:
   - icon: fa-star
     text: >-
       Hacer una nueva programación y una reconstrucción para tener los
-      resultados que si quieres. 
+      resultados que si quieres.
 includes:
   - icon: fa-plane
-    text: aa
+    text: a
 situations:
   - question: >-
       Si tienes algún síntoma física “enfermedad” que está afectando tu vida y
-      no le has encontrado solución 
+      no le has encontrado solución
   - question: Si actualmente no tienes la relación de pareja o la pareja que quisiera.
   - question: >-
       Si tienes un conflicto con tu relación de dinero y no logras multiplicarlo
@@ -46,7 +46,7 @@ form:
   showMessage: true
   title: más información
 theme:
-  color: violet
+  color: blue
   favicon: all
   showAchievements: true
   showForm: true
@@ -55,4 +55,3 @@ theme:
   showTestimonials: false
   useImage: true
 ---
-

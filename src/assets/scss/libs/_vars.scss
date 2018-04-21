@@ -18,7 +18,7 @@ $size: (
 $font: (
   family:
     (
-      'Quicksand',
+      'Kirvy',
       -apple-system,
       BlinkMacSystemFont,
       'Segoe UI',
@@ -32,7 +32,7 @@ $font: (
     ),
   family-secundary:
     (
-      'Montserrat',
+      'Kirvy',
       -apple-system,
       BlinkMacSystemFont,
       'Segoe UI',
@@ -47,23 +47,23 @@ $font: (
   family-fixed: ('Courier New', monospace),
   weight: 300,
   weight-bold: 600,
-  letter-spacing: 0.025em,
+  letter-spacing: 0,
   letter-spacing-alt: 0.25em
 );
 // Palette.
 $palette: (
   bg: white,
-  bg-alt: rgba(166, 35, 127, 0.37),
+  bg-alt: #93278f,
   fg: #3e3e3e,
   fg-bold: #3e3e3e,
   fg-light: rgba(31, 31, 34, 0.4),
   border: rgba(31, 31, 34, 0.4),
   border-bg: rgba(212, 212, 255, 0.4),
-  highlight: rgb(0, 194, 141),
-  accent1: rgba(255, 129, 31, 0.5),
-  accent2: rgba(255, 212, 31, 0.5),
-  accent3: rgba(166, 35, 127, 0.37),
+  highlight: #00c28d,
+  accent1: #ff811f,
+  accent2: #ffd41f,
+  accent3: #93278f,
   accent4: rgba(212, 212, 255, 0.5),
-  accent5: rgba(0, 194, 141, 0.5),
-  accent6: rgba(0, 126, 192, 0.8)
+  accent5: #00c28d,
+  accent6: #007ec0
 );
