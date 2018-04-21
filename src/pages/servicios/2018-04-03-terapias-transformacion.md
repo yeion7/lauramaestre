@@ -18,7 +18,8 @@ achievements:
     text: >-
       Sanar las heridas del niño interior que habita en ti para crear nuevos
       pensamientos y emociones sanos en tu vida.
-  - text: >-
+  - icon: fa-star
+    text: >-
       Hacer una nueva programación y una reconstrucción para tener los
       resultados que si quieres. 
 includes:
