@@ -6,7 +6,7 @@ title: 'TALLER RENACER '
 subtitle: ¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?
 cta: 'más información '
 date: '2018-05-19T11:49:02-05:00'
-description: Taller renacer Bogota
+description: ¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?
 achievements:
   - icon: fa-star
     text: Recordaras y sanarás las emociones que viviste durante tu gestación.
@@ -88,6 +88,7 @@ content:
     url: 'https://lauramaestre.com/eventos/atraviesa-miedos'
 theme:
   color: violet
+  favicon: purple
   showAchievements: true
   showDetails: true
   showFaqs: true
