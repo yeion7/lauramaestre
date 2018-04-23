@@ -1,16 +1,16 @@
 ---
 templateKey: eventos
-path: taller-renacer-villavicencio-26
+path: taller-renacer-bogota-19
 imagen: /img/laura-big.jpg
-title: Taller renacer
+title: 'TALLER RENACER '
 subtitle: ¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?
-cta: más información
-date: '2018-05-26T11:25:06-05:00'
-description: Taller renaces villavicencio
+cta: 'más información '
+date: '2018-05-19T11:49:02-05:00'
+description: Taller renacer Bogota
 achievements:
   - icon: fa-star
-    text: Recordarás y sanarás las emociones que viviste durante tu gestación.
-  - icon: fa-key
+    text: Recordaras y sanarás las emociones que viviste durante tu gestación.
+  - icon: fa-road
     text: >-
       Sanarás la forma como naciste ya que ella marca como te presentas y te
       desenvuelves en la vida.
@@ -31,8 +31,8 @@ situations:
       Si alguna de las preguntas contestaste que sí…entonces en el Taller
       Renacer encontrarás aquello que te ha limitado para lograr lo que quieres
 details:
-  city: Villavicencio
-  date: 26 de mayo
+  city: Bogotá
+  date: 19 mayo
   price: '300.000'
 faqs:
   - answer: >-
@@ -47,6 +47,8 @@ faqs:
       La única preparación es que una semana antes, se envían una ficha para
       llenar respecto a tu nacimiento y así empezar a abrir el inconsciente.
     question: ¿Debo tener una preparación anterior al taller?
+  - answer: El evento es presencial
+    question: ¿El taller es presencial o virtual?
   - answer: >-
       Una terapia es un proceso que utiliza la relajación y las emociones para
       ir a momentos de etapas tempranas como concepción, gestación y nacimiento;
@@ -65,33 +67,25 @@ faqs:
   - answer: Por PayU o consignación directa
     question: ¿Qué métodos de pago existen?
 testimonials:
-  - testimony: >
+  - testimony: >-
       "Realmente mi experiencia con el seminario Renacer de Laura Maestre fue
       maravillosa. Tener la oportunidad de ir al momento de mi concepción y
       nacimiento y también con su guía aceptar o descartar cada proyecto que
       tanto mi madre como mi padre me entregaron al momento de llegar a esta
-      tierra fue primero que todo liberador.",
-  - testimony: >-
-      Hace un buen tiempo venían pasando situaciones en mi vida, que no lograba
-      explicarme el porque de ello, gracias al Taller Renacer, me dio las pautas
-      para reconocer los Proyectos inconscientes que me delegaron mis padres,
-      para reconocer mi misión de Vida y una vez hago conciencia de estos temas,
-      me es más fácil poder soltar, lo que debo soltar desde el amor y lo más
-      apasionante es poder centrarme en mis propios proyectos, en mis propios
-      objetivos de vida"
+      tierra fue primero que todo liberador
 form:
-  listID: 9fae212d45.
+  listID: 0c0722bbab.
   showMessage: true
-  title: '¿Tienes alguna duda? '
+  title: ¿Tienes alguna duda?
 content:
-  - copy: 'Agenda una sesión gratuita de 30 minutos '
+  - copy: Agenda una sesión gratuita de 30 minutos
     cta: Agenda aquí
     icon: fa-calendar
     url: 'https://calendly.com/hablame'
-  - copy: 'Inscribete a nuestro reto de 7 días gratis '
+  - copy: 'Inscribete a nuestro reto gratuito de 7 días '
     cta: Inscribirme
-    icon: fa-home
-    url: 'https://lauramaestre.com/eventos/atraviesa-miedos/'
+    icon: fa-book
+    url: 'https://lauramaestre.com/eventos/atraviesa-miedos'
 theme:
   color: violet
   showAchievements: true
@@ -102,5 +96,6 @@ theme:
   showSelf: true
   showSituations: true
   showTestimonials: false
+  useImage: true
 ---
 
