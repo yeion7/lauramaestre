@@ -33,7 +33,7 @@ situations:
 details:
   city: Bogotá
   date: 19 mayo
-  price: '300.000'
+  price: 300.000 antes del 10 de mayo 255.000
 faqs:
   - answer: >-
       El taller es terapeútico y casi personalizado. Sólo tiene 6 cupos. Cada
