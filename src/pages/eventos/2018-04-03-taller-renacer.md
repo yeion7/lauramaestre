@@ -1,21 +1,12 @@
 ---
 templateKey: eventos
-path: taller-renacer-villavicencio
+path: taller-renacer-villavicencio-26
 imagen: /img/laura-big.jpg
 title: TALLER RENACER
 subtitle: ¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?
 cta: más información
-date: '2018-04-21T08:00:57-05:00'
+date: '2018-05-26T08:00:57-05:00'
 description: ¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?
-content:
-  - icon: fa-calendar
-    copy: Agenda una sesión gratuita de 30 minutos
-    url: https://calendly.com/hablame
-    cta: Inscribirme
-  - icon: fa-heart
-    copy: Entrenamiento gratuito
-    url: https://lauramaestre.com/eventos/atraviesa-miedos
-    cta: Inscribirme
 achievements:
   - icon: fa-star
     text: Recordaras y sanarás las emociones que viviste durante tu gestación.
@@ -41,9 +32,8 @@ situations:
       Renacer encontrarás aquello que te ha limitado para lograr lo que quieres
 details:
   city: 'Villavicencio '
-  date: 21 de Abril
+  date: 26 de mayo
   price: $300.000
-
 faqs:
   - answer: >-
       El taller es terapeútico y casi personalizado. Sólo tiene 6 cupos. Cada
@@ -104,9 +94,18 @@ testimonials:
       apasionante es poder centrarme en mis propios proyectos, en mis propios
       objetivos de vida"
 form:
-  listID: 6695601e5a
+  listID: 9fae212d45
   showMessage: true
   title: Dejanos tu duda
+content:
+  - copy: Agenda una sesión gratuita de 30 minutos
+    cta: Inscribirme
+    icon: fa-calendar
+    url: 'https://calendly.com/hablame'
+  - copy: Entrenamiento gratuito
+    cta: Inscribirme
+    icon: fa-heart
+    url: 'https://lauramaestre.com/eventos/atraviesa-miedos'
 theme:
   color: violet
   favicon: purple
@@ -120,3 +119,4 @@ theme:
   showTestimonials: true
   useImage: true
 ---
+
