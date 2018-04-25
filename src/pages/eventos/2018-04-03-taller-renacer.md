@@ -1,11 +1,11 @@
 ---
 templateKey: eventos
-path: taller-renacer-villavicencio-26
+path: taller-renacer-villavicencio-12
 imagen: /img/laura-big.jpg
 title: TALLER RENACER
 subtitle: ¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?
 cta: más información
-date: '2018-05-26T08:00:57-05:00'
+date: '2018-05-12T08:00:57-05:00'
 description: ¿Te gustaría tener un nuevo comienzo para crear la vida que deseas?
 achievements:
   - icon: fa-star
@@ -32,7 +32,7 @@ situations:
       Renacer encontrarás aquello que te ha limitado para lograr lo que quieres
 details:
   city: 'Villavicencio '
-  date: 26 de mayo
+  date: 12 de mayo
   price: $300.000 antes del 5 de mayo 255.000
 faqs:
   - answer: >-
