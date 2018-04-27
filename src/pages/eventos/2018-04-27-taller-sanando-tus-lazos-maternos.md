@@ -14,17 +14,17 @@ description: >-
 achievements:
   - icon: fa-medkit
     text: >-
-      -Volver a tu primera casa, el vientre de tu madre, a comenzar a sanar las
+      Volver a tu primera casa, el vientre de tu madre, a comenzar a sanar las
       emociones que viviste reemplazándolas por emociones que permitirán cumplir
       tus sueños.
   - icon: fa-heart
     text: >-
-      -Harás un recorrido por las etapas de concepción, gestación, nacimiento e
+      Harás un recorrido por las etapas de concepción, gestación, nacimiento e
       infancia para cortar las ataduras de las historias y cargas que te entregó
       tu madre.
   - icon: fa-home
     text: >-
-      -Perdonar y honrar a tu madre y a tu historia de vida, para por fin
+      Perdonar y honrar a tu madre y a tu historia de vida, para por fin
       liberarte de culpas y asumir con amor la responsabilidad de crear y
       transformar tu vida.
 situations:
@@ -88,7 +88,8 @@ faqs:
 testimonials:
   - testimony: iii
 form:
-  title: f876887244
+  listID: f876887244
+  title: '¿Tienes alguna duda? '
 content:
   - copy: Agenda una sesión gratuita de 30 minutos
     cta: 'Incribirme '
@@ -99,6 +100,8 @@ content:
     icon: fa-heart
     url: 'https://lauramaestre.com/eventos/regalo-lazos-maternos'
 theme:
+  color: violet
+  favicon: purple
   showAchievements: true
   showDetails: true
   showFaqs: true
