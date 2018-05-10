@@ -1,7 +1,7 @@
 ---
 templateKey: blog
 path: 'https://lauramaestre.com/blog'
-imagen: /img/img_3945.jpg
+imagen: /img/imagen-final.png
 title: ¿POR QUÉ NO TIENES EXCELENTES RELACIONES  EXTRAORDINARIAS?
 date: '2018-05-10T08:59:27-05:00'
 description: 5 Tips para el renacer de tus relaciones Interpersonales
@@ -10,6 +10,10 @@ form:
   showMessage: false
   title: ¿POR QUÉ NO TIENES EXCELENTES RELACIONES  EXTRAORDINARIAS?
 ---
+![](/img/img_3945.jpg)
+
+
+
 5 Tips para el renacer de tus relaciones Interpersonales
 
 ¿Quieres tener excelentes relaciones interpersonales?
