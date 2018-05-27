@@ -48,3 +48,5 @@ Así que tu decides como quieres una nueva relación con tu madre; tu decides cu
 >
 
 ![null](/img/blog28may.jpeg)
+
+> “Los vínculos en tu vida son el reflejo del primer vínculo que creaste: EL VÍNCULO MATERNO”
