@@ -1,13 +1,13 @@
 ---
 templateKey: eventos
-path: sana-tus-lazos-maternos-bogota
+path: Programa-Diseña-tu-vida
 imagen: /img/laura-horizon.jpg
-title: TALLER SANANDO TUS LAZOS MATERNOS
+title: PROGRAMA DISEÑA TU VIDA
 subtitle: >-
-  ¿Te gustaría tener una mejor relación con tu madre?  ¿Sientes que tus
-  relaciones  interpersonales  no  funcionan?
-cta: Incríbete aquí
-date: '2018-05-20T00:00:00-05:00'
+  Diseña tu vida conectando con tu niñ@ interior y creando cada uno de tus
+  sueños
+cta: AGENDA SESIÓN UNO A UNO
+date: '2018-11-20T00:00:00-05:00'
 description: >-
   ¿Te gustaría tener una mejor relación con tu madre?  ¿Sientes que tus
   relaciones  interpersonales no funcionan?
