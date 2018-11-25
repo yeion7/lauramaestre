@@ -1,7 +1,7 @@
 ---
 templateKey: eventos
 path: Programa-Diseña-tu-vida
-imagen: /img/laura-horizon.jpg
+imagen: /img/img_0676.jpg
 title: PROGRAMA DISEÑA TU VIDA
 subtitle: >-
   Diseña tu vida conectando con tu niñ@ interior y creando cada uno de tus
